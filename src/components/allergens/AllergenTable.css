@@ -12,7 +12,60 @@
   color: var(--color-coral);
 }
 
+/* ── Mobile: card layout with full allergen names ── */
+.allergen-mobile-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.allergen-mobile-card {
+  background: var(--color-white);
+  border: 2px solid var(--color-cream-dark);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.1rem;
+}
+
+.allergen-mobile-card__name {
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 3.5vw, 1.2rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-black);
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--color-cream-dark);
+}
+
+.allergen-mobile-card__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin: 0;
+}
+
+.allergen-mobile-card__row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.allergen-mobile-card__term {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-black);
+  margin: 0;
+}
+
+.allergen-mobile-card__value {
+  margin: 0;
+}
+
+/* ── Desktop: matrix table ── */
 .allergen-table-wrap {
+  display: none;
   overflow-x: auto;
   border: 2px solid var(--color-cream-dark);
   border-radius: var(--radius-lg);
@@ -52,32 +105,17 @@
 }
 
 .allergen-table__allergen-col {
-  min-width: 3.1rem;
+  min-width: 4.5rem;
 }
 
 .allergen-table__abbr {
-  display: block;
-  line-height: 1.1;
-}
-
-.allergen-table__label {
   display: none;
 }
 
-@media (min-width: 56rem) {
-  .allergen-table__abbr {
-    display: none;
-  }
-
-  .allergen-table__label {
-    display: block;
-    font-size: 0.72rem;
-    line-height: 1.15;
-  }
-
-  .allergen-table__allergen-col {
-    min-width: 4.5rem;
-  }
+.allergen-table__label {
+  display: block;
+  font-size: 0.72rem;
+  line-height: 1.15;
 }
 
 .allergen-table tbody th,
@@ -138,4 +176,14 @@
   background: var(--color-cream-dark);
   color: var(--color-black);
   border: 1px solid #d8d0c8;
+}
+
+@media (min-width: 768px) {
+  .allergen-mobile-list {
+    display: none;
+  }
+
+  .allergen-table-wrap {
+    display: block;
+  }
 }

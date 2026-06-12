@@ -28,6 +28,24 @@ export function AllergenTable({ section }: AllergenTableProps) {
         {section.title}
       </h2>
 
+      <div className="allergen-mobile-list" aria-label={`${section.title} allergen details`}>
+        {section.rows.map((row) => (
+          <article key={row.name} className="allergen-mobile-card">
+            <h3 className="allergen-mobile-card__name">{row.name}</h3>
+            <dl className="allergen-mobile-card__grid">
+              {allergenColumns.map((column) => (
+                <div key={column.key} className="allergen-mobile-card__row">
+                  <dt className="allergen-mobile-card__term">{column.label}</dt>
+                  <dd className="allergen-mobile-card__value">
+                    <AllergenCell status={row.allergens[column.key]} />
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </article>
+        ))}
+      </div>
+
       <div className="allergen-table-wrap">
         <table className="allergen-table">
           <thead>
