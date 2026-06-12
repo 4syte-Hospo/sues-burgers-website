@@ -1,0 +1,101 @@
+.allergen-search {
+  position: relative;
+  max-width: 32rem;
+}
+
+.allergen-search__label {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-black);
+  margin-bottom: 0.5rem;
+}
+
+.allergen-search__field {
+  position: relative;
+}
+
+.allergen-search__icon {
+  position: absolute;
+  left: 0.95rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-muted);
+  pointer-events: none;
+}
+
+.allergen-search__input {
+  width: 100%;
+  padding: 0.85rem 1rem 0.85rem 2.65rem;
+  border: 2px solid var(--color-cream-dark);
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  color: var(--color-black);
+  font: inherit;
+  font-size: 1rem;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.allergen-search__input:focus {
+  outline: none;
+  border-color: var(--color-coral);
+  box-shadow: 0 0 0 3px rgba(232, 93, 79, 0.15);
+}
+
+.allergen-search__results {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  left: 0;
+  right: 0;
+  z-index: 20;
+  max-height: min(18rem, 50vh);
+  overflow-y: auto;
+  margin: 0;
+  padding: 0.35rem;
+  list-style: none;
+  background: var(--color-white);
+  border: 2px solid var(--color-cream-dark);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.allergen-search__option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  border: none;
+  border-radius: var(--radius-md);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.allergen-search__option:hover,
+.allergen-search__option--active {
+  background: #fff5f4;
+}
+
+.allergen-search__option-name {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+.allergen-search__option-section {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+}
+
+.allergen-search__empty {
+  padding: 0.85rem 1rem;
+  font-size: 0.92rem;
+  color: var(--color-muted);
+}

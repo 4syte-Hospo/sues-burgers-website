@@ -1,4 +1,5 @@
 import { AllergenKey } from "../components/allergens/AllergenKey";
+import { AllergenSearch } from "../components/allergens/AllergenSearch";
 import { AllergenTable } from "../components/allergens/AllergenTable";
 import { allergenPage, allergenSections } from "../data/allergens";
 import "./AllergenInfoPage.css";
@@ -15,6 +16,8 @@ export function AllergenInfoPage() {
           <p className="allergen-page__rule" aria-hidden="true" />
           <p className="allergen-page__intro">{allergenPage.intro}</p>
         </header>
+
+        <AllergenSearch />
 
         <AllergenKey />
 

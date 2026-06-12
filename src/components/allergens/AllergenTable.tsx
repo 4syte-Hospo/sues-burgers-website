@@ -1,5 +1,6 @@
 import { allergenColumns } from "../../data/allergens";
 import type { AllergenSection } from "../../types/allergens";
+import { getAllergenItemId } from "../../utils/allergenSearch";
 import "./AllergenTable.css";
 
 type AllergenTableProps = {
@@ -29,8 +30,11 @@ export function AllergenTable({ section }: AllergenTableProps) {
       </h2>
 
       <div className="allergen-mobile-list" aria-label={`${section.title} allergen details`}>
-        {section.rows.map((row) => (
-          <article key={row.name} className="allergen-mobile-card">
+        {section.rows.map((row) => {
+          const itemId = getAllergenItemId(section.id, row.name);
+
+          return (
+          <article key={row.name} id={itemId} className="allergen-mobile-card allergen-item-target">
             <h3 className="allergen-mobile-card__name">{row.name}</h3>
             <dl className="allergen-mobile-card__grid">
               {allergenColumns.map((column) => (
@@ -43,7 +47,8 @@ export function AllergenTable({ section }: AllergenTableProps) {
               ))}
             </dl>
           </article>
-        ))}
+          );
+        })}
       </div>
 
       <div className="allergen-table-wrap">
@@ -62,8 +67,11 @@ export function AllergenTable({ section }: AllergenTableProps) {
             </tr>
           </thead>
           <tbody>
-            {section.rows.map((row) => (
-              <tr key={row.name}>
+            {section.rows.map((row) => {
+              const itemId = getAllergenItemId(section.id, row.name);
+
+              return (
+              <tr key={row.name} id={itemId} className="allergen-item-target">
                 <th scope="row" className="allergen-table__item">
                   {row.name}
                 </th>
@@ -73,7 +81,8 @@ export function AllergenTable({ section }: AllergenTableProps) {
                   </td>
                 ))}
               </tr>
-            ))}
+              );
+            })}
           </tbody>
         </table>
       </div>
