@@ -5,10 +5,10 @@ export const allergenPage = {
   title: "Allergen Information",
   intro:
     "Use this guide to check which allergens are present in our menu items. Symbols show whether an allergen is contained in the item or may be present as a trace.",
-  lastUpdated: "11 June 2025",
+  lastUpdated: "12 June 2026",
   disclaimer:
     "Please be aware that there is always a risk that traces of allergens may be transferred to items from our menu during processing, storage, or preparation (Trace Levels). Sue's Burgers & Shakes is unable to guarantee that any item sold is free from traces of listed allergens.",
-  pdfHref: "/docs/SUES-BURGERS-ALLERGEN-STM-2.pdf",
+  pdfHref: "/docs/sues-burgers-allergen-information.pdf",
 } as const;
 
 export const allergenColumns: { key: AllergenKey; label: string; abbr: string }[] = [
@@ -50,7 +50,7 @@ function section(id: string, title: string, rows: [string, string][]): AllergenS
   };
 }
 
-/** Matrix sourced from SUES-BURGERS-ALLERGEN-STM-2.pdf */
+/** Menu allergen matrix — PDF regenerated via `npm run generate:allergen-pdf` */
 export const allergenSections: AllergenSection[] = [
   section("burgers", "Burgers", [
     ["Sue's Classic", "X X X X O X X O O"],

@@ -15,6 +15,9 @@
 /sues-vip-terms-and-conditions/  /sues-vip-terms-and-conditions  301
 /suesviptsandcs/                 /suesviptsandcs                 301
 
+# Allergen PDF — legacy filename
+/docs/SUES-BURGERS-ALLERGEN-STM-2.pdf  /docs/sues-burgers-allergen-information.pdf  301
+
 # Form API — Netlify Functions (must be before SPA fallback)
 /api/contact   /.netlify/functions/contact   200
 /api/careers   /.netlify/functions/careers   200

@@ -30,7 +30,11 @@ export function AllergenInfoPage() {
         <footer className="allergen-page__footer">
           <p className="allergen-page__disclaimer">{allergenPage.disclaimer}</p>
           <p className="allergen-page__updated">Last updated {allergenPage.lastUpdated}</p>
-          <a href={allergenPage.pdfHref} className="allergen-page__pdf-link" download>
+          <a
+            href={allergenPage.pdfHref}
+            className="allergen-page__pdf-link"
+            download="sues-burgers-allergen-information.pdf"
+          >
             Download PDF version
           </a>
         </footer>
