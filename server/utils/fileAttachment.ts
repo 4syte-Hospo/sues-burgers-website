@@ -1,4 +1,5 @@
 import type { EmailAttachment } from "../email/types.js";
+import type { UploadedFile } from "../types/uploadedFile.js";
 
 const MIME_BY_EXTENSION: Record<string, string> = {
   pdf: "application/pdf",
@@ -11,7 +12,7 @@ const MIME_BY_EXTENSION: Record<string, string> = {
   webp: "image/webp",
 };
 
-export function toEmailAttachment(file: Express.Multer.File): EmailAttachment {
+export function toEmailAttachment(file: UploadedFile): EmailAttachment {
   const extension = file.originalname.split(".").pop()?.toLowerCase() ?? "";
   const contentType =
     file.mimetype || MIME_BY_EXTENSION[extension] || "application/octet-stream";

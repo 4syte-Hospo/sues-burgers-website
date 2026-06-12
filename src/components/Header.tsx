@@ -49,50 +49,52 @@ export function Header() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <header className="header">
-      <div className="header__bar">
-        <div className="header__inner container">
-          <Link to="/" className="header__logo" aria-label="Sue's Burgers home">
-            <img src={LOGO_SRC} alt="Sue's" width={160} height={64} />
-          </Link>
+    <>
+      <header className="header">
+        <div className="header__bar">
+          <div className="header__inner container">
+            <Link to="/" className="header__logo" aria-label="Sue's Burgers home">
+              <img src={LOGO_SRC} alt="Sue's" width={160} height={64} />
+            </Link>
 
-          <div className="header__actions">
-            <nav className="header__nav" aria-label="Main navigation">
-              <ul className="header__links">
-                {navLinks.map((link) => (
-                  <li key={link.href}>
-                    <HeaderNavItem
-                      href={link.href}
-                      label={link.label}
-                      linkClassName="header__link"
-                    />
-                  </li>
-                ))}
-              </ul>
-            </nav>
+            <div className="header__actions">
+              <nav className="header__nav" aria-label="Main navigation">
+                <ul className="header__links">
+                  {navLinks.map((link) => (
+                    <li key={link.href}>
+                      <HeaderNavItem
+                        href={link.href}
+                        label={link.label}
+                        linkClassName="header__link"
+                      />
+                    </li>
+                  ))}
+                </ul>
+              </nav>
 
-            <a
-              href={ORDER_URL}
-              className="btn btn--primary header__order"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Order Now
-            </a>
+              <a
+                href={ORDER_URL}
+                className="btn btn--primary header__order"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Order Now
+              </a>
 
-            <button
-              type="button"
-              className={`header__toggle ${menuOpen ? "header__toggle--open" : ""}`}
-              aria-expanded={menuOpen}
-              aria-label={menuOpen ? "Close menu" : "Open menu"}
-              onClick={() => setMenuOpen((open) => !open)}
-            >
-              <span />
-              <span />
-            </button>
+              <button
+                type="button"
+                className={`header__toggle ${menuOpen ? "header__toggle--open" : ""}`}
+                aria-expanded={menuOpen}
+                aria-label={menuOpen ? "Close menu" : "Open menu"}
+                onClick={() => setMenuOpen((open) => !open)}
+              >
+                <span />
+                <span />
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </header>
 
       <nav
         className={`header__drawer ${menuOpen ? "header__drawer--open" : ""}`}
@@ -112,6 +114,6 @@ export function Header() {
           ))}
         </ul>
       </nav>
-    </header>
+    </>
   );
 }

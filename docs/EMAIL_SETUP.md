@@ -51,36 +51,62 @@ If sending from your own domain (`@suesburgers.com.au`):
 
 Without verified DNS, messages may land in spam or fail sender checks.
 
-## Production deployment
+## Netlify production (recommended)
 
-The production server serves the built SPA (`dist/`) and API routes on one port.
+Forms run as **Netlify Functions** in `netlify/functions/`, sharing the same Postmark email layer as local dev.
 
 ```bash
-npm run build
-NODE_ENV=production npm start
+npm run build   # builds SPA to dist/ — Netlify also bundles functions automatically
 ```
 
-### Checklist
+### Netlify environment variables
 
-- [ ] All four Postmark env vars set on the host
+In **Site configuration → Environment variables → Production**, add:
+
+| Variable | Value |
+|----------|--------|
+| `POSTMARK_API_TOKEN` | From Postmark server settings |
+| `POSTMARK_FROM_EMAIL` | e.g. `noreply@suesburgers.com.au` |
+| `POSTMARK_CONTACT_TO_EMAIL` | Inbox for contact form |
+| `POSTMARK_CAREERS_TO_EMAIL` | Inbox for careers form |
+
+Deploy previews keep `VITE_STAGING=true` (forms show a staging message). **Production** on `main` uses live forms.
+
+### Production checklist
+
+- [ ] All four Postmark env vars set in Netlify **Production** scope
 - [ ] `POSTMARK_FROM_EMAIL` verified in Postmark
-- [ ] Domain DKIM + Return-Path DNS records live
-- [ ] `NODE_ENV=production`
-- [ ] HTTPS enabled (forms POST to `/api/*` on same origin)
-- [ ] Test contact form → arrives at contact inbox with fields, timestamp, IP, user agent
-- [ ] Test careers form → arrives with resume attachment (PDF/DOC/DOCX, max 5 MB)
-- [ ] `GET /api/health` returns `"postmarkConfigured": true`
+- [ ] Domain DKIM + Return-Path DNS records live in GoDaddy
+- [ ] Custom domain `suesburgers.com.au` connected in Netlify
+- [ ] `GET https://suesburgers.com.au/api/health` returns `"postmarkConfigured": true`
+- [ ] Test contact form on live domain
+- [ ] Test careers form with resume attachment on live domain
 
-### Hosting note
+Health check: `GET /api/health`
 
-Pure static hosts (upload-only `dist/` with SPA redirects) **cannot** run the API. Deploy the Node server (`npm start`) on a platform that runs Node (Railway, Render, Fly.io, VPS, etc.), or add serverless functions that import the same email service layer.
+## Local development (Express)
+
+For local dev, the Express API in `server/` still runs alongside Vite:
+
+```bash
+npm run dev
+```
+
+- Vite: `http://localhost:5173`
+- API server: `http://localhost:3001`
+- Vite proxies `/api/*` to the API server
+
+## Alternative: Node server hosting
+
+You can also deploy with `npm run build && npm start` on Railway, Render, Fly.io, or a VPS instead of Netlify Functions.
 
 ## Architecture
 
 ```
 Forms (React)
   → POST /api/contact | /api/careers
-  → server/routes/*
+  → Netlify Functions (production) or Express routes (local dev)
+  → server/handlers/*
   → server/email/emailService.ts
   → MockEmailProvider | PostmarkEmailProvider
 ```

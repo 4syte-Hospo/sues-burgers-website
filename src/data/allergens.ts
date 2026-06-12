@@ -91,13 +91,13 @@ export const allergenSections: AllergenSection[] = [
   section("sides", "Sides", [
     ["Fries", "O O X O O O O O O"],
     ["Onion Rings", "X O X X O X O O O"],
-    ["Not Chilli Mozza Sticks", "X X X O O X O O O"],
+    ["Not Chilli Mozza Sticks", "X X X O O X X O O"],
     ["Chilli Mozza Sticks", "X X X O O X X O O"],
   ]),
   section("loaded-fries", "Loaded Fries", [
     ["Cheese & Bacon Fries", "X X X X O X X O O"],
     ["Burger Fries", "X X X X O X X O O"],
-    ["Maple Loaded Fries", "O X X X O O X X O"],
+    ["Maple Loaded Fries", "O X X X O X X X O"],
   ]),
   section("kids", "Kids", [
     ["Cheeseburger & Fries", "X X X X O O O O O"],
