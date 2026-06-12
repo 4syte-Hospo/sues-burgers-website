@@ -1,0 +1,56 @@
+.faq-answer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.faq-answer__paragraph {
+  font-size: clamp(0.92rem, 2vw, 1rem);
+  color: var(--color-muted);
+  line-height: 1.65;
+}
+
+.faq-answer__heading {
+  font-family: var(--font-display);
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-coral);
+  margin-top: 0.25rem;
+}
+
+.faq-answer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-left: 1.15rem;
+  list-style: disc;
+}
+
+.faq-answer__list li {
+  font-size: clamp(0.92rem, 2vw, 1rem);
+  color: var(--color-muted);
+  line-height: 1.55;
+}
+
+.faq-answer__link {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-coral);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  transition: color var(--transition-fast);
+}
+
+.faq-answer__link:hover {
+  color: var(--color-coral-dark);
+}
+
+.faq-answer__allergen-note {
+  margin-top: 0.35rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-cream-dark);
+}

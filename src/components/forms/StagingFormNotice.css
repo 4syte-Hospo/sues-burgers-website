@@ -1,0 +1,9 @@
+.staging-form-notice {
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+  background: #f4f8fc;
+  border: 1px solid rgba(26, 26, 26, 0.12);
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  line-height: 1.55;
+}

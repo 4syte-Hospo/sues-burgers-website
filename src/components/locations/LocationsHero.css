@@ -1,0 +1,42 @@
+.locations-hero {
+  background: var(--color-cream);
+}
+
+.locations-hero__inner {
+  display: grid;
+  gap: var(--space-xl);
+  align-items: center;
+  padding-block: clamp(2rem, 5vw, 3.5rem);
+}
+
+.locations-hero__eyebrow {
+  font-family: var(--font-script);
+  font-size: clamp(1.35rem, 3.5vw, 1.85rem);
+  color: var(--color-coral);
+  margin-bottom: 0.25rem;
+}
+
+.locations-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 10vw, 5.5rem);
+  line-height: 0.92;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-coral);
+  margin-bottom: var(--space-sm);
+}
+
+.locations-hero__rule {
+  width: clamp(3.5rem, 10vw, 5rem);
+  height: 3px;
+  background: var(--color-coral);
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-md);
+}
+
+.locations-hero__body {
+  font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+  color: var(--color-muted);
+  line-height: 1.65;
+  max-width: 32rem;
+}

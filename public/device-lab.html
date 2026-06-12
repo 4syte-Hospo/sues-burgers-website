@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sue's — Device preview lab</title>
+    <style>
+      :root {
+        --bg: #1a1a1a;
+        --panel: #252525;
+        --border: #3a3a3a;
+        --text: #f5f5f5;
+        --muted: #9a9a9a;
+        --accent: #e85d4f;
+        --frame-bg: #111;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: system-ui, -apple-system, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        display: grid;
+        grid-template-columns: 280px 1fr;
+      }
+
+      .sidebar {
+        border-right: 1px solid var(--border);
+        padding: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        overflow-y: auto;
+        max-height: 100vh;
+        position: sticky;
+        top: 0;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
+      .subtitle {
+        margin: 0.35rem 0 0;
+        font-size: 0.8rem;
+        color: var(--muted);
+        line-height: 1.45;
+      }
+
+      label {
+        display: block;
+        font-size: 0.72rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--muted);
+        margin-bottom: 0.4rem;
+      }
+
+      .field {
+        display: flex;
+        flex-direction: column;
+      }
+
+      input,
+      select,
+      button {
+        font: inherit;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 0.55rem 0.65rem;
+        border: 1px solid var(--border);
+        border-radius: 0.45rem;
+        background: var(--panel);
+        color: var(--text);
+      }
+
+      .row-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+      }
+
+      .presets {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+      }
+
+      .preset-btn {
+        text-align: left;
+        padding: 0.6rem 0.7rem;
+        border: 1px solid var(--border);
+        border-radius: 0.45rem;
+        background: var(--panel);
+        color: var(--text);
+        cursor: pointer;
+        transition: border-color 0.15s, background 0.15s;
+      }
+
+      .preset-btn:hover {
+        border-color: var(--accent);
+      }
+
+      .preset-btn[aria-pressed="true"] {
+        border-color: var(--accent);
+        background: rgba(232, 93, 79, 0.12);
+      }
+
+      .preset-btn strong {
+        display: block;
+        font-size: 0.88rem;
+        margin-bottom: 0.15rem;
+      }
+
+      .preset-btn span {
+        font-size: 0.75rem;
+        color: var(--muted);
+      }
+
+      .actions {
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+      }
+
+      .btn {
+        padding: 0.55rem 0.75rem;
+        border-radius: 0.45rem;
+        border: 1px solid var(--border);
+        background: var(--panel);
+        color: var(--text);
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+        font-size: 0.85rem;
+      }
+
+      .btn:hover {
+        border-color: var(--accent);
+      }
+
+      .btn--primary {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #fff;
+        font-weight: 600;
+      }
+
+      .stage-wrap {
+        padding: 1.5rem;
+        overflow: auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .stage-meta {
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      .device-shell {
+        background: var(--frame-bg);
+        border: 2px solid var(--border);
+        border-radius: 1.25rem;
+        padding: 0.75rem;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+        transition: width 0.2s ease, height 0.2s ease;
+      }
+
+      .device-shell--desktop {
+        border-radius: 0.65rem;
+        padding: 0.5rem;
+      }
+
+      .device-notch {
+        height: 0.35rem;
+        width: 28%;
+        margin: 0 auto 0.5rem;
+        background: #2a2a2a;
+        border-radius: 999px;
+      }
+
+      .device-shell--desktop .device-notch {
+        display: none;
+      }
+
+      iframe {
+        display: block;
+        border: 0;
+        background: #fff;
+        border-radius: 0.85rem;
+      }
+
+      .device-shell--desktop iframe {
+        border-radius: 0.35rem;
+      }
+
+      .hint {
+        max-width: 36rem;
+        text-align: center;
+        font-size: 0.78rem;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      @media (max-width: 900px) {
+        body {
+          grid-template-columns: 1fr;
+        }
+
+        .sidebar {
+          max-height: none;
+          position: static;
+          border-right: none;
+          border-bottom: 1px solid var(--border);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div>
+        <h1>Device preview lab</h1>
+        <p class="subtitle">
+          Browse Sue's at common phone &amp; tablet sizes. Click inside the preview to interact — scroll, tap links, open the menu.
+        </p>
+      </div>
+
+      <div class="field">
+        <label for="path">Page path</label>
+        <input id="path" type="text" value="/" spellcheck="false" />
+      </div>
+
+      <div>
+        <label>Presets</label>
+        <div class="presets" id="presets"></div>
+      </div>
+
+      <div class="field">
+        <label>Custom size</label>
+        <div class="row-2">
+          <input id="width" type="number" min="280" max="1600" value="390" />
+          <input id="height" type="number" min="400" max="2000" value="844" />
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="button" class="btn btn--primary" id="apply">Apply size &amp; reload</button>
+        <button type="button" class="btn" id="rotate">Rotate (swap W/H)</button>
+        <a class="btn" id="open-full" href="/" target="_blank" rel="noopener">Open this page full size</a>
+      </div>
+    </aside>
+
+    <main class="stage-wrap">
+      <p class="stage-meta" id="meta">390 × 844 · iPhone 14</p>
+      <div class="device-shell" id="shell">
+        <div class="device-notch" aria-hidden="true"></div>
+        <iframe id="preview" title="Site preview" src="/"></iframe>
+      </div>
+      <p class="hint">
+        Tip: run <code>npm run dev</code> first. If you added new images to <code>public/</code>, restart the dev server so Vite picks them up.
+        Use your browser’s own DevTools (F12 → device toolbar) for pixel-perfect inspection.
+      </p>
+    </main>
+
+    <script>
+      const PRESETS = [
+        { id: "iphone-se", name: "iPhone SE", w: 375, h: 667, phone: true },
+        { id: "iphone-14", name: "iPhone 14", w: 390, h: 844, phone: true },
+        { id: "iphone-14-max", name: "iPhone 14 Pro Max", w: 430, h: 932, phone: true },
+        { id: "galaxy-s20", name: "Samsung Galaxy S20", w: 360, h: 800, phone: true },
+        { id: "ipad-mini", name: "iPad Mini", w: 768, h: 1024, phone: false },
+        { id: "ipad-air", name: "iPad Air", w: 820, h: 1180, phone: false },
+        { id: "ipad-pro-11", name: 'iPad Pro 11"', w: 834, h: 1194, phone: false },
+        { id: "ipad-landscape", name: "iPad landscape", w: 1024, h: 768, phone: false },
+        { id: "small-laptop", name: "Small laptop", w: 1280, h: 800, phone: false, desktop: true },
+      ];
+
+      const presetsEl = document.getElementById("presets");
+      const iframe = document.getElementById("preview");
+      const shell = document.getElementById("shell");
+      const meta = document.getElementById("meta");
+      const pathInput = document.getElementById("path");
+      const widthInput = document.getElementById("width");
+      const heightInput = document.getElementById("height");
+      const openFull = document.getElementById("open-full");
+
+      let activePreset = "iphone-14";
+
+      function pageUrl() {
+        const path = pathInput.value.trim() || "/";
+        return path.startsWith("/") ? path : `/${path}`;
+      }
+
+      function setSize(w, h, label, options = {}) {
+        widthInput.value = w;
+        heightInput.value = h;
+        iframe.width = w;
+        iframe.height = h;
+        shell.style.width = `${w + (options.desktop ? 16 : 24)}px`;
+        meta.textContent = `${w} × ${h} · ${label}`;
+        shell.classList.toggle("device-shell--desktop", Boolean(options.desktop));
+        shell.querySelector(".device-notch").style.display = options.phone === false || options.desktop ? "none" : "block";
+        openFull.href = pageUrl();
+      }
+
+      function loadPreview() {
+        iframe.src = pageUrl();
+        openFull.href = pageUrl();
+      }
+
+      function selectPreset(preset) {
+        activePreset = preset.id;
+        document.querySelectorAll(".preset-btn").forEach((btn) => {
+          btn.setAttribute("aria-pressed", btn.dataset.id === preset.id ? "true" : "false");
+        });
+        setSize(preset.w, preset.h, preset.name, {
+          phone: preset.phone,
+          desktop: preset.desktop,
+        });
+        loadPreview();
+      }
+
+      PRESETS.forEach((preset) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "preset-btn";
+        btn.dataset.id = preset.id;
+        btn.setAttribute("aria-pressed", preset.id === activePreset ? "true" : "false");
+        btn.innerHTML = `<strong>${preset.name}</strong><span>${preset.w} × ${preset.h}</span>`;
+        btn.addEventListener("click", () => selectPreset(preset));
+        presetsEl.appendChild(btn);
+      });
+
+      document.getElementById("apply").addEventListener("click", () => {
+        const w = Number(widthInput.value);
+        const h = Number(heightInput.value);
+        setSize(w, h, "Custom", { phone: w < 600, desktop: w >= 1100 });
+        loadPreview();
+      });
+
+      document.getElementById("rotate").addEventListener("click", () => {
+        const w = Number(widthInput.value);
+        const h = Number(heightInput.value);
+        setSize(h, w, "Custom (rotated)", { phone: h < 600, desktop: h >= 1100 });
+        loadPreview();
+      });
+
+      pathInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") loadPreview();
+      });
+
+      const initial = PRESETS.find((p) => p.id === activePreset);
+      selectPreset(initial);
+    </script>
+  </body>
+</html>

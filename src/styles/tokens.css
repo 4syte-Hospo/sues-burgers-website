@@ -1,0 +1,94 @@
+:root {
+  --color-coral: #e85d4f;
+  --color-coral-dark: #d14a3d;
+  --color-page: #ffffff;
+  --color-cream: #faf7f4;
+  --color-cream-dark: #f0ebe6;
+  --color-hero-bg: #eef4f8;
+  --color-black: #1a1a1a;
+  --color-white: #ffffff;
+  --color-cyan: #5ec8f0;
+  --color-cyan-dark: #3eb5e3;
+  --color-muted: #5c5c5c;
+
+  --font-display: "Bebas Neue", "Arial Narrow", sans-serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --font-script: "Pacifico", cursive;
+
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-hero: 0.75rem;
+  --radius-pill: 999px;
+
+  --header-height: 3.75rem;
+  --header-bar-height: 5.25rem;
+  --header-bar-padding-top: 0.85rem;
+  --header-bar-padding-bottom: 1.35rem;
+  /* One checker square — strip is always exactly 2 rows tall */
+  --header-checker-size: 1.35rem;
+  --header-total-height: calc(
+    var(--header-bar-height) + var(--header-bar-padding-bottom) +
+      2 * var(--header-checker-size)
+  );
+  --menu-cat-nav-height: calc(2 * var(--space-md) + 2.25rem + 1px);
+  --menu-scroll-offset: calc(var(--header-total-height) + var(--menu-cat-nav-height));
+  --container-max: 76rem;
+  /* Display cap — source PNGs are 2000px-wide web variants */
+  --hero-slide-max: 1024px;
+  --hero-slide-size: 96%;
+  --hero-slide-gap: 0.5rem;
+  --hero-slide-radius: 1.25rem;
+  --tap-min: 2.75rem;
+
+  /* Sue's Love TikTok carousel */
+  --tiktok-card-width: min(84vw, 20.5rem);
+  --tiktok-card-height: clamp(34rem, 88vw, 41rem);
+  --tiktok-card-gap: 1rem;
+  --tiktok-card-radius: 1rem;
+  --tiktok-carousel-gutter: 1rem;
+
+  --shadow-card: 0 4px 20px rgba(26, 26, 26, 0.06);
+  --shadow-hero: 0 4px 24px rgba(26, 26, 26, 0.07);
+  --shadow-button: 0 2px 8px rgba(232, 93, 79, 0.25);
+
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --tiktok-card-width: 21.5rem;
+    --tiktok-card-height: 41rem;
+    --tiktok-card-gap: 1.25rem;
+    --tiktok-card-radius: 1rem;
+    /* iPad / tablet — desktop peek carousel, slightly larger than laptop */
+    --hero-slide-size: 78%;
+    --hero-slide-gap: 2rem;
+    --hero-slide-radius: 1.625rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --hero-slide-size: 66%;
+    --hero-slide-gap: 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --tiktok-card-width: 22.5rem;
+    --tiktok-card-height: 42rem;
+    --tiktok-card-gap: 1.35rem;
+    --hero-slide-size: 64%;
+  }
+}

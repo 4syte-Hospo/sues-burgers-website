@@ -1,0 +1,51 @@
+.contact-intro {
+  background: var(--color-coral);
+  color: var(--color-white);
+}
+
+.contact-intro__inner {
+  padding-block: clamp(2.5rem, 6vw, 3.5rem);
+  text-align: center;
+  max-width: 42rem;
+}
+
+.contact-intro__headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 7vw, 3.5rem);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 0.95;
+  margin-bottom: var(--space-md);
+}
+
+.contact-intro__copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.contact-intro__body,
+.contact-intro__note {
+  font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+  line-height: 1.65;
+  opacity: 0.96;
+}
+
+.contact-intro__note {
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: clamp(0.9rem, 2.2vw, 1rem);
+  margin-top: var(--space-sm);
+}
+
+.contact-intro__link {
+  color: var(--color-white);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  transition: opacity var(--transition-fast);
+}
+
+.contact-intro__link:hover {
+  opacity: 0.85;
+}

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Dev tooling — not for indexing
+Disallow: /device-lab.html
+
+Sitemap: https://suesburgers.com.au/sitemap.xml

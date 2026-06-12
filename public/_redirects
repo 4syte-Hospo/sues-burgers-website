@@ -1,0 +1,19 @@
+# Legacy WordPress URLs — permanent 301 redirects
+/locations-2   /locations 301
+/locations-2/  /locations 301
+/contact-us    /contact   301
+/contact-us/   /contact   301
+/join-our-team /careers   301
+/join-our-team/ /careers  301
+
+# Optional — old /menu path to preserved /our-menu
+/menu          /our-menu  301
+/menu/         /our-menu  301
+
+# Normalise trailing slashes on preserved legal URLs
+/suesprivacypolicy/              /suesprivacypolicy              301
+/sues-vip-terms-and-conditions/  /sues-vip-terms-and-conditions  301
+/suesviptsandcs/                 /suesviptsandcs                 301
+
+# SPA fallback
+/*    /index.html   200

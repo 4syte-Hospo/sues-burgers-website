@@ -1,0 +1,98 @@
+.privacy-page {
+  background: var(--color-cream);
+}
+
+.privacy-page__inner {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.75rem, 4vw, 2.5rem);
+  padding-bottom: clamp(2rem, 5vw, 3.5rem);
+  max-width: 48rem;
+}
+
+.privacy-page__header {
+  max-width: 42rem;
+}
+
+.privacy-page__eyebrow {
+  font-family: var(--font-script);
+  font-size: clamp(1.25rem, 3vw, 1.65rem);
+  color: var(--color-coral);
+  margin-bottom: 0.25rem;
+}
+
+.privacy-page__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 7vw, 3.5rem);
+  line-height: 0.95;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-coral);
+  margin-bottom: var(--space-sm);
+}
+
+.privacy-page__rule {
+  width: clamp(3.5rem, 10vw, 5rem);
+  height: 3px;
+  background: var(--color-coral);
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-md);
+}
+
+.privacy-page__intro {
+  font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+  color: var(--color-muted);
+  line-height: 1.65;
+}
+
+.privacy-page__updated {
+  margin-top: var(--space-sm);
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.privacy-page__sections {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 3.5vw, 2rem);
+}
+
+.privacy-page__section {
+  padding-top: clamp(0.5rem, 2vw, 0.75rem);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.privacy-page__section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-black);
+  margin-bottom: 0.75rem;
+}
+
+.privacy-page__paragraph {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-black);
+  margin-bottom: 0.75rem;
+}
+
+.privacy-page__paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-page__list {
+  margin: 0.5rem 0 0.75rem;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.privacy-page__list li {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-black);
+  list-style: disc;
+}

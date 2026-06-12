@@ -1,0 +1,11 @@
+.locations-list {
+  background: var(--color-cream);
+  padding-top: 0;
+}
+
+.locations-list__inner {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, 3vw, 2rem);
+  padding-bottom: clamp(2rem, 5vw, 3.5rem);
+}

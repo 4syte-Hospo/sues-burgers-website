@@ -1,0 +1,53 @@
+.allergen-key {
+  background: var(--color-white);
+  border: 2px solid var(--color-cream-dark);
+  border-radius: var(--radius-lg);
+  padding: clamp(1rem, 3vw, 1.35rem);
+}
+
+.allergen-key__title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-coral);
+  margin-bottom: 0.75rem;
+}
+
+.allergen-key__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+}
+
+.allergen-key__item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+.allergen-key__symbol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+.allergen-key__symbol--contains {
+  background: var(--color-coral);
+  color: var(--color-white);
+}
+
+.allergen-key__symbol--traces {
+  background: var(--color-cream-dark);
+  color: var(--color-black);
+  border: 1px solid #d8d0c8;
+}
