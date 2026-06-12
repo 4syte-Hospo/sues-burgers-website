@@ -36,8 +36,7 @@
   /* One checker square — strip is always exactly 2 rows tall */
   --header-checker-size: 1.35rem;
   --header-total-height: calc(
-    var(--header-bar-height) + var(--header-bar-padding-bottom) +
-      2 * var(--header-checker-size)
+    var(--header-bar-height) + var(--header-bar-padding-bottom)
   );
   --menu-cat-nav-height: calc(2 * var(--space-md) + 2.25rem + 1px);
   --menu-scroll-offset: calc(var(--header-total-height) + var(--menu-cat-nav-height));

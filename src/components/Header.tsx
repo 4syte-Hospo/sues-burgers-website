@@ -94,8 +94,6 @@ export function Header() {
         </div>
       </div>
 
-      <div className="header__checker" aria-hidden="true" />
-
       <nav
         className={`header__drawer ${menuOpen ? "header__drawer--open" : ""}`}
         aria-label="Mobile navigation"
