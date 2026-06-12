@@ -93,6 +93,36 @@
   z-index: 2;
 }
 
+@media (max-width: 767px) {
+  .about__collage {
+    width: 100%;
+    min-height: clamp(17rem, 54vw, 22rem);
+    aspect-ratio: 4 / 5;
+  }
+
+  .about__photo {
+    border-width: 2px;
+    border-radius: 0.65rem;
+    box-shadow:
+      2px 4px 0 rgba(26, 26, 26, 0.06),
+      0 8px 18px rgba(26, 26, 26, 0.14);
+  }
+
+  .about__photo--back {
+    width: 76%;
+    top: 1%;
+    left: 2%;
+    transform: rotate(-6deg);
+  }
+
+  .about__photo--front {
+    width: 76%;
+    bottom: 1%;
+    right: 2%;
+    transform: rotate(5deg);
+  }
+}
+
 @media (min-width: 768px) {
   .about {
     padding-block: clamp(3.5rem, 7vw, 6.5rem);
