@@ -50,8 +50,24 @@ export function searchAllergenItems(query: string, limit = 8): AllergenSearchRes
   return scored.slice(0, limit).map(({ item }) => item);
 }
 
+/** Resolves the visible allergen row/card — mobile and desktop share the same logical id. */
+export function getAllergenItemElement(id: string): HTMLElement | null {
+  const escaped = CSS.escape(id);
+  const candidates = document.querySelectorAll<HTMLElement>(
+    `[data-allergen-item-id="${escaped}"]`,
+  );
+
+  for (const candidate of candidates) {
+    if (candidate.getClientRects().length > 0) {
+      return candidate;
+    }
+  }
+
+  return document.getElementById(id);
+}
+
 export function scrollToAllergenItem(id: string): boolean {
-  const target = document.getElementById(id);
+  const target = getAllergenItemElement(id);
   if (!target) return false;
 
   target.scrollIntoView({ behavior: "smooth", block: "start" });

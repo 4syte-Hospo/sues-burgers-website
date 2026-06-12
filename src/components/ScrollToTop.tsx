@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { scrollToAllergenItem } from "../utils/allergenSearch";
 
 export function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -7,6 +8,14 @@ export function ScrollToTop() {
   useEffect(() => {
     if (hash) {
       const id = hash.slice(1);
+
+      if (id.startsWith("allergen-item-")) {
+        requestAnimationFrame(() => {
+          scrollToAllergenItem(id);
+        });
+        return;
+      }
+
       requestAnimationFrame(() => {
         const target = document.getElementById(id);
         if (target) {

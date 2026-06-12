@@ -34,7 +34,11 @@ export function AllergenTable({ section }: AllergenTableProps) {
           const itemId = getAllergenItemId(section.id, row.name);
 
           return (
-          <article key={row.name} id={itemId} className="allergen-mobile-card allergen-item-target">
+          <article
+            key={row.name}
+            data-allergen-item-id={itemId}
+            className="allergen-mobile-card allergen-item-target"
+          >
             <h3 className="allergen-mobile-card__name">{row.name}</h3>
             <dl className="allergen-mobile-card__grid">
               {allergenColumns.map((column) => (
@@ -71,7 +75,11 @@ export function AllergenTable({ section }: AllergenTableProps) {
               const itemId = getAllergenItemId(section.id, row.name);
 
               return (
-              <tr key={row.name} id={itemId} className="allergen-item-target">
+              <tr
+                key={row.name}
+                data-allergen-item-id={itemId}
+                className="allergen-item-target"
+              >
                 <th scope="row" className="allergen-table__item">
                   {row.name}
                 </th>
