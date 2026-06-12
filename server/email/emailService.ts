@@ -1,31 +1,29 @@
-import { emailEnv, isPostmarkConfigured } from "../config/env.js";
+import { getEmailEnv, isPostmarkConfigured } from "../config/env.js";
 import { MockEmailProvider } from "./MockEmailProvider.js";
 import { PostmarkEmailProvider } from "./PostmarkEmailProvider.js";
 import type { EmailProvider, SendEmailPayload } from "./types.js";
 
-let provider: EmailProvider | null = null;
-
 export function getEmailProvider(): EmailProvider {
-  if (provider) return provider;
-
   if (isPostmarkConfigured()) {
-    provider = new PostmarkEmailProvider(
-      emailEnv.postmarkApiToken!,
-      emailEnv.fromEmail!,
-    );
-    console.info("[email] Using Postmark provider");
-    return provider;
+    const env = getEmailEnv();
+    return new PostmarkEmailProvider(env.postmarkApiToken!, env.fromEmail!);
   }
 
-  provider = new MockEmailProvider();
-  console.warn(
-    "[email] Postmark credentials missing — using mock provider (emails logged to console)",
-  );
-  return provider;
+  return new MockEmailProvider();
 }
 
 export async function sendEmail(payload: SendEmailPayload): Promise<void> {
-  await getEmailProvider().send(payload);
+  const provider = getEmailProvider();
+
+  if (provider.name === "mock") {
+    console.warn(
+      "[email] Postmark credentials missing — using mock provider (emails logged to console)",
+    );
+  } else {
+    console.info("[email] Using Postmark provider");
+  }
+
+  await provider.send(payload);
 }
 
 export function getEmailProviderName(): string {

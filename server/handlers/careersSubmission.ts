@@ -1,4 +1,5 @@
-import { emailEnv, isPostmarkConfigured } from "../config/env.js";
+import { getEmailEnv, isPostmarkConfigured } from "../config/env.js";
+import { getEmailDeliveryErrorMessage } from "../utils/postmarkError.js";
 import { sendEmail } from "../email/emailService.js";
 import { buildCareersEmail } from "../email/templates/careers.js";
 import type { UploadedFile } from "../types/uploadedFile.js";
@@ -59,6 +60,8 @@ export async function handleCareersSubmission(
     return { ok: false, status: 400, body: { error: "Please upload a PDF, DOC, or DOCX file." } };
   }
 
+  const emailEnv = getEmailEnv();
+
   if (isPostmarkConfigured() && !emailEnv.careersToEmail) {
     return {
       ok: false,
@@ -98,7 +101,7 @@ export async function handleCareersSubmission(
     return {
       ok: false,
       status: 500,
-      body: { error: "Something went wrong. Please try again in a moment." },
+      body: { error: getEmailDeliveryErrorMessage(error) },
     };
   }
 

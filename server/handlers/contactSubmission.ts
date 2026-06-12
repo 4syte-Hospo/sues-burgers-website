@@ -1,7 +1,8 @@
-import { emailEnv, isPostmarkConfigured } from "../config/env.js";
+import { getEmailEnv, isPostmarkConfigured } from "../config/env.js";
 import { sendEmail } from "../email/emailService.js";
 import { buildContactEmail } from "../email/templates/contact.js";
 import type { UploadedFile } from "../types/uploadedFile.js";
+import { getEmailDeliveryErrorMessage } from "../utils/postmarkError.js";
 import { toEmailAttachment } from "../utils/fileAttachment.js";
 import { getSubmissionTimestamp } from "../utils/requestMeta.js";
 
@@ -67,6 +68,8 @@ export async function handleContactSubmission(
     }
   }
 
+  const emailEnv = getEmailEnv();
+
   if (isPostmarkConfigured() && !emailEnv.contactToEmail) {
     return {
       ok: false,
@@ -105,7 +108,7 @@ export async function handleContactSubmission(
     return {
       ok: false,
       status: 500,
-      body: { error: "Something went wrong. Please try again in a moment." },
+      body: { error: getEmailDeliveryErrorMessage(error) },
     };
   }
 
