@@ -66,8 +66,10 @@
 }
 
 @media (max-width: 767px) {
+  .hero__viewport,
   .hero__track {
-    touch-action: pan-x pinch-zoom;
+    /* Allow vertical page scroll; Embla still handles deliberate horizontal swipes */
+    touch-action: pan-y pinch-zoom;
   }
 
   .hero__slide .hero-slide {
