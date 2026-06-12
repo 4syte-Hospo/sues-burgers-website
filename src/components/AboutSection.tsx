@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { aboutContent } from "../data/aboutContent";
 import "./AboutSection.css";
 
@@ -15,9 +16,9 @@ export function AboutSection() {
               {paragraph}
             </p>
           ))}
-          <a href={aboutContent.cta.href} className="btn btn--outline about__cta">
+          <Link to={aboutContent.cta.href} className="btn btn--outline about__cta">
             {aboutContent.cta.label}
-          </a>
+          </Link>
         </div>
 
         <div className="about__collage">

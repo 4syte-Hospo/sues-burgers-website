@@ -6,7 +6,7 @@ export const aboutContent = {
     "You've seen us online — now taste why. Sue's Burgers & Shakes is home to some of Brisbane's favourite smash burgers, Raising Dave's fried chicken boxes, Dirty Sodas and loaded fries. Everything is made fresh, served fast, and designed to live up to the hype.",
     "From our retro-inspired roots to our growing Brisbane locations, we're obsessed with great food, good vibes and creating the kind of meals people can't stop talking about.",
   ],
-  cta: { label: "View Menu", href: "#menu" },
+  cta: { label: "View Menu", href: "/our-menu" },
   photos: [
     {
       src: "/images/about/raising-daves-box.png",
