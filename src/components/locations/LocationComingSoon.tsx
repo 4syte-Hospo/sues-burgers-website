@@ -4,10 +4,13 @@ import "./LocationComingSoon.css";
 export function LocationComingSoon() {
   return (
     <article className="location-soon" aria-labelledby="location-soon-title">
-      <div className="location-soon__media" aria-hidden="true">
-        <div className="location-soon__pattern" />
-        <div className="location-soon__mark">?</div>
-        <p className="location-soon__mark-label">Coming Soon</p>
+      <div className="location-soon__media">
+        <img
+          src={comingSoonLocation.image}
+          alt={comingSoonLocation.imageAlt}
+          className="location-soon__image"
+          loading="lazy"
+        />
       </div>
 
       <div className="location-soon__body">

@@ -74,5 +74,8 @@ export const comingSoonLocation = {
   title: "Sue's #3",
   subtitle: "Coming Soon",
   teaser: "Our next Sue's is on the way. Stay tuned.",
+  image: "/images/locations/location-three.png",
+  imageAlt:
+    "Sue's Burgers & Shakes storefront at night with red neon signage reflected on wet pavement",
   followUrl: "https://www.instagram.com/suesburgersandshakes",
 } as const;
