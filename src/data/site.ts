@@ -6,8 +6,8 @@ export const LOGO_SRC = "/images/logo.png";
 /** Placeholder for menu items without a product photo. */
 export const MENU_ITEM_PLACEHOLDER_SRC = "/images/menu-placeholder.png";
 
-/** White cursive “Sue's” for Sue's Love section title */
-export const SUE_SCRIPT_LOGO_SRC = "/images/sue-script-logo.png";
+/** White cursive “Sue's” — Sue's Love TikTok section only (header/footer use LOGO_SRC). */
+export const SUE_SCRIPT_LOGO_SRC = "/images/sue-script-logo-white.png";
 
 export const navLinks = [
   { label: "Menu", href: "/our-menu" },

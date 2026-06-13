@@ -40,7 +40,6 @@
   display: block;
   height: clamp(4.75rem, 16vw, 10.5rem);
   width: auto;
-  mix-blend-mode: lighten;
 }
 
 .tiktok-section__title-display {
