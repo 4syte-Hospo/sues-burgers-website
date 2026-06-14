@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { LOGO_SRC, navLinks, ORDER_URL } from "../data/site";
+import { trackOrderNowClick } from "../utils/analytics";
 import "./Header.css";
 
 function HeaderNavItem({
@@ -77,6 +78,7 @@ export function Header() {
                 className="btn btn--primary header__order"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackOrderNowClick("header")}
               >
                 Order Now
               </a>

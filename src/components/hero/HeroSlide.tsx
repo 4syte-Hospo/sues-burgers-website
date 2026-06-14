@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
 import type { ButtonPosition, HeroSlide as HeroSlideType } from "../../types/heroSlide";
+import { trackOrderNowClick } from "../../utils/analytics";
 import { getHeroImages } from "../../utils/heroImages";
 import "./HeroSlider.css";
 
@@ -65,6 +66,7 @@ export function HeroSlide({ slide, isFirst = false, shouldLoad = true }: Props) 
         className="btn btn--primary btn--compact hero-slide__cta"
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => trackOrderNowClick("hero_carousel")}
       >
         {slide.buttonText}
       </a>

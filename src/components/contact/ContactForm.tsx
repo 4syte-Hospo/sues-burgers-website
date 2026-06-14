@@ -8,6 +8,7 @@ import type { ContactFormErrors, ContactMessage } from "../../types/contact";
 import { resolveFormSubmissionError } from "../../api/formSubmission";
 import { isStagingDeploy, stagingFormsUnavailableMessage } from "../../config/staging";
 import { StagingFormNotice } from "../forms/StagingFormNotice";
+import { trackContactSubmit } from "../../utils/analytics";
 import {
   emptyContactMessage,
   submitContactMessage,
@@ -59,6 +60,7 @@ export function ContactForm() {
 
     try {
       await submitContactMessage(message);
+      trackContactSubmit();
       setIsSubmitted(true);
       setMessage(emptyContactMessage());
       if (attachmentInputRef.current) {

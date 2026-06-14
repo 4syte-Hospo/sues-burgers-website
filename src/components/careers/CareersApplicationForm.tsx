@@ -9,6 +9,7 @@ import type { CareersApplication, CareersFormErrors } from "../../types/careers"
 import { resolveFormSubmissionError } from "../../api/formSubmission";
 import { isStagingDeploy, stagingFormsUnavailableMessage } from "../../config/staging";
 import { StagingFormNotice } from "../forms/StagingFormNotice";
+import { trackCareersApply } from "../../utils/analytics";
 import {
   emptyCareersApplication,
   submitCareersApplication,
@@ -92,6 +93,7 @@ export function CareersApplicationForm() {
 
     try {
       await submitCareersApplication(application);
+      trackCareersApply();
       setIsSubmitted(true);
       setApplication(emptyCareersApplication());
       if (resumeInputRef.current) {

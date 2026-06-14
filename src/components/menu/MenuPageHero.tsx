@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { menuHero } from "../../data/fullMenu";
 import { ORDER_URL } from "../../data/site";
+import { trackOrderNowClick } from "../../utils/analytics";
 import { getActiveSlides } from "../../utils/data";
 import { MenuHeroCarousel } from "./MenuHeroCarousel";
 import "./MenuPageHero.css";
@@ -21,6 +22,7 @@ export function MenuPageHero() {
               className="btn btn--primary"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackOrderNowClick("menu_hero")}
             >
               Order Now
             </a>
