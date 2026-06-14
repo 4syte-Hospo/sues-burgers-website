@@ -1,11 +1,69 @@
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
+import manifest from "../../data/heroImageManifest.json";
 import type { HeroSlide } from "../../types/heroSlide";
+import { getHeroImages, type HeroResponsiveImages } from "../../utils/heroImages";
 import "./MenuHeroCarousel.css";
 
 type Props = {
   slides: HeroSlide[];
 };
+
+function resolveSlideImages(slide: HeroSlide): HeroResponsiveImages | null {
+  if (!slide.imageKey || !(slide.imageKey in manifest.slides)) {
+    return null;
+  }
+
+  return getHeroImages(slide.imageKey);
+}
+
+type SlideImageProps = {
+  slide: HeroSlide;
+  isFirst: boolean;
+  shouldLoad: boolean;
+};
+
+function MenuHeroSlideImage({ slide, isFirst, shouldLoad }: SlideImageProps) {
+  const images = resolveSlideImages(slide);
+  const imgProps = {
+    alt: slide.alt,
+    className: "menu-hero-carousel__image",
+    loading: (isFirst ? "eager" : "lazy") as "eager" | "lazy",
+    fetchPriority: (isFirst ? "high" : "low") as "high" | "low",
+    decoding: (isFirst ? "sync" : "async") as "sync" | "async",
+    width: manifest.mobileLayout.width,
+    height: manifest.mobileLayout.height,
+  };
+
+  return (
+    <picture>
+      {shouldLoad && images ? (
+        <>
+          <source
+            media="(min-width: 768px)"
+            type="image/avif"
+            srcSet={images.desktop.avifSrcSet}
+            sizes={images.sizes}
+          />
+          <source
+            media="(min-width: 768px)"
+            type="image/webp"
+            srcSet={images.desktop.webpSrcSet}
+            sizes={images.sizes}
+          />
+          <source type="image/avif" srcSet={images.mobile.avifSrcSet} sizes={images.sizes} />
+          <source type="image/webp" srcSet={images.mobile.webpSrcSet} sizes={images.sizes} />
+          <img src={images.mobile.fallback} {...imgProps} />
+        </>
+      ) : shouldLoad ? (
+        <>
+          <source media="(min-width: 768px)" srcSet={slide.desktopImage} />
+          <img src={slide.mobileImage} {...imgProps} />
+        </>
+      ) : null}
+    </picture>
+  );
+}
 
 export function MenuHeroCarousel({ slides }: Props) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -13,6 +71,7 @@ export function MenuHeroCarousel({ slides }: Props) {
     align: "center",
   });
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [loadedIndices, setLoadedIndices] = useState<Set<number>>(() => new Set([0]));
 
   const scrollTo = useCallback((index: number) => emblaApi?.scrollTo(index), [emblaApi]);
 
@@ -31,6 +90,16 @@ export function MenuHeroCarousel({ slides }: Props) {
     };
   }, [emblaApi]);
 
+  useEffect(() => {
+    setLoadedIndices((current) => {
+      const next = new Set(current);
+      next.add(selectedIndex);
+      next.add((selectedIndex - 1 + slides.length) % slides.length);
+      next.add((selectedIndex + 1) % slides.length);
+      return next;
+    });
+  }, [selectedIndex, slides.length]);
+
   if (slides.length === 0) return null;
 
   return (
@@ -39,17 +108,11 @@ export function MenuHeroCarousel({ slides }: Props) {
         <div className="menu-hero-carousel__track">
           {slides.map((slide, index) => (
             <div className="menu-hero-carousel__slide" key={slide.id}>
-              <picture>
-                <source media="(min-width: 768px)" srcSet={slide.desktopImage} />
-                <img
-                  src={slide.mobileImage}
-                  alt={slide.alt}
-                  className="menu-hero-carousel__image"
-                  loading={index === 0 ? "eager" : "lazy"}
-                  fetchPriority={index === 0 ? "high" : "auto"}
-                  decoding={index === 0 ? "sync" : "async"}
-                />
-              </picture>
+              <MenuHeroSlideImage
+                slide={slide}
+                isFirst={index === 0}
+                shouldLoad={loadedIndices.has(index)}
+              />
             </div>
           ))}
         </div>

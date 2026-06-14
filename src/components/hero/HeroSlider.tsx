@@ -37,6 +37,7 @@ export function HeroSlider({ slides }: Props) {
     duration: 28,
   });
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [loadedIndices, setLoadedIndices] = useState<Set<number>>(() => new Set([0]));
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
@@ -54,6 +55,16 @@ export function HeroSlider({ slides }: Props) {
       window.clearInterval(interval);
     };
   }, [emblaApi]);
+
+  useEffect(() => {
+    setLoadedIndices((current) => {
+      const next = new Set(current);
+      next.add(selectedIndex);
+      next.add((selectedIndex - 1 + slides.length) % slides.length);
+      next.add((selectedIndex + 1) % slides.length);
+      return next;
+    });
+  }, [selectedIndex, slides.length]);
 
   if (slides.length === 0) return null;
 
@@ -91,7 +102,11 @@ export function HeroSlider({ slides }: Props) {
                   className={`hero__slide hero__slide--${getSlidePosition(index)}`}
                   key={slide.id}
                 >
-                  <HeroSlide slide={slide} isFirst={index === 0} />
+                  <HeroSlide
+                    slide={slide}
+                    isFirst={index === 0}
+                    shouldLoad={loadedIndices.has(index)}
+                  />
                 </div>
               ))}
             </div>

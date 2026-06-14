@@ -3,15 +3,17 @@ import type { HeroSlide } from "../types/heroSlide";
 const ORDER_URL = "https://suesburgers.redcatcloud.com.au/app/";
 
 /**
- * Hero slides — PNG exports live in public/images/hero/
+ * Hero slides — optimized WebP/AVIF variants in public/images/hero/optimized/
+ * (generated via `npm run generate:hero-images`). Source PNGs remain for OG/social.
  * (heroimg1 = Dirty Soda, heroimg2 = Chili Mozzarella, heroimg3 = Raising Dave's,
  *  heroimg4 = Chicken Crack Sando)
  *
- * Desktop: *-web.png (2000px-wide). Mobile: *-mobile.png (portrait 4:5).
+ * Desktop: 1200px + 2000px landscape. Mobile: 768px + 1536px portrait 4:5.
  */
 export const heroSlides: HeroSlide[] = [
   {
     id: "chicken-crack-sando",
+    imageKey: "heroimg4",
     desktopImage: "/images/hero/heroimg4.png",
     mobileImage: "/images/hero/heroimg4-mobile.png",
     alt: "Limited time Chicken Crack Sando — spicy fried chicken, sriracha mayo, and crispy chicken skin on butter-toasted milk bread",
@@ -23,6 +25,7 @@ export const heroSlides: HeroSlide[] = [
   },
   {
     id: "raising-daves-box",
+    imageKey: "heroimg3",
     desktopImage: "/images/hero/heroimg3-web.png",
     mobileImage: "/images/hero/heroimg3-mobile.png",
     alt: "Raising Dave's Box — fried chicken, fries, Texas toast and Dave's sauce",
@@ -34,6 +37,7 @@ export const heroSlides: HeroSlide[] = [
   },
   {
     id: "dirty-soda-bar",
+    imageKey: "heroimg1",
     desktopImage: "/images/hero/heroimg1-web.png",
     mobileImage: "/images/hero/heroimg1-mobile.png",
     alt: "Dirty Soda Bar — creamy, fizzy, flavoured sodas",
@@ -45,6 +49,7 @@ export const heroSlides: HeroSlide[] = [
   },
   {
     id: "chili-mozzarella-sticks",
+    imageKey: "heroimg2",
     desktopImage: "/images/hero/heroimg2-web.png",
     mobileImage: "/images/hero/heroimg2-mobile.png",
     alt: "Chili mozzarella sticks with a dramatic cheese pull",

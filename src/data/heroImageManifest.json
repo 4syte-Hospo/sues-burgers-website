@@ -1,0 +1,321 @@
+{
+  "mobileLayout": {
+    "width": 3750,
+    "height": 4688
+  },
+  "desktopLayout": {
+    "width": 2000,
+    "height": 1093
+  },
+  "sizes": "(min-width: 768px) min(66vw, 1024px), 96vw",
+  "slides": {
+    "heroimg4": {
+      "desktop": {
+        "variants": [
+          {
+            "src": "/images/hero/optimized/heroimg4-desktop-1200.webp",
+            "width": 1200,
+            "height": 656,
+            "format": "webp",
+            "bytes": 118016
+          },
+          {
+            "src": "/images/hero/optimized/heroimg4-desktop-1200.avif",
+            "width": 1200,
+            "height": 656,
+            "format": "avif",
+            "bytes": 141103
+          },
+          {
+            "src": "/images/hero/optimized/heroimg4-desktop-2000.webp",
+            "width": 2000,
+            "height": 1094,
+            "format": "webp",
+            "bytes": 231956
+          },
+          {
+            "src": "/images/hero/optimized/heroimg4-desktop-2000.avif",
+            "width": 2000,
+            "height": 1094,
+            "format": "avif",
+            "bytes": 262854
+          }
+        ],
+        "srcset": {
+          "webp": "/images/hero/optimized/heroimg4-desktop-1200.webp 1200w, /images/hero/optimized/heroimg4-desktop-2000.webp 2000w",
+          "avif": "/images/hero/optimized/heroimg4-desktop-1200.avif 1200w, /images/hero/optimized/heroimg4-desktop-2000.avif 2000w"
+        },
+        "fallback": "/images/hero/optimized/heroimg4-desktop-2000.webp"
+      },
+      "mobile": {
+        "variants": [
+          {
+            "src": "/images/hero/optimized/heroimg4-mobile-768.webp",
+            "width": 768,
+            "height": 960,
+            "format": "webp",
+            "bytes": 122044
+          },
+          {
+            "src": "/images/hero/optimized/heroimg4-mobile-768.avif",
+            "width": 768,
+            "height": 960,
+            "format": "avif",
+            "bytes": 145346
+          },
+          {
+            "src": "/images/hero/optimized/heroimg4-mobile-1536.webp",
+            "width": 1536,
+            "height": 1920,
+            "format": "webp",
+            "bytes": 296938
+          },
+          {
+            "src": "/images/hero/optimized/heroimg4-mobile-1536.avif",
+            "width": 1536,
+            "height": 1920,
+            "format": "avif",
+            "bytes": 317802
+          }
+        ],
+        "srcset": {
+          "webp": "/images/hero/optimized/heroimg4-mobile-768.webp 768w, /images/hero/optimized/heroimg4-mobile-1536.webp 1536w",
+          "avif": "/images/hero/optimized/heroimg4-mobile-768.avif 768w, /images/hero/optimized/heroimg4-mobile-1536.avif 1536w"
+        },
+        "fallback": "/images/hero/optimized/heroimg4-mobile-768.webp"
+      },
+      "totalBytes": 1636059
+    },
+    "heroimg3": {
+      "desktop": {
+        "variants": [
+          {
+            "src": "/images/hero/optimized/heroimg3-desktop-1200.webp",
+            "width": 1200,
+            "height": 656,
+            "format": "webp",
+            "bytes": 87440
+          },
+          {
+            "src": "/images/hero/optimized/heroimg3-desktop-1200.avif",
+            "width": 1200,
+            "height": 656,
+            "format": "avif",
+            "bytes": 98831
+          },
+          {
+            "src": "/images/hero/optimized/heroimg3-desktop-2000.webp",
+            "width": 2000,
+            "height": 1093,
+            "format": "webp",
+            "bytes": 161346
+          },
+          {
+            "src": "/images/hero/optimized/heroimg3-desktop-2000.avif",
+            "width": 2000,
+            "height": 1093,
+            "format": "avif",
+            "bytes": 165504
+          }
+        ],
+        "srcset": {
+          "webp": "/images/hero/optimized/heroimg3-desktop-1200.webp 1200w, /images/hero/optimized/heroimg3-desktop-2000.webp 2000w",
+          "avif": "/images/hero/optimized/heroimg3-desktop-1200.avif 1200w, /images/hero/optimized/heroimg3-desktop-2000.avif 2000w"
+        },
+        "fallback": "/images/hero/optimized/heroimg3-desktop-2000.webp"
+      },
+      "mobile": {
+        "variants": [
+          {
+            "src": "/images/hero/optimized/heroimg3-mobile-768.webp",
+            "width": 768,
+            "height": 960,
+            "format": "webp",
+            "bytes": 86374
+          },
+          {
+            "src": "/images/hero/optimized/heroimg3-mobile-768.avif",
+            "width": 768,
+            "height": 960,
+            "format": "avif",
+            "bytes": 101835
+          },
+          {
+            "src": "/images/hero/optimized/heroimg3-mobile-1536.webp",
+            "width": 1536,
+            "height": 1920,
+            "format": "webp",
+            "bytes": 202432
+          },
+          {
+            "src": "/images/hero/optimized/heroimg3-mobile-1536.avif",
+            "width": 1536,
+            "height": 1920,
+            "format": "avif",
+            "bytes": 206676
+          }
+        ],
+        "srcset": {
+          "webp": "/images/hero/optimized/heroimg3-mobile-768.webp 768w, /images/hero/optimized/heroimg3-mobile-1536.webp 1536w",
+          "avif": "/images/hero/optimized/heroimg3-mobile-768.avif 768w, /images/hero/optimized/heroimg3-mobile-1536.avif 1536w"
+        },
+        "fallback": "/images/hero/optimized/heroimg3-mobile-768.webp"
+      },
+      "totalBytes": 1110438
+    },
+    "heroimg1": {
+      "desktop": {
+        "variants": [
+          {
+            "src": "/images/hero/optimized/heroimg1-desktop-1200.webp",
+            "width": 1200,
+            "height": 656,
+            "format": "webp",
+            "bytes": 87134
+          },
+          {
+            "src": "/images/hero/optimized/heroimg1-desktop-1200.avif",
+            "width": 1200,
+            "height": 656,
+            "format": "avif",
+            "bytes": 83483
+          },
+          {
+            "src": "/images/hero/optimized/heroimg1-desktop-2000.webp",
+            "width": 2000,
+            "height": 1094,
+            "format": "webp",
+            "bytes": 165146
+          },
+          {
+            "src": "/images/hero/optimized/heroimg1-desktop-2000.avif",
+            "width": 2000,
+            "height": 1094,
+            "format": "avif",
+            "bytes": 137758
+          }
+        ],
+        "srcset": {
+          "webp": "/images/hero/optimized/heroimg1-desktop-1200.webp 1200w, /images/hero/optimized/heroimg1-desktop-2000.webp 2000w",
+          "avif": "/images/hero/optimized/heroimg1-desktop-1200.avif 1200w, /images/hero/optimized/heroimg1-desktop-2000.avif 2000w"
+        },
+        "fallback": "/images/hero/optimized/heroimg1-desktop-2000.webp"
+      },
+      "mobile": {
+        "variants": [
+          {
+            "src": "/images/hero/optimized/heroimg1-mobile-768.webp",
+            "width": 768,
+            "height": 960,
+            "format": "webp",
+            "bytes": 79530
+          },
+          {
+            "src": "/images/hero/optimized/heroimg1-mobile-768.avif",
+            "width": 768,
+            "height": 960,
+            "format": "avif",
+            "bytes": 79849
+          },
+          {
+            "src": "/images/hero/optimized/heroimg1-mobile-1536.webp",
+            "width": 1536,
+            "height": 1920,
+            "format": "webp",
+            "bytes": 196272
+          },
+          {
+            "src": "/images/hero/optimized/heroimg1-mobile-1536.avif",
+            "width": 1536,
+            "height": 1920,
+            "format": "avif",
+            "bytes": 163534
+          }
+        ],
+        "srcset": {
+          "webp": "/images/hero/optimized/heroimg1-mobile-768.webp 768w, /images/hero/optimized/heroimg1-mobile-1536.webp 1536w",
+          "avif": "/images/hero/optimized/heroimg1-mobile-768.avif 768w, /images/hero/optimized/heroimg1-mobile-1536.avif 1536w"
+        },
+        "fallback": "/images/hero/optimized/heroimg1-mobile-768.webp"
+      },
+      "totalBytes": 992706
+    },
+    "heroimg2": {
+      "desktop": {
+        "variants": [
+          {
+            "src": "/images/hero/optimized/heroimg2-desktop-1200.webp",
+            "width": 1200,
+            "height": 656,
+            "format": "webp",
+            "bytes": 61330
+          },
+          {
+            "src": "/images/hero/optimized/heroimg2-desktop-1200.avif",
+            "width": 1200,
+            "height": 656,
+            "format": "avif",
+            "bytes": 70947
+          },
+          {
+            "src": "/images/hero/optimized/heroimg2-desktop-2000.webp",
+            "width": 2000,
+            "height": 1094,
+            "format": "webp",
+            "bytes": 124270
+          },
+          {
+            "src": "/images/hero/optimized/heroimg2-desktop-2000.avif",
+            "width": 2000,
+            "height": 1094,
+            "format": "avif",
+            "bytes": 143899
+          }
+        ],
+        "srcset": {
+          "webp": "/images/hero/optimized/heroimg2-desktop-1200.webp 1200w, /images/hero/optimized/heroimg2-desktop-2000.webp 2000w",
+          "avif": "/images/hero/optimized/heroimg2-desktop-1200.avif 1200w, /images/hero/optimized/heroimg2-desktop-2000.avif 2000w"
+        },
+        "fallback": "/images/hero/optimized/heroimg2-desktop-2000.webp"
+      },
+      "mobile": {
+        "variants": [
+          {
+            "src": "/images/hero/optimized/heroimg2-mobile-768.webp",
+            "width": 768,
+            "height": 960,
+            "format": "webp",
+            "bytes": 76824
+          },
+          {
+            "src": "/images/hero/optimized/heroimg2-mobile-768.avif",
+            "width": 768,
+            "height": 960,
+            "format": "avif",
+            "bytes": 94407
+          },
+          {
+            "src": "/images/hero/optimized/heroimg2-mobile-1536.webp",
+            "width": 1536,
+            "height": 1920,
+            "format": "webp",
+            "bytes": 197852
+          },
+          {
+            "src": "/images/hero/optimized/heroimg2-mobile-1536.avif",
+            "width": 1536,
+            "height": 1920,
+            "format": "avif",
+            "bytes": 233136
+          }
+        ],
+        "srcset": {
+          "webp": "/images/hero/optimized/heroimg2-mobile-768.webp 768w, /images/hero/optimized/heroimg2-mobile-1536.webp 1536w",
+          "avif": "/images/hero/optimized/heroimg2-mobile-768.avif 768w, /images/hero/optimized/heroimg2-mobile-1536.avif 1536w"
+        },
+        "fallback": "/images/hero/optimized/heroimg2-mobile-768.webp"
+      },
+      "totalBytes": 1002665
+    }
+  }
+}
