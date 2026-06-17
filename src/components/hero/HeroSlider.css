@@ -219,11 +219,11 @@
 
 @media (min-width: 768px) {
   .hero__arrow--prev {
-    left: max(0.75rem, calc((100% - min(var(--hero-slide-size), var(--hero-slide-max))) / 2 - 1.75rem));
+    left: max(0.5rem, calc((100% - min(var(--hero-slide-size), var(--hero-slide-max))) / 4));
   }
 
   .hero__arrow--next {
-    right: max(0.75rem, calc((100% - min(var(--hero-slide-size), var(--hero-slide-max))) / 2 - 1.75rem));
+    right: max(0.5rem, calc((100% - min(var(--hero-slide-size), var(--hero-slide-max))) / 4));
   }
 }
 
