@@ -48,9 +48,9 @@
   --hero-slide-radius: 1.25rem;
   --tap-min: 2.75rem;
 
-  /* Sue's Love TikTok carousel — refined embed sizing */
+  /* Sue's Love TikTok carousel — refined embed sizing (mobile-first) */
   --tiktok-card-width: min(80vw, 19rem);
-  --tiktok-card-height: clamp(33.5rem, 83vw, 38.5rem);
+  --tiktok-card-height: clamp(37rem, 88vw, 42rem);
   --tiktok-card-gap: 0.85rem;
   --tiktok-card-radius: 1rem;
   --tiktok-carousel-gutter: 1rem;
