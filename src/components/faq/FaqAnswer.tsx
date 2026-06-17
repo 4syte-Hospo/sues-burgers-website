@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import type { ReactNode } from "react";
 import type { FaqAnswerBlock } from "../../types/faq";
 import "./FaqAnswer.css";
 
@@ -7,6 +8,18 @@ type Props = {
   showAllergenLink?: boolean;
 };
 
+function renderFaqText(text: string): ReactNode {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+
+  return parts.map((part, index) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return <strong key={index}>{part.slice(2, -2)}</strong>;
+    }
+
+    return part;
+  });
+}
+
 export function FaqAnswer({ blocks, showAllergenLink }: Props) {
   return (
     <div className="faq-answer">
@@ -14,7 +27,7 @@ export function FaqAnswer({ blocks, showAllergenLink }: Props) {
         if (block.type === "paragraph") {
           return (
             <p key={index} className="faq-answer__paragraph">
-              {block.content}
+              {renderFaqText(block.content)}
             </p>
           );
         }
@@ -31,7 +44,7 @@ export function FaqAnswer({ blocks, showAllergenLink }: Props) {
           return (
             <ul key={index} className="faq-answer__list">
               {block.items.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item}>{renderFaqText(item)}</li>
               ))}
             </ul>
           );

@@ -192,23 +192,23 @@ export const faqItems: FaqItem[] = [
     answer: [
       {
         type: "paragraph",
-        content:
-          "Cutting back on carbs or just feeling like something a bit lighter? Swap any burger bun for our Bunless Option (crispy cos lettuce leaves).",
+        content: "Cutting back on carbs? No worries.",
       },
       {
         type: "paragraph",
-        content: "Or try one of our low-carb favourites:",
+        content:
+          "You can swap any burger bun for our Bunless Option (crispy cos lettuce leaves), or give one of these a crack:",
       },
       {
         type: "list",
         items: [
-          "Naked Sue – all the goodness of our classic Sue burger, served bunless on a bed of crispy cos lettuce.",
-          'Flying Sue – a double cheeseburger served between two thick-cut grilled onion "buns" instead of bread.',
+          "**Naked Sue** – our classic Sue burger, served bunless on a bed of crispy cos lettuce.",
+          "**Flying Sue** – a double cheeseburger stacked between two thick-cut grilled onions instead of a bun.",
         ],
       },
       {
         type: "paragraph",
-        content: "Big flavour, less carbs.",
+        content: "Still all the good stuff. Just less bread.",
       },
     ],
   },
