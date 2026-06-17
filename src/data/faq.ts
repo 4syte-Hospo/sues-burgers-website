@@ -125,7 +125,7 @@ export const faqItems: FaqItem[] = [
       {
         type: "paragraph",
         content:
-          "Yes! We serve a selection of beers, wine, cider and cocktails at both stores. Our Woolloongabba store also has a small selection of tap beer/cider!",
+          "Yep! Both Sue's locations are fully licensed, offering a range of pre-packaged beers, wines and cider. You can also add a shot of vodka to any Dirty Soda.",
       },
     ],
   },
