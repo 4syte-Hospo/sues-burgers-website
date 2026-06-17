@@ -1,0 +1,105 @@
+.tiktok-social-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--color-white);
+  border-radius: var(--tiktok-card-radius);
+  overflow: hidden;
+  color: var(--color-black);
+  text-decoration: none;
+  box-shadow:
+    0 2px 8px rgba(26, 26, 26, 0.08),
+    0 12px 28px rgba(26, 26, 26, 0.14);
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.tiktok-social-card:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 4px 12px rgba(26, 26, 26, 0.1),
+    0 18px 36px rgba(26, 26, 26, 0.18);
+}
+
+.tiktok-social-card__media {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  background: #111;
+}
+
+.tiktok-social-card__thumb {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tiktok-social-card__play {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--color-white);
+  background: rgba(0, 0, 0, 0.18);
+  transition: background var(--transition-fast);
+}
+
+.tiktok-social-card:hover .tiktok-social-card__play {
+  background: rgba(0, 0, 0, 0.28);
+}
+
+.tiktok-social-card__play svg {
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0.65rem;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+}
+
+.tiktok-social-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.65rem 0.75rem 0.8rem;
+  min-height: 5.5rem;
+}
+
+.tiktok-social-card__creator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--color-black);
+  margin: 0;
+}
+
+.tiktok-social-card__icon {
+  flex-shrink: 0;
+  color: #010101;
+}
+
+.tiktok-social-card__caption {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--color-muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tiktok-social-card__cta {
+  margin-top: auto;
+  padding-top: 0.15rem;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-coral);
+}

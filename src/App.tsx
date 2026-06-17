@@ -9,11 +9,23 @@ import { LocationsPage } from "./pages/LocationsPage";
 import { MenuPage } from "./pages/MenuPage";
 import { PrivacyPolicyPage } from "./pages/PrivacyPolicyPage";
 import { VipComingSoonPage } from "./pages/VipComingSoonPage";
+import { TikTokPreviewPage } from "./pages/dev/TikTokPreviewPage";
+import { TikTokEmbedPage } from "./pages/dev/TikTokEmbedPage";
+import { MobileDevicePreviewPage } from "./pages/dev/MobileDevicePreviewPage";
+
+const DevRoutes = import.meta.env.DEV ? (
+  <>
+    <Route path="/dev/tiktok-preview" element={<TikTokPreviewPage />} />
+    <Route path="/dev/tiktok-embed" element={<TikTokEmbedPage />} />
+    <Route path="/dev/mobile-preview" element={<MobileDevicePreviewPage />} />
+  </>
+) : null;
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {DevRoutes}
         <Route element={<Layout />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/our-menu" element={<MenuPage />} />

@@ -1,7 +1,7 @@
 .tiktok-section {
   background: var(--color-coral);
   color: var(--color-white);
-  padding-block: clamp(2.75rem, 6.5vw, 4.5rem);
+  padding-block: clamp(2.25rem, 5.5vw, 3.75rem);
   overflow: hidden;
 }
 
@@ -10,7 +10,7 @@
   max-width: none;
   margin-inline: 0;
   padding-inline: var(--tiktok-carousel-gutter);
-  margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
+  margin-bottom: clamp(1.35rem, 3.5vw, 2.25rem);
 }
 
 .tiktok-section__intro {
@@ -132,6 +132,7 @@
   position: absolute;
   inset: 0;
   overflow: hidden;
+  overscroll-behavior: none;
   background: var(--color-white);
 }
 
@@ -225,5 +226,63 @@
 
   .tiktok-section__title-display {
     font-size: 10.5rem;
+  }
+}
+
+/* ── Legacy embed (dev comparison) — pre-refined oversized cards ── */
+.tiktok-section--legacy {
+  --tiktok-card-width: min(84vw, 20.5rem);
+  --tiktok-card-height: clamp(34rem, 88vw, 41rem);
+  --tiktok-card-gap: 1rem;
+  padding-block: clamp(2.75rem, 6.5vw, 4.5rem);
+}
+
+.tiktok-section--legacy .tiktok-section__header {
+  margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+@media (min-width: 768px) {
+  .tiktok-section--legacy {
+    --tiktok-card-width: 21.5rem;
+    --tiktok-card-height: 41rem;
+    --tiktok-card-gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tiktok-section--legacy {
+    --tiktok-card-width: 22.5rem;
+    --tiktok-card-height: 42rem;
+    --tiktok-card-gap: 1.35rem;
+  }
+}
+
+/* ── Custom preview cards (dev) — thumbnail + CTA, no embed ── */
+.tiktok-section--preview {
+  --tiktok-card-width: min(68vw, 14.5rem);
+  --tiktok-card-height: auto;
+  --tiktok-card-gap: 0.75rem;
+  --tiktok-card-radius: 0.85rem;
+  padding-block: clamp(2.25rem, 5.5vw, 3.75rem);
+}
+
+.tiktok-section--preview .tiktok-section__header {
+  margin-bottom: clamp(1.35rem, 3.5vw, 2.25rem);
+}
+
+.tiktok-section--preview .tiktok-section__slide {
+  align-self: stretch;
+}
+
+@media (min-width: 768px) {
+  .tiktok-section--preview {
+    --tiktok-card-width: 15.5rem;
+    --tiktok-card-gap: 0.9rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tiktok-section--preview {
+    --tiktok-card-width: 16.25rem;
   }
 }

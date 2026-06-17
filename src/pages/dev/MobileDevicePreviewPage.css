@@ -1,0 +1,121 @@
+.device-preview {
+  background: #f4f4f5;
+  color: var(--color-black);
+  padding: 2rem 1rem 3rem;
+  min-height: 100vh;
+}
+
+.device-preview--blocked {
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+  text-align: center;
+  min-height: 50vh;
+}
+
+.device-preview__banner {
+  max-width: 42rem;
+  margin: 0 auto 2.5rem;
+}
+
+.device-preview__eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-coral);
+  margin-bottom: 0.5rem;
+}
+
+.device-preview__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.device-preview__body {
+  color: var(--color-muted);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.device-preview__link-row {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  word-break: break-all;
+}
+
+.device-preview__link-row a,
+.device-preview__back {
+  color: var(--color-coral);
+}
+
+.device-preview__back {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.device-preview__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 2rem 1.5rem;
+  max-width: 72rem;
+  margin-inline: auto;
+}
+
+.device-preview__device {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.device-preview__device-header {
+  text-align: center;
+}
+
+.device-preview__device-name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.device-preview__device-size {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  margin-top: 0.2rem;
+}
+
+.device-preview__frame {
+  position: relative;
+  border-radius: 1.35rem;
+  padding: 0.45rem;
+  background: linear-gradient(145deg, #2a2a2a 0%, #111 100%);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.18),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.device-preview__bezel {
+  overflow: hidden;
+  border-radius: 1rem;
+  background: var(--color-coral);
+  width: 100%;
+  height: 100%;
+}
+
+.device-preview__iframe {
+  display: block;
+  border: 0;
+  transform-origin: top left;
+  pointer-events: auto;
+}
+
+@media (min-width: 900px) {
+  .device-preview {
+    padding-inline: 2rem;
+  }
+}

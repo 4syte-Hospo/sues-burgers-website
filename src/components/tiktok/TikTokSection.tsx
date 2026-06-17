@@ -1,12 +1,20 @@
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useRef, useState } from "react";
+import type { TikTokCarouselVariant } from "../../config/tiktokCarousel";
+import type { TikTokVideo } from "../../data/tiktokVideos";
 import { SUE_SCRIPT_LOGO_SRC } from "../../data/site";
 import {
   TIKTOK_EMBED_BASE,
   tiktokSection,
   tiktokVideos,
 } from "../../data/tiktokVideos";
+import { TikTokPreviewCard } from "./TikTokPreviewCard";
 import "./TikTokSection.css";
+
+type Props = {
+  variant?: TikTokCarouselVariant;
+  headingId?: string;
+};
 
 function ArrowIcon({ direction }: { direction: "prev" | "next" }) {
   return (
@@ -29,7 +37,7 @@ function ArrowIcon({ direction }: { direction: "prev" | "next" }) {
   );
 }
 
-function TikTokCard({ videoId, label }: { videoId: string; label: string }) {
+function TikTokEmbedCard({ video }: { video: TikTokVideo }) {
   const ref = useRef<HTMLDivElement>(null);
   const [showEmbed, setShowEmbed] = useState(false);
 
@@ -54,9 +62,10 @@ function TikTokCard({ videoId, label }: { videoId: string; label: string }) {
         <div className="tiktok-card__embed-wrap">
           {showEmbed ? (
             <iframe
-              src={`${TIKTOK_EMBED_BASE}/${videoId}`}
-              title={label}
+              src={`${TIKTOK_EMBED_BASE}/${video.id}`}
+              title={video.label}
               className="tiktok-card__embed"
+              scrolling="no"
               allow="fullscreen; encrypted-media"
               allowFullScreen
               loading="lazy"
@@ -70,7 +79,14 @@ function TikTokCard({ videoId, label }: { videoId: string; label: string }) {
   );
 }
 
-export function TikTokSection() {
+function sectionClassName(variant: TikTokCarouselVariant): string {
+  const base = "tiktok-section section";
+  if (variant === "legacy") return `${base} tiktok-section--legacy`;
+  if (variant === "preview") return `${base} tiktok-section--preview`;
+  return base;
+}
+
+export function TikTokSection({ variant = "default", headingId = "tiktok-heading" }: Props) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
     containScroll: "trimSnaps",
@@ -79,6 +95,7 @@ export function TikTokSection() {
   });
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
+  const isPreview = variant === "preview";
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
@@ -104,11 +121,11 @@ export function TikTokSection() {
   }, [emblaApi]);
 
   return (
-    <section className="tiktok-section section" aria-labelledby="tiktok-heading">
+    <section className={sectionClassName(variant)} aria-labelledby={headingId}>
       <div className="tiktok-section__header">
         <div className="tiktok-section__intro">
           <div className="tiktok-section__title-block">
-            <h2 id="tiktok-heading" className="tiktok-section__title">
+            <h2 id={headingId} className="tiktok-section__title">
               <img
                 src={SUE_SCRIPT_LOGO_SRC}
                 alt="Sue's"
@@ -149,7 +166,11 @@ export function TikTokSection() {
           <div className="tiktok-section__track">
             {tiktokVideos.map((video) => (
               <div className="tiktok-section__slide" key={video.id}>
-                <TikTokCard videoId={video.id} label={video.label} />
+                {isPreview ? (
+                  <TikTokPreviewCard video={video} />
+                ) : (
+                  <TikTokEmbedCard video={video} />
+                )}
               </div>
             ))}
           </div>
