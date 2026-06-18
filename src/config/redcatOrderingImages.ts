@@ -1,4 +1,5 @@
 import type { MenuCategorySection } from "../types/menu";
+import menuImageManifest from "../data/menuImageManifest.json";
 
 /** Redcat online ordering — image CDN used by suesburgers.redcatcloud.com.au */
 export const REDCAT_ORDERING_IMAGE_BASE =
@@ -37,7 +38,6 @@ export const redcatMenuImageById: Record<string, string> = {
   "crunchy-biscoff": "biscoffshakenew.png",
   "malteser-shake": "maltesershakenew.png",
   "peanut-butter-shake": "pbshakenew.png",
-  "dulce-de-leche": "caramelshakenew.png",
   "classic-shakes": "classicshakenew.png",
   coke: "cokecansues.png",
   "coke-no-sugar": "cokeNScansues.png",
@@ -57,10 +57,16 @@ export function applyTemporaryRedcatImages(
   return sections.map((section) => ({
     ...section,
     items: section.items.map((item) => {
+      const localImage = menuImageManifest[item.id as keyof typeof menuImageManifest];
+      if (localImage) {
+        return { ...item, image: localImage };
+      }
+
+      if (item.image?.startsWith("/images/menu/")) return item;
+
       const filename = redcatMenuImageById[item.id];
       if (!filename) return item;
-      // Keep dedicated local menu photos when present (higher quality than Redcat).
-      if (item.image?.startsWith("/images/menu/")) return item;
+
       return { ...item, image: redcatOrderingImage(filename) };
     }),
   }));

@@ -9,6 +9,7 @@ export const menuCategoryNav: MenuCategoryNavItem[] = [
   { id: "monthly-specials", label: "Monthly Specials" },
   { id: "burgers", label: "Burgers" },
   { id: "chicken-burgers", label: "Chicken Burgers" },
+  { id: "veg-burgers", label: "Veg Burgers" },
   { id: "raising-daves", label: "Raising Dave's" },
   { id: "sides", label: "Sides & Loaded Fries" },
   { id: "dirty-sodas", label: "Dirty Sodas" },
@@ -40,7 +41,6 @@ const baseMenuSections: MenuCategorySection[] = [
         name: "Chicken Crack Sandwich",
         description:
           "BUTTER-TOASTED MILK BREAD STACKED WITH SPICY FRIED CHICKEN BREAST, CRISPY SHREDDED LETTUCE, CRISPY CHICKEN SKIN BITS (CHICKEN CRACK), SRIRACHA MAYO, AND TOPPED WITH OUR SPICY SEASONING AND MORE CHICKEN CRACK! (MILD)",
-        image: "/images/menu/chicken-crack-sandwich.png",
         badge: "Monthly Special",
         orderLink: order,
       },
@@ -144,6 +144,16 @@ const baseMenuSections: MenuCategorySection[] = [
           "SUE'S NASHVILLE STYLE FRIED CHICKEN BREAST, LETTUCE, AMERICAN CHEESE, PICKLES & SRIRACHA MAYO ON A TOASTY POTATO BUN",
         orderLink: order,
       },
+    ],
+  },
+  {
+    id: "veg-burgers",
+    navLabel: "Veg Burgers",
+    eyebrow: "veg",
+    title: "Burgers",
+    description:
+      "Plant-based patties with all the Sue's fixings — vego and fully vegan options on toasty buns.",
+    items: [
       {
         id: "vego-signature-sue",
         name: "Vego Signature Sue",
@@ -176,7 +186,6 @@ const baseMenuSections: MenuCategorySection[] = [
         price: 25,
         description:
           "3 X CHEF DAVE'S TIKTOK FAMOUS SOUTHERN FRIED CHICKEN TENDERS SERVED WITH GARLIC-BUTTERED TEXAS TOAST, CRISPY FRIES AND A 8OZ CUP OF DAVE'S SAUCE",
-        image: "/images/hero/heroimg3-web.png",
         badge: "Fan Favourite",
         fanFavourite: true,
         orderLink: order,
@@ -187,7 +196,6 @@ const baseMenuSections: MenuCategorySection[] = [
         price: 25,
         description:
           "3 X SUE'S FAMOUS HOT FRIED CHICKEN TENDERS, SERVED WITH GARLIC-BUTTERED TEXAS TOAST, CRISPY FRIES, 8OZ SPICY DAVE'S SAUCE AND A POT OF HOT HONEY",
-        image: "/images/menu/sues-hot-honey-box.png",
         orderLink: order,
       },
       {
@@ -228,7 +236,6 @@ const baseMenuSections: MenuCategorySection[] = [
         price: 15,
         description:
           "3 X HAND-MADE CHILI'S INSPIRED VIRAL MOZZARELLA STICKS SERVED WITH HOUSE-MADE RANCH SAUCE (VEG). CHOOSE BETWEEN CHILI OR NOT CHILI",
-        image: "/images/hero/heroimg2-web.png",
         fanFavourite: true,
         orderLink: order,
       },
@@ -278,7 +285,6 @@ const baseMenuSections: MenuCategorySection[] = [
         name: "Pink Flamingo",
         price: 8,
         description: "SPRITE · RASPBERRY · PEACH · LIME. PRO TIP: TRY WITH VANILLA CREAM",
-        image: "/images/hero/heroimg1-web.png",
         fanFavourite: true,
         orderLink: order,
       },
@@ -453,6 +459,7 @@ const baseMenuSections: MenuCategorySection[] = [
         name: "Kids Nuggs and Fries",
         price: 13,
         description: "5 X CRISPY CHICKEN NUGGETS, FRIES & TOMATO SAUCE",
+        image: "/images/menu/kids-nuggs-fries.png",
         orderLink: order,
       },
       {
@@ -461,11 +468,12 @@ const baseMenuSections: MenuCategorySection[] = [
         price: 15,
         description:
           "KID'S CHEESEBURGER WITH TOMATO SAUCE, BEEF & CHEESE & FRIES",
+        image: "/images/menu/kids-cheeseburger-fries.png",
         orderLink: order,
       },
     ],
   },
 ];
 
-/** Menu sections with temporary Redcat ordering images where available. */
+/** Menu sections — local photos from public/images/menu/{id}.png auto-wired via manifest; Redcat CDN as fallback. */
 export const menuSections = applyTemporaryRedcatImages(baseMenuSections);

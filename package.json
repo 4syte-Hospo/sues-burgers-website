@@ -5,12 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "concurrently -n web,api -c blue,magenta \"vite\" \"tsx watch server/index.ts\"",
-    "dev:web": "vite",
+    "dev:web": "npm run generate:menu-images && vite",
     "dev:server": "tsx watch server/index.ts",
     "generate:allergen-pdf": "tsx scripts/generate-allergen-pdf.ts",
+    "generate:menu-images": "tsx scripts/generate-menu-image-manifest.ts",
     "generate:hero-images": "python3 scripts/generate-hero-images.py",
     "fetch:tiktok-thumbnails": "python3 scripts/fetch-tiktok-thumbnails.py",
-    "build": "tsc -b && npm run generate:allergen-pdf && vite build && npm run build:server",
+    "build": "tsc -b && npm run generate:allergen-pdf && npm run generate:menu-images && vite build && npm run build:server",
     "build:server": "tsc -p server/tsconfig.json",
     "start": "node server/dist/index.js",
     "preview": "npm run build && NODE_ENV=production node server/dist/index.js"
