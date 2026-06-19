@@ -299,7 +299,7 @@ const baseMenuSections: MenuCategorySection[] = [
         id: "popping-punch",
         name: "Popping Punch",
         price: 9.5,
-        description: "FANTA · MANGO · PEACH",
+        description: "FANTA · MANGO · PEACH · MANGO POPPING PEARLS",
         orderLink: order,
       },
       {

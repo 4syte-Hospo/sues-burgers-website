@@ -16,4 +16,12 @@ export const menuImageAliases: Record<string, string> = {
   coke: "coke-can.png",
   "sues-hot-honey-box": "sues-hot-honey-box-daves-box.png",
   "dulce-de-leche": "dulce-de-leche-shake.png",
+  "pink-flamingo": "pink-flamingo-dirty-soda.png",
+  "raspberry-cream-cola": "raspberr-cream-cola.png",
+  "popping-punch": "popping-punch-dirty-soda.png",
+  "raspberry-coconut": "raspberry-coconut-dirty-soda.png",
+  "peach-spritz": "peach-spritz-dirty-soda.png",
+  "caramel-cola": "caramel-cola-dirty-soda.png",
+  "mango-lychee-splash": "mango-lychee-splash-dirty-soda.png",
+  "tropical-sunset": "tropical-sunset-dirty-soda.png",
 };
