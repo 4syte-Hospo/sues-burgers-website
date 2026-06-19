@@ -178,7 +178,7 @@ const baseMenuSections: MenuCategorySection[] = [
     eyebrow: "Fan Favourite",
     title: "Raising Dave's",
     description:
-      "Chef Dave's viral southern fried chicken — Raising Dave's boxes, tender boxes and hot honey hits. Brisbane's favourite Raising Cane's alternative.",
+      "Chef Dave's viral southern fried chicken — inspired by America's famous tender box meals and made fresh in Brisbane.",
     items: [
       {
         id: "raising-daves-box",
