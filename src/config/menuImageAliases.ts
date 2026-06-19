@@ -15,4 +15,5 @@ export const menuImageAliases: Record<string, string> = {
   "burger-fries": "burger-fries-maple-fries.png",
   coke: "coke-can.png",
   "sues-hot-honey-box": "sues-hot-honey-box-daves-box.png",
+  "dulce-de-leche": "dulce-de-leche-shake.png",
 };
