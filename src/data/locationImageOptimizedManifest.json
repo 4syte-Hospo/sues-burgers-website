@@ -1,0 +1,141 @@
+{
+  "sizes": "(min-width: 900px) 58vw, 100vw",
+  "images": {
+    "carindale": {
+      "source": "/images/locations/carindale.png",
+      "width": 1448,
+      "height": 1086,
+      "variants": [
+        {
+          "src": "/images/locations/optimized/carindale-720.webp",
+          "width": 720,
+          "height": 540,
+          "format": "webp",
+          "bytes": 120956
+        },
+        {
+          "src": "/images/locations/optimized/carindale-720.avif",
+          "width": 720,
+          "height": 540,
+          "format": "avif",
+          "bytes": 143254
+        },
+        {
+          "src": "/images/locations/optimized/carindale-1200.webp",
+          "width": 1200,
+          "height": 900,
+          "format": "webp",
+          "bytes": 284748
+        },
+        {
+          "src": "/images/locations/optimized/carindale-1200.avif",
+          "width": 1200,
+          "height": 900,
+          "format": "avif",
+          "bytes": 319325
+        }
+      ],
+      "srcset": {
+        "webp": "/images/locations/optimized/carindale-720.webp 720w, /images/locations/optimized/carindale-1200.webp 1200w",
+        "avif": "/images/locations/optimized/carindale-720.avif 720w, /images/locations/optimized/carindale-1200.avif 1200w"
+      },
+      "fallback": "/images/locations/optimized/carindale-1200.webp",
+      "totalBytes": 868283
+    },
+    "hero-food": {
+      "source": "/images/locations/hero-food.jpg",
+      "width": 341,
+      "height": 256,
+      "variants": [
+        {
+          "src": "/images/locations/optimized/hero-food-341.webp",
+          "width": 341,
+          "height": 256,
+          "format": "webp",
+          "bytes": 15050
+        },
+        {
+          "src": "/images/locations/optimized/hero-food-341.avif",
+          "width": 341,
+          "height": 256,
+          "format": "avif",
+          "bytes": 19228
+        }
+      ],
+      "srcset": {
+        "webp": "/images/locations/optimized/hero-food-341.webp 341w",
+        "avif": "/images/locations/optimized/hero-food-341.avif 341w"
+      },
+      "fallback": "/images/locations/optimized/hero-food-341.webp",
+      "totalBytes": 34278
+    },
+    "location-three": {
+      "source": "/images/locations/location-three.png",
+      "width": 1024,
+      "height": 576,
+      "variants": [
+        {
+          "src": "/images/locations/optimized/location-three-720.webp",
+          "width": 720,
+          "height": 405,
+          "format": "webp",
+          "bytes": 12518
+        },
+        {
+          "src": "/images/locations/optimized/location-three-720.avif",
+          "width": 720,
+          "height": 405,
+          "format": "avif",
+          "bytes": 17223
+        }
+      ],
+      "srcset": {
+        "webp": "/images/locations/optimized/location-three-720.webp 720w",
+        "avif": "/images/locations/optimized/location-three-720.avif 720w"
+      },
+      "fallback": "/images/locations/optimized/location-three-720.webp",
+      "totalBytes": 29741
+    },
+    "woolloongabba": {
+      "source": "/images/locations/woolloongabba.png",
+      "width": 1507,
+      "height": 1044,
+      "variants": [
+        {
+          "src": "/images/locations/optimized/woolloongabba-720.webp",
+          "width": 720,
+          "height": 499,
+          "format": "webp",
+          "bytes": 69848
+        },
+        {
+          "src": "/images/locations/optimized/woolloongabba-720.avif",
+          "width": 720,
+          "height": 499,
+          "format": "avif",
+          "bytes": 76982
+        },
+        {
+          "src": "/images/locations/optimized/woolloongabba-1200.webp",
+          "width": 1200,
+          "height": 831,
+          "format": "webp",
+          "bytes": 156196
+        },
+        {
+          "src": "/images/locations/optimized/woolloongabba-1200.avif",
+          "width": 1200,
+          "height": 831,
+          "format": "avif",
+          "bytes": 163151
+        }
+      ],
+      "srcset": {
+        "webp": "/images/locations/optimized/woolloongabba-720.webp 720w, /images/locations/optimized/woolloongabba-1200.webp 1200w",
+        "avif": "/images/locations/optimized/woolloongabba-720.avif 720w, /images/locations/optimized/woolloongabba-1200.avif 1200w"
+      },
+      "fallback": "/images/locations/optimized/woolloongabba-1200.webp",
+      "totalBytes": 466177
+    }
+  }
+}

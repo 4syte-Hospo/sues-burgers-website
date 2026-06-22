@@ -6,6 +6,7 @@ import {
   LocationPhoneIcon,
   LocationPinIcon,
 } from "./LocationIcons";
+import { LocationImage } from "./LocationImage";
 import "./LocationCard.css";
 
 type Props = {
@@ -27,11 +28,10 @@ export function LocationCard({ location }: Props) {
   return (
     <article className="location-card">
       <div className="location-card__media">
-        <img
+        <LocationImage
           src={location.image}
           alt={location.imageAlt}
           className="location-card__image"
-          loading="lazy"
         />
       </div>
 

@@ -1,15 +1,15 @@
 import { comingSoonLocation } from "../../data/locations";
+import { LocationImage } from "./LocationImage";
 import "./LocationComingSoon.css";
 
 export function LocationComingSoon() {
   return (
     <article className="location-soon" aria-labelledby="location-soon-title">
       <div className="location-soon__media">
-        <img
+        <LocationImage
           src={comingSoonLocation.image}
           alt={comingSoonLocation.imageAlt}
           className="location-soon__image"
-          loading="lazy"
         />
       </div>
 
