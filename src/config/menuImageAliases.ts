@@ -4,6 +4,8 @@
  */
 export const menuImageAliases: Record<string, string> = {
   "sues-classic": "classic-cheeseburger.png",
+  "signature-sue": "sues-signature-burger.png",
+  "grilled-chicken-n-mozza": "grilled-chicken-mozza.png",
   "jalapeno-smash": "jalapeno-smash-burger.png",
   "oklahoma-sue": "oklahoma-burger.png",
   "flying-sue": "flying-sue-burger.png",
