@@ -24,7 +24,8 @@ export const menuHero = {
   body:
     "Smash burgers, crispy southern tenders, dirty sodas & thickshakes — all made to order.",
   allergenHref: "/allergen-info",
-  pdfHref: "#pdf-menu",
+  pdfHref: "/docs/sues-burgers-full-menu-jun26.pdf",
+  pdfDownloadName: "sues-burgers-full-menu-jun26.pdf",
 } as const;
 
 const baseMenuSections: MenuCategorySection[] = [

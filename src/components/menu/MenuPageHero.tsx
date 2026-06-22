@@ -29,7 +29,11 @@ export function MenuPageHero() {
             <Link to={menuHero.allergenHref} className="btn btn--outline menu-hero__btn-alt">
               Allergen Info
             </Link>
-            <a href={menuHero.pdfHref} className="btn btn--outline menu-hero__btn-alt">
+            <a
+              href={menuHero.pdfHref}
+              className="btn btn--outline menu-hero__btn-alt"
+              download={menuHero.pdfDownloadName}
+            >
               PDF Menu
             </a>
           </div>
