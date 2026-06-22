@@ -54,17 +54,19 @@ function section(id: string, title: string, rows: [string, string][]): AllergenS
 export const allergenSections: AllergenSection[] = [
   section("burgers", "Burgers", [
     ["Sue's Classic", "X X X X O X X O O"],
-    ["Truffle Cheeseburger", "X X X X O X O O O"],
     ["Signature Sue", "X X X X O X X O O"],
     ["Oklahoma Sue", "X X X X O X X O O"],
+    ["Flying Sue", "X X O O O X X O O"],
     ["Naked Sue", "X X O O O X X O O"],
     ["Southern Fried Chicken", "X X X X O X X O X"],
-    ["Dirty Bird", "X X X X O X X X O"],
+    ["Dirty Bird", "X X X X O X X O O"],
     ["Grilled Chicken N' Mozza", "X X X X O O X O O"],
-    ["Nashville Fried Chicken", "X X X X O X X X O"],
-    ["Dave's Burger", "X X X X O X X O X"],
+    ["Nashville Fried Chicken", "X X X X O X X O O"],
     ["Vegetarian Sue", "X X X X O O X O O"],
     ["Vegan Sue", "O O X X O O X O O"],
+  ]),
+  section("specials", "Specials", [
+    ["Chicken Crack Sando", "X X X X O X X O O"],
   ]),
   section("burger-extras", "Burger Extras", [
     ["Cheese", "X O O O O O O O O"],
@@ -80,7 +82,7 @@ export const allergenSections: AllergenSection[] = [
   ]),
   section("sauces", "Sauces", [
     ["Signature Sauce", "O X O O O X X O X"],
-    ["Sriracha Mayo", "O X O O O O X X O"],
+    ["Sriracha Mayo", "O X O O O O X O O"],
     ["3-Cheese Sauce", "X O X X O X X O O"],
     ["Aioli", "O X O X O O X O O"],
     ["Vegan Aioli", "O O O X O O X O O"],
