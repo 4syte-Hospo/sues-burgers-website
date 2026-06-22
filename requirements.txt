@@ -1,0 +1,2 @@
+# Used by Netlify build for scripts/generate-*-images.py (menu, location, hero).
+Pillow>=10.0.0
