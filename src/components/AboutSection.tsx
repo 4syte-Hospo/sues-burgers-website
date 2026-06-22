@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { aboutContent } from "../data/aboutContent";
+import { AboutImage } from "./AboutImage";
 import "./AboutSection.css";
 
 export function AboutSection() {
@@ -23,10 +24,10 @@ export function AboutSection() {
 
         <div className="about__collage">
           <figure className="about__photo about__photo--back">
-            <img src={backPhoto.src} alt={backPhoto.alt} loading="lazy" />
+            <AboutImage src={backPhoto.src} alt={backPhoto.alt} />
           </figure>
           <figure className="about__photo about__photo--front">
-            <img src={frontPhoto.src} alt={frontPhoto.alt} loading="lazy" />
+            <AboutImage src={frontPhoto.src} alt={frontPhoto.alt} />
           </figure>
         </div>
       </div>

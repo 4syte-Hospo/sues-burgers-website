@@ -1,0 +1,73 @@
+{
+  "sizes": "(min-width: 768px) min(42vw, 28rem), min(76vw, 22rem)",
+  "images": {
+    "burger-stack": {
+      "source": "/images/about/burger-stack.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/about/optimized/burger-stack-720.webp",
+          "width": 720,
+          "height": 720,
+          "format": "webp",
+          "bytes": 92182
+        },
+        {
+          "src": "/images/about/optimized/burger-stack-720.avif",
+          "width": 720,
+          "height": 720,
+          "format": "avif",
+          "bytes": 128263
+        }
+      ],
+      "srcset": {
+        "webp": "/images/about/optimized/burger-stack-720.webp 720w",
+        "avif": "/images/about/optimized/burger-stack-720.avif 720w"
+      },
+      "fallback": "/images/about/optimized/burger-stack-720.webp",
+      "totalBytes": 220445
+    },
+    "raising-daves-box": {
+      "source": "/images/about/raising-daves-box.png",
+      "width": 1375,
+      "height": 1375,
+      "variants": [
+        {
+          "src": "/images/about/optimized/raising-daves-box-720.webp",
+          "width": 720,
+          "height": 720,
+          "format": "webp",
+          "bytes": 98134
+        },
+        {
+          "src": "/images/about/optimized/raising-daves-box-720.avif",
+          "width": 720,
+          "height": 720,
+          "format": "avif",
+          "bytes": 124586
+        },
+        {
+          "src": "/images/about/optimized/raising-daves-box-1200.webp",
+          "width": 1200,
+          "height": 1200,
+          "format": "webp",
+          "bytes": 189684
+        },
+        {
+          "src": "/images/about/optimized/raising-daves-box-1200.avif",
+          "width": 1200,
+          "height": 1200,
+          "format": "avif",
+          "bytes": 222502
+        }
+      ],
+      "srcset": {
+        "webp": "/images/about/optimized/raising-daves-box-720.webp 720w, /images/about/optimized/raising-daves-box-1200.webp 1200w",
+        "avif": "/images/about/optimized/raising-daves-box-720.avif 720w, /images/about/optimized/raising-daves-box-1200.avif 1200w"
+      },
+      "fallback": "/images/about/optimized/raising-daves-box-1200.webp",
+      "totalBytes": 634906
+    }
+  }
+}
