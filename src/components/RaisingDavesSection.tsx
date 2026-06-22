@@ -25,7 +25,7 @@ export function RaisingDavesSection() {
         </div>
 
         <figure className="raising-daves__media">
-          <img src={image.src} alt={image.alt} loading="lazy" width={768} height={1024} />
+          <img src={image.src} alt={image.alt} loading="lazy" width={1024} height={1024} />
         </figure>
       </div>
     </section>

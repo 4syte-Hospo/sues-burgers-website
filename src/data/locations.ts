@@ -37,8 +37,8 @@ export const locations: LocationStore[] = [
     locationNote:
       "Located in Dining Precinct underneath Angelika Cinemas. Free undercover parking for up to 3 hrs.",
     hours: "Mon – Sun 11:00am – 9:00pm",
-    phone: "(07) 0403 582 907",
-    phoneHref: "tel:+61403582907",
+    phone: "(07) 3132 7302",
+    phoneHref: "tel:+61731327302",
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Sue's+Burgers+and+Shakes+148+Logan+Rd+Woolloongabba+QLD+4102",
     mapsLabel: "Open in Google Maps — Woolloongabba",
