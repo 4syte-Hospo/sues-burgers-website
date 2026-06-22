@@ -94,28 +94,28 @@
             "width": 1200,
             "height": 656,
             "format": "webp",
-            "bytes": 87440
+            "bytes": 92886
           },
           {
             "src": "/images/hero/optimized/heroimg3-desktop-1200.avif",
             "width": 1200,
             "height": 656,
             "format": "avif",
-            "bytes": 98831
+            "bytes": 110767
           },
           {
             "src": "/images/hero/optimized/heroimg3-desktop-2000.webp",
             "width": 2000,
-            "height": 1093,
+            "height": 1094,
             "format": "webp",
-            "bytes": 161346
+            "bytes": 175404
           },
           {
             "src": "/images/hero/optimized/heroimg3-desktop-2000.avif",
             "width": 2000,
-            "height": 1093,
+            "height": 1094,
             "format": "avif",
-            "bytes": 165504
+            "bytes": 196334
           }
         ],
         "srcset": {
@@ -131,28 +131,28 @@
             "width": 768,
             "height": 960,
             "format": "webp",
-            "bytes": 86374
+            "bytes": 98458
           },
           {
             "src": "/images/hero/optimized/heroimg3-mobile-768.avif",
             "width": 768,
             "height": 960,
             "format": "avif",
-            "bytes": 101835
+            "bytes": 120565
           },
           {
             "src": "/images/hero/optimized/heroimg3-mobile-1536.webp",
             "width": 1536,
             "height": 1920,
             "format": "webp",
-            "bytes": 202432
+            "bytes": 251334
           },
           {
             "src": "/images/hero/optimized/heroimg3-mobile-1536.avif",
             "width": 1536,
             "height": 1920,
             "format": "avif",
-            "bytes": 206676
+            "bytes": 275939
           }
         ],
         "srcset": {
@@ -161,7 +161,7 @@
         },
         "fallback": "/images/hero/optimized/heroimg3-mobile-768.webp"
       },
-      "totalBytes": 1110438
+      "totalBytes": 1321687
     },
     "heroimg1": {
       "desktop": {
