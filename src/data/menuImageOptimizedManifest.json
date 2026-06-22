@@ -1,0 +1,1973 @@
+{
+  "sizes": "(min-width: 1100px) 25vw, (min-width: 600px) 50vw, min(76vw, 15.5rem)",
+  "images": {
+    "apple-juice": {
+      "source": "/images/menu/apple-juice.png",
+      "width": 800,
+      "height": 800,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/apple-juice-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 25138
+        },
+        {
+          "src": "/images/menu/optimized/apple-juice-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 27718
+        },
+        {
+          "src": "/images/menu/optimized/apple-juice-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 53314
+        },
+        {
+          "src": "/images/menu/optimized/apple-juice-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 59627
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/apple-juice-480.webp 480w, /images/menu/optimized/apple-juice-800.webp 800w",
+        "avif": "/images/menu/optimized/apple-juice-480.avif 480w, /images/menu/optimized/apple-juice-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/apple-juice-800.webp",
+      "totalBytes": 165797
+    },
+    "baby-daves-box": {
+      "source": "/images/menu/baby-daves-box.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/baby-daves-box-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 42410
+        },
+        {
+          "src": "/images/menu/optimized/baby-daves-box-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 52765
+        },
+        {
+          "src": "/images/menu/optimized/baby-daves-box-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 95676
+        },
+        {
+          "src": "/images/menu/optimized/baby-daves-box-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 119605
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/baby-daves-box-480.webp 480w, /images/menu/optimized/baby-daves-box-800.webp 800w",
+        "avif": "/images/menu/optimized/baby-daves-box-480.avif 480w, /images/menu/optimized/baby-daves-box-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/baby-daves-box-800.webp",
+      "totalBytes": 310456
+    },
+    "burger-fries-maple-fries": {
+      "source": "/images/menu/burger-fries-maple-fries.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/burger-fries-maple-fries-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 47936
+        },
+        {
+          "src": "/images/menu/optimized/burger-fries-maple-fries-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 60755
+        },
+        {
+          "src": "/images/menu/optimized/burger-fries-maple-fries-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 100834
+        },
+        {
+          "src": "/images/menu/optimized/burger-fries-maple-fries-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 122534
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/burger-fries-maple-fries-480.webp 480w, /images/menu/optimized/burger-fries-maple-fries-800.webp 800w",
+        "avif": "/images/menu/optimized/burger-fries-maple-fries-480.avif 480w, /images/menu/optimized/burger-fries-maple-fries-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/burger-fries-maple-fries-800.webp",
+      "totalBytes": 332059
+    },
+    "caramel-cola-dirty-soda": {
+      "source": "/images/menu/caramel-cola-dirty-soda.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/caramel-cola-dirty-soda-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 30542
+        },
+        {
+          "src": "/images/menu/optimized/caramel-cola-dirty-soda-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 35705
+        },
+        {
+          "src": "/images/menu/optimized/caramel-cola-dirty-soda-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 64478
+        },
+        {
+          "src": "/images/menu/optimized/caramel-cola-dirty-soda-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 75619
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/caramel-cola-dirty-soda-480.webp 480w, /images/menu/optimized/caramel-cola-dirty-soda-800.webp 800w",
+        "avif": "/images/menu/optimized/caramel-cola-dirty-soda-480.avif 480w, /images/menu/optimized/caramel-cola-dirty-soda-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/caramel-cola-dirty-soda-800.webp",
+      "totalBytes": 206344
+    },
+    "cheese-bacon-fries": {
+      "source": "/images/menu/cheese-bacon-fries.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/cheese-bacon-fries-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 43478
+        },
+        {
+          "src": "/images/menu/optimized/cheese-bacon-fries-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 53272
+        },
+        {
+          "src": "/images/menu/optimized/cheese-bacon-fries-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 92068
+        },
+        {
+          "src": "/images/menu/optimized/cheese-bacon-fries-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 111583
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/cheese-bacon-fries-480.webp 480w, /images/menu/optimized/cheese-bacon-fries-800.webp 800w",
+        "avif": "/images/menu/optimized/cheese-bacon-fries-480.avif 480w, /images/menu/optimized/cheese-bacon-fries-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/cheese-bacon-fries-800.webp",
+      "totalBytes": 300401
+    },
+    "chicken-crack-sandwich": {
+      "source": "/images/menu/chicken-crack-sandwich.png",
+      "width": 800,
+      "height": 800,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/chicken-crack-sandwich-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 46466
+        },
+        {
+          "src": "/images/menu/optimized/chicken-crack-sandwich-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 61568
+        },
+        {
+          "src": "/images/menu/optimized/chicken-crack-sandwich-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 95402
+        },
+        {
+          "src": "/images/menu/optimized/chicken-crack-sandwich-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 121799
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/chicken-crack-sandwich-480.webp 480w, /images/menu/optimized/chicken-crack-sandwich-800.webp 800w",
+        "avif": "/images/menu/optimized/chicken-crack-sandwich-480.avif 480w, /images/menu/optimized/chicken-crack-sandwich-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/chicken-crack-sandwich-800.webp",
+      "totalBytes": 325235
+    },
+    "chilli-mozzarella-sticks": {
+      "source": "/images/menu/chilli-mozzarella-sticks.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/chilli-mozzarella-sticks-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 30306
+        },
+        {
+          "src": "/images/menu/optimized/chilli-mozzarella-sticks-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 34073
+        },
+        {
+          "src": "/images/menu/optimized/chilli-mozzarella-sticks-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 62044
+        },
+        {
+          "src": "/images/menu/optimized/chilli-mozzarella-sticks-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 69426
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/chilli-mozzarella-sticks-480.webp 480w, /images/menu/optimized/chilli-mozzarella-sticks-800.webp 800w",
+        "avif": "/images/menu/optimized/chilli-mozzarella-sticks-480.avif 480w, /images/menu/optimized/chilli-mozzarella-sticks-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/chilli-mozzarella-sticks-800.webp",
+      "totalBytes": 195849
+    },
+    "classic-cheeseburger": {
+      "source": "/images/menu/classic-cheeseburger.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/classic-cheeseburger-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 33786
+        },
+        {
+          "src": "/images/menu/optimized/classic-cheeseburger-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 40295
+        },
+        {
+          "src": "/images/menu/optimized/classic-cheeseburger-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 70180
+        },
+        {
+          "src": "/images/menu/optimized/classic-cheeseburger-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 81270
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/classic-cheeseburger-480.webp 480w, /images/menu/optimized/classic-cheeseburger-800.webp 800w",
+        "avif": "/images/menu/optimized/classic-cheeseburger-480.avif 480w, /images/menu/optimized/classic-cheeseburger-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/classic-cheeseburger-800.webp",
+      "totalBytes": 225531
+    },
+    "classic-shakes": {
+      "source": "/images/menu/classic-shakes.png",
+      "width": 800,
+      "height": 800,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/classic-shakes-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 32698
+        },
+        {
+          "src": "/images/menu/optimized/classic-shakes-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 35291
+        },
+        {
+          "src": "/images/menu/optimized/classic-shakes-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 70242
+        },
+        {
+          "src": "/images/menu/optimized/classic-shakes-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 76526
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/classic-shakes-480.webp 480w, /images/menu/optimized/classic-shakes-800.webp 800w",
+        "avif": "/images/menu/optimized/classic-shakes-480.avif 480w, /images/menu/optimized/classic-shakes-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/classic-shakes-800.webp",
+      "totalBytes": 214757
+    },
+    "coke-can": {
+      "source": "/images/menu/coke-can.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/coke-can-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 25870
+        },
+        {
+          "src": "/images/menu/optimized/coke-can-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 27928
+        },
+        {
+          "src": "/images/menu/optimized/coke-can-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 49854
+        },
+        {
+          "src": "/images/menu/optimized/coke-can-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 53889
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/coke-can-480.webp 480w, /images/menu/optimized/coke-can-800.webp 800w",
+        "avif": "/images/menu/optimized/coke-can-480.avif 480w, /images/menu/optimized/coke-can-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/coke-can-800.webp",
+      "totalBytes": 157541
+    },
+    "coke-no-sugar": {
+      "source": "/images/menu/coke-no-sugar.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/coke-no-sugar-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 23560
+        },
+        {
+          "src": "/images/menu/optimized/coke-no-sugar-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 27411
+        },
+        {
+          "src": "/images/menu/optimized/coke-no-sugar-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 47298
+        },
+        {
+          "src": "/images/menu/optimized/coke-no-sugar-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 55139
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/coke-no-sugar-480.webp 480w, /images/menu/optimized/coke-no-sugar-800.webp 800w",
+        "avif": "/images/menu/optimized/coke-no-sugar-480.avif 480w, /images/menu/optimized/coke-no-sugar-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/coke-no-sugar-800.webp",
+      "totalBytes": 153408
+    },
+    "crunchy-biscoff": {
+      "source": "/images/menu/crunchy-biscoff.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/crunchy-biscoff-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 26394
+        },
+        {
+          "src": "/images/menu/optimized/crunchy-biscoff-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 28541
+        },
+        {
+          "src": "/images/menu/optimized/crunchy-biscoff-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 49412
+        },
+        {
+          "src": "/images/menu/optimized/crunchy-biscoff-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 50638
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/crunchy-biscoff-480.webp 480w, /images/menu/optimized/crunchy-biscoff-800.webp 800w",
+        "avif": "/images/menu/optimized/crunchy-biscoff-480.avif 480w, /images/menu/optimized/crunchy-biscoff-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/crunchy-biscoff-800.webp",
+      "totalBytes": 154985
+    },
+    "dipping-sauces": {
+      "source": "/images/menu/dipping-sauces.png",
+      "width": 800,
+      "height": 800,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/dipping-sauces-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 30740
+        },
+        {
+          "src": "/images/menu/optimized/dipping-sauces-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 33954
+        },
+        {
+          "src": "/images/menu/optimized/dipping-sauces-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 61152
+        },
+        {
+          "src": "/images/menu/optimized/dipping-sauces-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 65760
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/dipping-sauces-480.webp 480w, /images/menu/optimized/dipping-sauces-800.webp 800w",
+        "avif": "/images/menu/optimized/dipping-sauces-480.avif 480w, /images/menu/optimized/dipping-sauces-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/dipping-sauces-800.webp",
+      "totalBytes": 191606
+    },
+    "dirty-bird-burger": {
+      "source": "/images/menu/dirty-bird-burger.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/dirty-bird-burger-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 33010
+        },
+        {
+          "src": "/images/menu/optimized/dirty-bird-burger-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 40081
+        },
+        {
+          "src": "/images/menu/optimized/dirty-bird-burger-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 75380
+        },
+        {
+          "src": "/images/menu/optimized/dirty-bird-burger-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 91306
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/dirty-bird-burger-480.webp 480w, /images/menu/optimized/dirty-bird-burger-800.webp 800w",
+        "avif": "/images/menu/optimized/dirty-bird-burger-480.avif 480w, /images/menu/optimized/dirty-bird-burger-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/dirty-bird-burger-800.webp",
+      "totalBytes": 239777
+    },
+    "dulce-de-leche-shake": {
+      "source": "/images/menu/dulce-de-leche-shake.png",
+      "width": 800,
+      "height": 800,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/dulce-de-leche-shake-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 24184
+        },
+        {
+          "src": "/images/menu/optimized/dulce-de-leche-shake-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 24336
+        },
+        {
+          "src": "/images/menu/optimized/dulce-de-leche-shake-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 44516
+        },
+        {
+          "src": "/images/menu/optimized/dulce-de-leche-shake-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 42383
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/dulce-de-leche-shake-480.webp 480w, /images/menu/optimized/dulce-de-leche-shake-800.webp 800w",
+        "avif": "/images/menu/optimized/dulce-de-leche-shake-480.avif 480w, /images/menu/optimized/dulce-de-leche-shake-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/dulce-de-leche-shake-800.webp",
+      "totalBytes": 135419
+    },
+    "fanta": {
+      "source": "/images/menu/fanta.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/fanta-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 23828
+        },
+        {
+          "src": "/images/menu/optimized/fanta-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 27309
+        },
+        {
+          "src": "/images/menu/optimized/fanta-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 46018
+        },
+        {
+          "src": "/images/menu/optimized/fanta-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 51617
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/fanta-480.webp 480w, /images/menu/optimized/fanta-800.webp 800w",
+        "avif": "/images/menu/optimized/fanta-480.avif 480w, /images/menu/optimized/fanta-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/fanta-800.webp",
+      "totalBytes": 148772
+    },
+    "flying-sue-burger": {
+      "source": "/images/menu/flying-sue-burger.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/flying-sue-burger-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 31102
+        },
+        {
+          "src": "/images/menu/optimized/flying-sue-burger-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 35630
+        },
+        {
+          "src": "/images/menu/optimized/flying-sue-burger-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 60544
+        },
+        {
+          "src": "/images/menu/optimized/flying-sue-burger-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 67668
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/flying-sue-burger-480.webp 480w, /images/menu/optimized/flying-sue-burger-800.webp 800w",
+        "avif": "/images/menu/optimized/flying-sue-burger-480.avif 480w, /images/menu/optimized/flying-sue-burger-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/flying-sue-burger-800.webp",
+      "totalBytes": 194944
+    },
+    "fries": {
+      "source": "/images/menu/fries.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/fries-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 36124
+        },
+        {
+          "src": "/images/menu/optimized/fries-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 42708
+        },
+        {
+          "src": "/images/menu/optimized/fries-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 75526
+        },
+        {
+          "src": "/images/menu/optimized/fries-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 87080
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/fries-480.webp 480w, /images/menu/optimized/fries-800.webp 800w",
+        "avif": "/images/menu/optimized/fries-480.avif 480w, /images/menu/optimized/fries-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/fries-800.webp",
+      "totalBytes": 241438
+    },
+    "grilled-chicken-mozza": {
+      "source": "/images/menu/grilled-chicken-mozza.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/grilled-chicken-mozza-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 26784
+        },
+        {
+          "src": "/images/menu/optimized/grilled-chicken-mozza-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 34482
+        },
+        {
+          "src": "/images/menu/optimized/grilled-chicken-mozza-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 55524
+        },
+        {
+          "src": "/images/menu/optimized/grilled-chicken-mozza-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 69129
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/grilled-chicken-mozza-480.webp 480w, /images/menu/optimized/grilled-chicken-mozza-800.webp 800w",
+        "avif": "/images/menu/optimized/grilled-chicken-mozza-480.avif 480w, /images/menu/optimized/grilled-chicken-mozza-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/grilled-chicken-mozza-800.webp",
+      "totalBytes": 185919
+    },
+    "jalapeno-smash-burger": {
+      "source": "/images/menu/jalapeno-smash-burger.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/jalapeno-smash-burger-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 34648
+        },
+        {
+          "src": "/images/menu/optimized/jalapeno-smash-burger-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 42261
+        },
+        {
+          "src": "/images/menu/optimized/jalapeno-smash-burger-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 73056
+        },
+        {
+          "src": "/images/menu/optimized/jalapeno-smash-burger-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 87708
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/jalapeno-smash-burger-480.webp 480w, /images/menu/optimized/jalapeno-smash-burger-800.webp 800w",
+        "avif": "/images/menu/optimized/jalapeno-smash-burger-480.avif 480w, /images/menu/optimized/jalapeno-smash-burger-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/jalapeno-smash-burger-800.webp",
+      "totalBytes": 237673
+    },
+    "kids-cheeseburger-fries": {
+      "source": "/images/menu/kids-cheeseburger-fries.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/kids-cheeseburger-fries-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 38968
+        },
+        {
+          "src": "/images/menu/optimized/kids-cheeseburger-fries-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 48931
+        },
+        {
+          "src": "/images/menu/optimized/kids-cheeseburger-fries-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 85006
+        },
+        {
+          "src": "/images/menu/optimized/kids-cheeseburger-fries-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 103804
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/kids-cheeseburger-fries-480.webp 480w, /images/menu/optimized/kids-cheeseburger-fries-800.webp 800w",
+        "avif": "/images/menu/optimized/kids-cheeseburger-fries-480.avif 480w, /images/menu/optimized/kids-cheeseburger-fries-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/kids-cheeseburger-fries-800.webp",
+      "totalBytes": 276709
+    },
+    "kids-nuggs-fries": {
+      "source": "/images/menu/kids-nuggs-fries.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/kids-nuggs-fries-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 41534
+        },
+        {
+          "src": "/images/menu/optimized/kids-nuggs-fries-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 49757
+        },
+        {
+          "src": "/images/menu/optimized/kids-nuggs-fries-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 85924
+        },
+        {
+          "src": "/images/menu/optimized/kids-nuggs-fries-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 100058
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/kids-nuggs-fries-480.webp 480w, /images/menu/optimized/kids-nuggs-fries-800.webp 800w",
+        "avif": "/images/menu/optimized/kids-nuggs-fries-480.avif 480w, /images/menu/optimized/kids-nuggs-fries-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/kids-nuggs-fries-800.webp",
+      "totalBytes": 277273
+    },
+    "loaded-maple-fries": {
+      "source": "/images/menu/loaded-maple-fries.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/loaded-maple-fries-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 49986
+        },
+        {
+          "src": "/images/menu/optimized/loaded-maple-fries-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 64159
+        },
+        {
+          "src": "/images/menu/optimized/loaded-maple-fries-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 106998
+        },
+        {
+          "src": "/images/menu/optimized/loaded-maple-fries-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 132019
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/loaded-maple-fries-480.webp 480w, /images/menu/optimized/loaded-maple-fries-800.webp 800w",
+        "avif": "/images/menu/optimized/loaded-maple-fries-480.avif 480w, /images/menu/optimized/loaded-maple-fries-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/loaded-maple-fries-800.webp",
+      "totalBytes": 353162
+    },
+    "malteser-shake": {
+      "source": "/images/menu/malteser-shake.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/malteser-shake-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 23804
+        },
+        {
+          "src": "/images/menu/optimized/malteser-shake-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 26906
+        },
+        {
+          "src": "/images/menu/optimized/malteser-shake-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 44320
+        },
+        {
+          "src": "/images/menu/optimized/malteser-shake-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 48002
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/malteser-shake-480.webp 480w, /images/menu/optimized/malteser-shake-800.webp 800w",
+        "avif": "/images/menu/optimized/malteser-shake-480.avif 480w, /images/menu/optimized/malteser-shake-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/malteser-shake-800.webp",
+      "totalBytes": 143032
+    },
+    "mango-lychee-splash-dirty-soda": {
+      "source": "/images/menu/mango-lychee-splash-dirty-soda.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/mango-lychee-splash-dirty-soda-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 22572
+        },
+        {
+          "src": "/images/menu/optimized/mango-lychee-splash-dirty-soda-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 23132
+        },
+        {
+          "src": "/images/menu/optimized/mango-lychee-splash-dirty-soda-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 46240
+        },
+        {
+          "src": "/images/menu/optimized/mango-lychee-splash-dirty-soda-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 47745
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/mango-lychee-splash-dirty-soda-480.webp 480w, /images/menu/optimized/mango-lychee-splash-dirty-soda-800.webp 800w",
+        "avif": "/images/menu/optimized/mango-lychee-splash-dirty-soda-480.avif 480w, /images/menu/optimized/mango-lychee-splash-dirty-soda-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/mango-lychee-splash-dirty-soda-800.webp",
+      "totalBytes": 139689
+    },
+    "naked-sue-burger": {
+      "source": "/images/menu/naked-sue-burger.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/naked-sue-burger-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 36088
+        },
+        {
+          "src": "/images/menu/optimized/naked-sue-burger-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 44067
+        },
+        {
+          "src": "/images/menu/optimized/naked-sue-burger-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 78718
+        },
+        {
+          "src": "/images/menu/optimized/naked-sue-burger-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 96353
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/naked-sue-burger-480.webp 480w, /images/menu/optimized/naked-sue-burger-800.webp 800w",
+        "avif": "/images/menu/optimized/naked-sue-burger-480.avif 480w, /images/menu/optimized/naked-sue-burger-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/naked-sue-burger-800.webp",
+      "totalBytes": 255226
+    },
+    "nashville-burger": {
+      "source": "/images/menu/nashville-burger.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/nashville-burger-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 29800
+        },
+        {
+          "src": "/images/menu/optimized/nashville-burger-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 35994
+        },
+        {
+          "src": "/images/menu/optimized/nashville-burger-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 60890
+        },
+        {
+          "src": "/images/menu/optimized/nashville-burger-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 72987
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/nashville-burger-480.webp 480w, /images/menu/optimized/nashville-burger-800.webp 800w",
+        "avif": "/images/menu/optimized/nashville-burger-480.avif 480w, /images/menu/optimized/nashville-burger-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/nashville-burger-800.webp",
+      "totalBytes": 199671
+    },
+    "nutella-shake": {
+      "source": "/images/menu/nutella-shake.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/nutella-shake-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 28648
+        },
+        {
+          "src": "/images/menu/optimized/nutella-shake-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 30275
+        },
+        {
+          "src": "/images/menu/optimized/nutella-shake-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 53026
+        },
+        {
+          "src": "/images/menu/optimized/nutella-shake-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 53959
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/nutella-shake-480.webp 480w, /images/menu/optimized/nutella-shake-800.webp 800w",
+        "avif": "/images/menu/optimized/nutella-shake-480.avif 480w, /images/menu/optimized/nutella-shake-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/nutella-shake-800.webp",
+      "totalBytes": 165908
+    },
+    "oklahoma-burger": {
+      "source": "/images/menu/oklahoma-burger.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/oklahoma-burger-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 34814
+        },
+        {
+          "src": "/images/menu/optimized/oklahoma-burger-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 41644
+        },
+        {
+          "src": "/images/menu/optimized/oklahoma-burger-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 76218
+        },
+        {
+          "src": "/images/menu/optimized/oklahoma-burger-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 91093
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/oklahoma-burger-480.webp 480w, /images/menu/optimized/oklahoma-burger-800.webp 800w",
+        "avif": "/images/menu/optimized/oklahoma-burger-480.avif 480w, /images/menu/optimized/oklahoma-burger-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/oklahoma-burger-800.webp",
+      "totalBytes": 243769
+    },
+    "onion-rings": {
+      "source": "/images/menu/onion-rings.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/onion-rings-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 32752
+        },
+        {
+          "src": "/images/menu/optimized/onion-rings-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 38167
+        },
+        {
+          "src": "/images/menu/optimized/onion-rings-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 68922
+        },
+        {
+          "src": "/images/menu/optimized/onion-rings-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 79480
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/onion-rings-480.webp 480w, /images/menu/optimized/onion-rings-800.webp 800w",
+        "avif": "/images/menu/optimized/onion-rings-480.avif 480w, /images/menu/optimized/onion-rings-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/onion-rings-800.webp",
+      "totalBytes": 219321
+    },
+    "orange-juice": {
+      "source": "/images/menu/orange-juice.png",
+      "width": 800,
+      "height": 800,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/orange-juice-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 19346
+        },
+        {
+          "src": "/images/menu/optimized/orange-juice-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 19124
+        },
+        {
+          "src": "/images/menu/optimized/orange-juice-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 37602
+        },
+        {
+          "src": "/images/menu/optimized/orange-juice-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 35567
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/orange-juice-480.webp 480w, /images/menu/optimized/orange-juice-800.webp 800w",
+        "avif": "/images/menu/optimized/orange-juice-480.avif 480w, /images/menu/optimized/orange-juice-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/orange-juice-800.webp",
+      "totalBytes": 111639
+    },
+    "oreo-cookies-creme": {
+      "source": "/images/menu/oreo-cookies-creme.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/oreo-cookies-creme-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 25960
+        },
+        {
+          "src": "/images/menu/optimized/oreo-cookies-creme-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 29455
+        },
+        {
+          "src": "/images/menu/optimized/oreo-cookies-creme-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 47392
+        },
+        {
+          "src": "/images/menu/optimized/oreo-cookies-creme-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 50801
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/oreo-cookies-creme-480.webp 480w, /images/menu/optimized/oreo-cookies-creme-800.webp 800w",
+        "avif": "/images/menu/optimized/oreo-cookies-creme-480.avif 480w, /images/menu/optimized/oreo-cookies-creme-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/oreo-cookies-creme-800.webp",
+      "totalBytes": 153608
+    },
+    "peach-spritz-dirty-soda": {
+      "source": "/images/menu/peach-spritz-dirty-soda.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/peach-spritz-dirty-soda-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 20324
+        },
+        {
+          "src": "/images/menu/optimized/peach-spritz-dirty-soda-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 20865
+        },
+        {
+          "src": "/images/menu/optimized/peach-spritz-dirty-soda-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 43260
+        },
+        {
+          "src": "/images/menu/optimized/peach-spritz-dirty-soda-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 43920
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/peach-spritz-dirty-soda-480.webp 480w, /images/menu/optimized/peach-spritz-dirty-soda-800.webp 800w",
+        "avif": "/images/menu/optimized/peach-spritz-dirty-soda-480.avif 480w, /images/menu/optimized/peach-spritz-dirty-soda-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/peach-spritz-dirty-soda-800.webp",
+      "totalBytes": 128369
+    },
+    "peanut-butter-shake": {
+      "source": "/images/menu/peanut-butter-shake.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/peanut-butter-shake-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 26414
+        },
+        {
+          "src": "/images/menu/optimized/peanut-butter-shake-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 25773
+        },
+        {
+          "src": "/images/menu/optimized/peanut-butter-shake-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 48204
+        },
+        {
+          "src": "/images/menu/optimized/peanut-butter-shake-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 45297
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/peanut-butter-shake-480.webp 480w, /images/menu/optimized/peanut-butter-shake-800.webp 800w",
+        "avif": "/images/menu/optimized/peanut-butter-shake-480.avif 480w, /images/menu/optimized/peanut-butter-shake-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/peanut-butter-shake-800.webp",
+      "totalBytes": 145688
+    },
+    "pink-flamingo-dirty-soda": {
+      "source": "/images/menu/pink-flamingo-dirty-soda.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/pink-flamingo-dirty-soda-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 23030
+        },
+        {
+          "src": "/images/menu/optimized/pink-flamingo-dirty-soda-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 24640
+        },
+        {
+          "src": "/images/menu/optimized/pink-flamingo-dirty-soda-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 46804
+        },
+        {
+          "src": "/images/menu/optimized/pink-flamingo-dirty-soda-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 47965
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/pink-flamingo-dirty-soda-480.webp 480w, /images/menu/optimized/pink-flamingo-dirty-soda-800.webp 800w",
+        "avif": "/images/menu/optimized/pink-flamingo-dirty-soda-480.avif 480w, /images/menu/optimized/pink-flamingo-dirty-soda-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/pink-flamingo-dirty-soda-800.webp",
+      "totalBytes": 142439
+    },
+    "popping-punch-dirty-soda": {
+      "source": "/images/menu/popping-punch-dirty-soda.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/popping-punch-dirty-soda-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 24244
+        },
+        {
+          "src": "/images/menu/optimized/popping-punch-dirty-soda-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 26022
+        },
+        {
+          "src": "/images/menu/optimized/popping-punch-dirty-soda-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 50704
+        },
+        {
+          "src": "/images/menu/optimized/popping-punch-dirty-soda-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 52302
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/popping-punch-dirty-soda-480.webp 480w, /images/menu/optimized/popping-punch-dirty-soda-800.webp 800w",
+        "avif": "/images/menu/optimized/popping-punch-dirty-soda-480.avif 480w, /images/menu/optimized/popping-punch-dirty-soda-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/popping-punch-dirty-soda-800.webp",
+      "totalBytes": 153272
+    },
+    "raising-daves-box": {
+      "source": "/images/menu/raising-daves-box.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/raising-daves-box-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 51406
+        },
+        {
+          "src": "/images/menu/optimized/raising-daves-box-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 66224
+        },
+        {
+          "src": "/images/menu/optimized/raising-daves-box-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 113328
+        },
+        {
+          "src": "/images/menu/optimized/raising-daves-box-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 143630
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/raising-daves-box-480.webp 480w, /images/menu/optimized/raising-daves-box-800.webp 800w",
+        "avif": "/images/menu/optimized/raising-daves-box-480.avif 480w, /images/menu/optimized/raising-daves-box-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/raising-daves-box-800.webp",
+      "totalBytes": 374588
+    },
+    "raspberr-cream-cola": {
+      "source": "/images/menu/raspberr-cream-cola.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/raspberr-cream-cola-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 24172
+        },
+        {
+          "src": "/images/menu/optimized/raspberr-cream-cola-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 26012
+        },
+        {
+          "src": "/images/menu/optimized/raspberr-cream-cola-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 47556
+        },
+        {
+          "src": "/images/menu/optimized/raspberr-cream-cola-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 50959
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/raspberr-cream-cola-480.webp 480w, /images/menu/optimized/raspberr-cream-cola-800.webp 800w",
+        "avif": "/images/menu/optimized/raspberr-cream-cola-480.avif 480w, /images/menu/optimized/raspberr-cream-cola-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/raspberr-cream-cola-800.webp",
+      "totalBytes": 148699
+    },
+    "raspberry-coconut-dirty-soda": {
+      "source": "/images/menu/raspberry-coconut-dirty-soda.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/raspberry-coconut-dirty-soda-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 22608
+        },
+        {
+          "src": "/images/menu/optimized/raspberry-coconut-dirty-soda-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 23652
+        },
+        {
+          "src": "/images/menu/optimized/raspberry-coconut-dirty-soda-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 44720
+        },
+        {
+          "src": "/images/menu/optimized/raspberry-coconut-dirty-soda-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 46237
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/raspberry-coconut-dirty-soda-480.webp 480w, /images/menu/optimized/raspberry-coconut-dirty-soda-800.webp 800w",
+        "avif": "/images/menu/optimized/raspberry-coconut-dirty-soda-480.avif 480w, /images/menu/optimized/raspberry-coconut-dirty-soda-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/raspberry-coconut-dirty-soda-800.webp",
+      "totalBytes": 137217
+    },
+    "southern-fried-chicken-burger": {
+      "source": "/images/menu/southern-fried-chicken-burger.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/southern-fried-chicken-burger-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 33084
+        },
+        {
+          "src": "/images/menu/optimized/southern-fried-chicken-burger-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 40659
+        },
+        {
+          "src": "/images/menu/optimized/southern-fried-chicken-burger-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 72570
+        },
+        {
+          "src": "/images/menu/optimized/southern-fried-chicken-burger-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 87039
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/southern-fried-chicken-burger-480.webp 480w, /images/menu/optimized/southern-fried-chicken-burger-800.webp 800w",
+        "avif": "/images/menu/optimized/southern-fried-chicken-burger-480.avif 480w, /images/menu/optimized/southern-fried-chicken-burger-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/southern-fried-chicken-burger-800.webp",
+      "totalBytes": 233352
+    },
+    "sparkling-water": {
+      "source": "/images/menu/sparkling-water.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/sparkling-water-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 18582
+        },
+        {
+          "src": "/images/menu/optimized/sparkling-water-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 20595
+        },
+        {
+          "src": "/images/menu/optimized/sparkling-water-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 38044
+        },
+        {
+          "src": "/images/menu/optimized/sparkling-water-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 41326
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/sparkling-water-480.webp 480w, /images/menu/optimized/sparkling-water-800.webp 800w",
+        "avif": "/images/menu/optimized/sparkling-water-480.avif 480w, /images/menu/optimized/sparkling-water-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/sparkling-water-800.webp",
+      "totalBytes": 118547
+    },
+    "sprite": {
+      "source": "/images/menu/sprite.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/sprite-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 23954
+        },
+        {
+          "src": "/images/menu/optimized/sprite-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 27900
+        },
+        {
+          "src": "/images/menu/optimized/sprite-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 48332
+        },
+        {
+          "src": "/images/menu/optimized/sprite-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 56181
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/sprite-480.webp 480w, /images/menu/optimized/sprite-800.webp 800w",
+        "avif": "/images/menu/optimized/sprite-480.avif 480w, /images/menu/optimized/sprite-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/sprite-800.webp",
+      "totalBytes": 156367
+    },
+    "still-water": {
+      "source": "/images/menu/still-water.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/still-water-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 20222
+        },
+        {
+          "src": "/images/menu/optimized/still-water-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 21766
+        },
+        {
+          "src": "/images/menu/optimized/still-water-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 39024
+        },
+        {
+          "src": "/images/menu/optimized/still-water-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 41118
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/still-water-480.webp 480w, /images/menu/optimized/still-water-800.webp 800w",
+        "avif": "/images/menu/optimized/still-water-480.avif 480w, /images/menu/optimized/still-water-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/still-water-800.webp",
+      "totalBytes": 122130
+    },
+    "sues-hot-honey-box-daves-box": {
+      "source": "/images/menu/sues-hot-honey-box-daves-box.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/sues-hot-honey-box-daves-box-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 41092
+        },
+        {
+          "src": "/images/menu/optimized/sues-hot-honey-box-daves-box-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 51106
+        },
+        {
+          "src": "/images/menu/optimized/sues-hot-honey-box-daves-box-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 92834
+        },
+        {
+          "src": "/images/menu/optimized/sues-hot-honey-box-daves-box-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 114119
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/sues-hot-honey-box-daves-box-480.webp 480w, /images/menu/optimized/sues-hot-honey-box-daves-box-800.webp 800w",
+        "avif": "/images/menu/optimized/sues-hot-honey-box-daves-box-480.avif 480w, /images/menu/optimized/sues-hot-honey-box-daves-box-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/sues-hot-honey-box-daves-box-800.webp",
+      "totalBytes": 299151
+    },
+    "sues-hot-honey-box": {
+      "source": "/images/menu/sues-hot-honey-box.png",
+      "width": 819,
+      "height": 1024,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/sues-hot-honey-box-480.webp",
+          "width": 480,
+          "height": 600,
+          "format": "webp",
+          "bytes": 62748
+        },
+        {
+          "src": "/images/menu/optimized/sues-hot-honey-box-480.avif",
+          "width": 480,
+          "height": 600,
+          "format": "avif",
+          "bytes": 80986
+        },
+        {
+          "src": "/images/menu/optimized/sues-hot-honey-box-800.webp",
+          "width": 800,
+          "height": 1000,
+          "format": "webp",
+          "bytes": 126478
+        },
+        {
+          "src": "/images/menu/optimized/sues-hot-honey-box-800.avif",
+          "width": 800,
+          "height": 1000,
+          "format": "avif",
+          "bytes": 159515
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/sues-hot-honey-box-480.webp 480w, /images/menu/optimized/sues-hot-honey-box-800.webp 800w",
+        "avif": "/images/menu/optimized/sues-hot-honey-box-480.avif 480w, /images/menu/optimized/sues-hot-honey-box-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/sues-hot-honey-box-800.webp",
+      "totalBytes": 429727
+    },
+    "sues-signature-burger": {
+      "source": "/images/menu/sues-signature-burger.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/sues-signature-burger-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 38228
+        },
+        {
+          "src": "/images/menu/optimized/sues-signature-burger-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 46820
+        },
+        {
+          "src": "/images/menu/optimized/sues-signature-burger-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 79054
+        },
+        {
+          "src": "/images/menu/optimized/sues-signature-burger-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 95534
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/sues-signature-burger-480.webp 480w, /images/menu/optimized/sues-signature-burger-800.webp 800w",
+        "avif": "/images/menu/optimized/sues-signature-burger-480.avif 480w, /images/menu/optimized/sues-signature-burger-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/sues-signature-burger-800.webp",
+      "totalBytes": 259636
+    },
+    "tropical-sunset-dirty-soda": {
+      "source": "/images/menu/tropical-sunset-dirty-soda.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/tropical-sunset-dirty-soda-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 25686
+        },
+        {
+          "src": "/images/menu/optimized/tropical-sunset-dirty-soda-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 28162
+        },
+        {
+          "src": "/images/menu/optimized/tropical-sunset-dirty-soda-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 55382
+        },
+        {
+          "src": "/images/menu/optimized/tropical-sunset-dirty-soda-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 59645
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/tropical-sunset-dirty-soda-480.webp 480w, /images/menu/optimized/tropical-sunset-dirty-soda-800.webp 800w",
+        "avif": "/images/menu/optimized/tropical-sunset-dirty-soda-480.avif 480w, /images/menu/optimized/tropical-sunset-dirty-soda-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/tropical-sunset-dirty-soda-800.webp",
+      "totalBytes": 168875
+    },
+    "vego-burger": {
+      "source": "/images/menu/vego-burger.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/vego-burger-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 29480
+        },
+        {
+          "src": "/images/menu/optimized/vego-burger-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 35669
+        },
+        {
+          "src": "/images/menu/optimized/vego-burger-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 62818
+        },
+        {
+          "src": "/images/menu/optimized/vego-burger-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 76119
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/vego-burger-480.webp 480w, /images/menu/optimized/vego-burger-800.webp 800w",
+        "avif": "/images/menu/optimized/vego-burger-480.avif 480w, /images/menu/optimized/vego-burger-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/vego-burger-800.webp",
+      "totalBytes": 204086
+    }
+  }
+}
