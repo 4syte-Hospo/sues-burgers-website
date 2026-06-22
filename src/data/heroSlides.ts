@@ -32,7 +32,7 @@ export const heroSlides: HeroSlide[] = [
     buttonText: "ORDER ONLINE",
     buttonLink: ORDER_URL,
     active: true,
-    buttonPositionDesktop: { x: 75, y: 88 },
+    buttonPositionDesktop: { x: 72, y: 86 },
     buttonPositionMobile: { x: 50, y: 92.5 },
   },
   {

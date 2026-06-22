@@ -94,28 +94,28 @@
             "width": 1200,
             "height": 656,
             "format": "webp",
-            "bytes": 92886
+            "bytes": 92710
           },
           {
             "src": "/images/hero/optimized/heroimg3-desktop-1200.avif",
             "width": 1200,
             "height": 656,
             "format": "avif",
-            "bytes": 110767
+            "bytes": 110343
           },
           {
             "src": "/images/hero/optimized/heroimg3-desktop-2000.webp",
             "width": 2000,
             "height": 1094,
             "format": "webp",
-            "bytes": 175404
+            "bytes": 177058
           },
           {
             "src": "/images/hero/optimized/heroimg3-desktop-2000.avif",
             "width": 2000,
             "height": 1094,
             "format": "avif",
-            "bytes": 196334
+            "bytes": 196873
           }
         ],
         "srcset": {
@@ -161,7 +161,7 @@
         },
         "fallback": "/images/hero/optimized/heroimg3-mobile-768.webp"
       },
-      "totalBytes": 1321687
+      "totalBytes": 1323280
     },
     "heroimg1": {
       "desktop": {
