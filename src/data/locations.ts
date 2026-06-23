@@ -22,7 +22,7 @@ export const locationsHero = {
   eyebrow: "Visit us",
   title: "Our Brisbane Locations",
   body:
-    "Family-friendly restaurants in Woolloongabba and Carindale — smash burgers, Raising Dave's fried chicken boxes, dirty sodas and loaded fries across Brisbane's south side.",
+    "Family-friendly restaurants in Woolloongabba and Carindale — smash burgers, Raising Dave's fried chicken boxes, dirty sodas and loaded fries across Brisbane's south-east.",
 } as const;
 
 export const locations: LocationStore[] = [
