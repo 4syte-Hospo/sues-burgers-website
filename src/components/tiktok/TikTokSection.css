@@ -166,22 +166,6 @@
   border: 0;
 }
 
-/* Mobile gesture shim — sits above iframe for directional swipe handling */
-.tiktok-card__touch-layer {
-  display: none;
-}
-
-@media (max-width: 767px) {
-  .tiktok-card__touch-layer {
-    display: block;
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    touch-action: none;
-    background: transparent;
-  }
-}
-
 .tiktok-card__placeholder {
   background: linear-gradient(
     180deg,

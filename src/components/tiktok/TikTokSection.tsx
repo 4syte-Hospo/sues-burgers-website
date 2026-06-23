@@ -6,6 +6,7 @@ import {
   useEffect,
   useRef,
   useState,
+  type RefObject,
 } from "react";
 import type { TikTokCarouselVariant } from "../../config/tiktokCarousel";
 import type { TikTokVideo } from "../../data/tiktokVideos";
@@ -24,8 +25,6 @@ const EmblaCarouselContext = createContext<EmblaApi | undefined>(undefined);
 
 const AXIS_LOCK_PX = 12;
 const SWIPE_PX = 48;
-const TAP_PX = 10;
-
 type Props = {
   variant?: TikTokCarouselVariant;
   headingId?: string;
@@ -67,64 +66,55 @@ function useIsMobileViewport() {
 }
 
 /**
- * Mobile-only gesture layer above TikTok iframes.
- * Cross-origin embeds capture touches — this shim detects swipe direction and
- * either advances the carousel (horizontal) or temporarily steps aside (vertical/tap).
+ * Mobile-only swipe routing on the iframe element itself (no overlay).
+ * Taps and vertical gestures pass through to the TikTok embed; horizontal swipes
+ * advance the carousel. A full-screen overlay cannot forward taps into cross-origin iframes.
  */
-function MobileEmbedTouchLayer() {
+function useMobileIframeSwipe(
+  iframeRef: RefObject<HTMLIFrameElement | null>,
+  enabled: boolean,
+) {
   const emblaApi = useContext(EmblaCarouselContext);
-  const layerRef = useRef<HTMLDivElement>(null);
-  const startRef = useRef<{ x: number; y: number } | null>(null);
-  const axisRef = useRef<"horizontal" | "vertical" | null>(null);
-
-  const releaseToEmbed = useCallback(() => {
-    const layer = layerRef.current;
-    if (!layer) return;
-    layer.style.pointerEvents = "none";
-    window.setTimeout(() => {
-      if (layer) layer.style.pointerEvents = "";
-    }, 350);
-  }, []);
 
   useEffect(() => {
-    const layer = layerRef.current;
-    if (!layer) return;
+    if (!enabled) return;
+
+    const iframe = iframeRef.current;
+    if (!iframe) return;
+
+    let start: { x: number; y: number } | null = null;
+    let axis: "horizontal" | "vertical" | null = null;
 
     const onTouchStart = (event: TouchEvent) => {
       const touch = event.changedTouches[0] ?? event.touches[0];
       if (!touch) return;
-      startRef.current = { x: touch.clientX, y: touch.clientY };
-      axisRef.current = null;
+      start = { x: touch.clientX, y: touch.clientY };
+      axis = null;
     };
 
     const onTouchMove = (event: TouchEvent) => {
-      const start = startRef.current;
+      if (!start) return;
       const touch = event.touches[0];
-      if (!start || !touch) return;
+      if (!touch) return;
 
       const dx = touch.clientX - start.x;
       const dy = touch.clientY - start.y;
 
-      if (!axisRef.current && (Math.abs(dx) > AXIS_LOCK_PX || Math.abs(dy) > AXIS_LOCK_PX)) {
-        axisRef.current = Math.abs(dx) > Math.abs(dy) ? "horizontal" : "vertical";
-        if (axisRef.current === "vertical") {
-          releaseToEmbed();
-        }
+      if (!axis && (Math.abs(dx) > AXIS_LOCK_PX || Math.abs(dy) > AXIS_LOCK_PX)) {
+        axis = Math.abs(dx) > Math.abs(dy) ? "horizontal" : "vertical";
       }
 
-      if (axisRef.current === "horizontal") {
+      if (axis === "horizontal") {
         event.preventDefault();
       }
     };
 
     const onTouchEnd = (event: TouchEvent) => {
-      const start = startRef.current;
+      if (!start) return;
       const touch = event.changedTouches[0];
-      if (!start || !touch) return;
+      if (!touch) return;
 
       const dx = touch.clientX - start.x;
-      const dy = touch.clientY - start.y;
-      const axis = axisRef.current;
 
       if (axis === "horizontal") {
         if (dx <= -SWIPE_PX) {
@@ -132,39 +122,32 @@ function MobileEmbedTouchLayer() {
         } else if (dx >= SWIPE_PX) {
           emblaApi?.scrollPrev();
         }
-      } else if (!axis && Math.abs(dx) < TAP_PX && Math.abs(dy) < TAP_PX) {
-        layer.style.pointerEvents = "none";
-        const target = document.elementFromPoint(touch.clientX, touch.clientY) as HTMLElement | null;
-        target?.click();
-        window.requestAnimationFrame(() => {
-          layer.style.pointerEvents = "";
-        });
       }
 
-      startRef.current = null;
-      axisRef.current = null;
+      start = null;
+      axis = null;
     };
 
-    layer.addEventListener("touchstart", onTouchStart, { passive: true });
-    layer.addEventListener("touchmove", onTouchMove, { passive: false });
-    layer.addEventListener("touchend", onTouchEnd, { passive: true });
-    layer.addEventListener("touchcancel", onTouchEnd, { passive: true });
+    iframe.addEventListener("touchstart", onTouchStart, { passive: true });
+    iframe.addEventListener("touchmove", onTouchMove, { passive: false });
+    iframe.addEventListener("touchend", onTouchEnd, { passive: true });
+    iframe.addEventListener("touchcancel", onTouchEnd, { passive: true });
 
     return () => {
-      layer.removeEventListener("touchstart", onTouchStart);
-      layer.removeEventListener("touchmove", onTouchMove);
-      layer.removeEventListener("touchend", onTouchEnd);
-      layer.removeEventListener("touchcancel", onTouchEnd);
+      iframe.removeEventListener("touchstart", onTouchStart);
+      iframe.removeEventListener("touchmove", onTouchMove);
+      iframe.removeEventListener("touchend", onTouchEnd);
+      iframe.removeEventListener("touchcancel", onTouchEnd);
     };
-  }, [emblaApi, releaseToEmbed]);
-
-  return <div ref={layerRef} className="tiktok-card__touch-layer" aria-hidden="true" />;
+  }, [emblaApi, enabled, iframeRef]);
 }
 
 function TikTokEmbedCard({ video }: { video: TikTokVideo }) {
   const ref = useRef<HTMLDivElement>(null);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
   const [showEmbed, setShowEmbed] = useState(false);
   const isMobile = useIsMobileViewport();
+  useMobileIframeSwipe(iframeRef, isMobile && showEmbed);
 
   useEffect(() => {
     const el = ref.current;
@@ -186,18 +169,16 @@ function TikTokEmbedCard({ video }: { video: TikTokVideo }) {
       <div className="tiktok-card__frame">
         <div className="tiktok-card__embed-wrap">
           {showEmbed ? (
-            <>
-              <iframe
-                src={`${TIKTOK_EMBED_BASE}/${video.id}`}
-                title={video.label}
-                className="tiktok-card__embed"
-                scrolling={isMobile ? "yes" : "no"}
-                allow="fullscreen; encrypted-media"
-                allowFullScreen
-                loading="lazy"
-              />
-              {isMobile ? <MobileEmbedTouchLayer /> : null}
-            </>
+            <iframe
+              ref={iframeRef}
+              src={`${TIKTOK_EMBED_BASE}/${video.id}`}
+              title={video.label}
+              className="tiktok-card__embed"
+              scrolling={isMobile ? "yes" : "no"}
+              allow="fullscreen; encrypted-media"
+              allowFullScreen
+              loading="lazy"
+            />
           ) : (
             <div className="tiktok-card__placeholder" aria-hidden="true" />
           )}
@@ -222,7 +203,7 @@ export function TikTokSection({ variant = "default", headingId = "tiktok-heading
     loop: false,
     watchDrag: (_emblaApi, event) => {
       const target = event.target;
-      if (target instanceof Element && target.closest(".tiktok-card__touch-layer")) {
+      if (target instanceof HTMLIFrameElement && target.classList.contains("tiktok-card__embed")) {
         return false;
       }
       return true;
