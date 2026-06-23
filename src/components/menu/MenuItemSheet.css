@@ -36,16 +36,15 @@
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   box-shadow: 0 -8px 40px rgba(26, 26, 26, 0.14);
   overflow: hidden;
-  transform: translateY(1.25rem);
+  transform: translate3d(0, 100%, 0);
   opacity: 0;
   transition:
     transform 340ms cubic-bezier(0.16, 1, 0.3, 1),
-    opacity 260ms ease-out;
-  will-change: transform, opacity;
+    opacity 280ms ease-out;
 }
 
 .menu-item-sheet--visible .menu-item-sheet__panel {
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
   opacity: 1;
 }
 
@@ -109,6 +108,12 @@
   cursor: pointer;
   box-shadow: 0 2px 10px rgba(26, 26, 26, 0.12);
   pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.menu-item-sheet__close:active {
+  transform: none;
 }
 
 .menu-item-sheet__image {

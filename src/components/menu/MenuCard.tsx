@@ -102,14 +102,11 @@ export function MenuCard({ item }: Props) {
       {isTouchPrimary && sheetMounted && (
         <MenuItemSheet
           item={item}
-          open={sheetOpen}
           scrollY={sheetScrollY}
-          onClose={() => setSheetOpen(false)}
           onExited={() => {
             setSheetMounted(false);
             setSheetOpen(false);
           }}
-          returnFocusRef={cardRef}
         />
       )}
     </>

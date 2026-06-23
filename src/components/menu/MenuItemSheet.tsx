@@ -9,11 +9,8 @@ const EXIT_MS = 340;
 
 type Props = {
   item: MenuItem;
-  open: boolean;
   scrollY: number;
-  onClose: () => void;
   onExited: () => void;
-  returnFocusRef: React.RefObject<HTMLElement | null>;
 };
 
 function lockBodyScroll(scrollY: number) {
@@ -25,8 +22,9 @@ function lockBodyScroll(scrollY: number) {
 }
 
 function unlockBodyScroll(scrollY: number) {
-  const previousBehavior = document.documentElement.style.scrollBehavior;
-  document.documentElement.style.scrollBehavior = "auto";
+  const html = document.documentElement;
+  const previousBehavior = html.style.scrollBehavior;
+  html.style.scrollBehavior = "auto";
 
   document.body.style.position = "";
   document.body.style.top = "";
@@ -34,21 +32,14 @@ function unlockBodyScroll(scrollY: number) {
   document.body.style.right = "";
   document.body.style.width = "";
 
-  document.documentElement.scrollTop = scrollY;
+  html.scrollTop = scrollY;
   document.body.scrollTop = scrollY;
-  window.scrollTo(0, scrollY);
+  window.scrollTo({ top: scrollY, left: 0, behavior: "instant" });
 
-  document.documentElement.style.scrollBehavior = previousBehavior;
+  html.style.scrollBehavior = previousBehavior;
 }
 
-export function MenuItemSheet({
-  item,
-  open,
-  scrollY,
-  onClose,
-  onExited,
-  returnFocusRef,
-}: Props) {
+export function MenuItemSheet({ item, scrollY, onExited }: Props) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
   const scrollYRef = useRef(scrollY);
@@ -66,19 +57,21 @@ export function MenuItemSheet({
     hasFinishedRef.current = true;
     isClosingRef.current = false;
 
+    const dialog = dialogRef.current;
+    if (dialog) {
+      dialog.style.visibility = "hidden";
+    }
+
     unlockBodyScroll(scrollYRef.current);
-    dialogRef.current?.close();
-    onExited();
 
     requestAnimationFrame(() => {
-      returnFocusRef.current?.focus({ preventScroll: true });
+      dialogRef.current?.close();
+      onExited();
     });
-  }, [onExited, returnFocusRef]);
+  }, [onExited]);
 
   const beginClose = useCallback(() => {
     if (isClosingRef.current || hasFinishedRef.current) return;
-
-    onClose();
 
     if (!isAnimatedInRef.current) {
       finishClose();
@@ -95,18 +88,22 @@ export function MenuItemSheet({
       return;
     }
 
-    const handleTransitionEnd = (event: TransitionEvent) => {
-      if (event.target !== panel || event.propertyName !== "transform") return;
+    let finished = false;
+    const complete = () => {
+      if (finished) return;
+      finished = true;
       panel.removeEventListener("transitionend", handleTransitionEnd);
       finishClose();
     };
 
+    const handleTransitionEnd = (event: TransitionEvent) => {
+      if (event.target !== panel || event.propertyName !== "transform") return;
+      complete();
+    };
+
     panel.addEventListener("transitionend", handleTransitionEnd);
-    window.setTimeout(() => {
-      panel.removeEventListener("transitionend", handleTransitionEnd);
-      finishClose();
-    }, EXIT_MS + 80);
-  }, [finishClose, onClose]);
+    window.setTimeout(complete, EXIT_MS + 80);
+  }, [finishClose]);
 
   useLayoutEffect(() => {
     scrollYRef.current = scrollY;
@@ -138,16 +135,16 @@ export function MenuItemSheet({
     };
   }, [beginClose]);
 
-  useEffect(() => {
-    if (!open) {
-      beginClose();
-    }
-  }, [open, beginClose]);
-
   const handleDialogClick = (event: React.MouseEvent<HTMLDialogElement>) => {
     if (event.target === dialogRef.current) {
       beginClose();
     }
+  };
+
+  const handleCloseClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    event.stopPropagation();
+    beginClose();
   };
 
   return (
@@ -171,7 +168,7 @@ export function MenuItemSheet({
               type="button"
               className="menu-item-sheet__close"
               aria-label={`Close ${item.name}`}
-              onClick={beginClose}
+              onClick={handleCloseClick}
             >
               <span aria-hidden="true">&times;</span>
             </button>
