@@ -158,23 +158,24 @@ export function MenuItemSheet({
       onClick={handleDialogClick}
     >
       <div ref={panelRef} className="menu-item-sheet__panel" role="document">
-        <div className="menu-item-sheet__handle" aria-hidden="true" />
-
-        <button
-          type="button"
-          className="menu-item-sheet__close"
-          aria-label={`Close ${item.name}`}
-          onClick={beginClose}
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-
         <div className="menu-item-sheet__media">
           <MenuItemImage
             item={item}
             imageClassName="menu-item-sheet__image"
             loading="eager"
           />
+
+          <div className="menu-item-sheet__chrome">
+            <div className="menu-item-sheet__handle" aria-hidden="true" />
+            <button
+              type="button"
+              className="menu-item-sheet__close"
+              aria-label={`Close ${item.name}`}
+              onClick={beginClose}
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
         </div>
 
         <div className="menu-item-sheet__body">
