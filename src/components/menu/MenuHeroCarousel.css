@@ -17,6 +17,8 @@
   flex: 0 0 100%;
   min-width: 0;
   line-height: 0;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
 }
 
 .menu-hero-carousel__slide picture {
@@ -25,6 +27,7 @@
   line-height: 0;
   aspect-ratio: 3750 / 4688;
   background: var(--color-cream);
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
