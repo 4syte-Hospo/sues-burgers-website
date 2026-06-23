@@ -11,10 +11,11 @@
 .menu-card--touch {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .menu-card--touch:active {
-  opacity: 0.96;
+  opacity: 0.98;
 }
 
 .menu-card__media {

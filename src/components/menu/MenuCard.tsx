@@ -2,7 +2,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import type { MenuItem } from "../../types/menu";
 import { ORDER_URL } from "../../data/site";
 import { formatPrice } from "../../utils/data";
-import { lockMenuSheetScroll } from "../../utils/menuSheetScroll";
 import { MenuItemImage } from "./MenuItemImage";
 import { MenuItemSheet } from "./MenuItemSheet";
 import "./MenuCard.css";
@@ -29,7 +28,6 @@ export function MenuCard({ item }: Props) {
   const cardRef = useRef<HTMLElement>(null);
   const [sheetOpen, setSheetOpen] = useState(false);
   const [sheetMounted, setSheetMounted] = useState(false);
-  const [sheetScrollY, setSheetScrollY] = useState(0);
   const isTouchPrimary = useTouchPrimary();
 
   const orderHref = item.orderLink ?? ORDER_URL;
@@ -37,8 +35,6 @@ export function MenuCard({ item }: Props) {
     item.priceLabel ?? (item.price != null ? formatPrice(item.price) : "");
 
   const openSheet = useCallback(() => {
-    const y = lockMenuSheetScroll();
-    setSheetScrollY(y);
     setSheetMounted(true);
     setSheetOpen(true);
   }, []);
@@ -104,7 +100,6 @@ export function MenuCard({ item }: Props) {
       {isTouchPrimary && sheetMounted && (
         <MenuItemSheet
           item={item}
-          scrollY={sheetScrollY}
           onExited={() => {
             setSheetMounted(false);
             setSheetOpen(false);

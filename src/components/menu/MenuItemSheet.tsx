@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useId, useLayoutEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import type { MenuItem } from "../../types/menu";
 import { ORDER_URL } from "../../data/site";
 import { formatPrice } from "../../utils/data";
 import {
-  isMenuSheetScrollLocked,
   lockMenuSheetScroll,
   unlockMenuSheetScroll,
 } from "../../utils/menuSheetScroll";
@@ -14,14 +14,12 @@ const TRANSITION_MS = 360;
 
 type Props = {
   item: MenuItem;
-  scrollY: number;
   onExited: () => void;
 };
 
-export function MenuItemSheet({ item, scrollY, onExited }: Props) {
-  const dialogRef = useRef<HTMLDialogElement>(null);
+export function MenuItemSheet({ item, onExited }: Props) {
+  const rootRef = useRef<HTMLDivElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
-  const scrollYRef = useRef(scrollY);
   const isAnimatedInRef = useRef(false);
   const isClosingRef = useRef(false);
   const hasFinishedRef = useRef(false);
@@ -36,15 +34,7 @@ export function MenuItemSheet({ item, scrollY, onExited }: Props) {
     hasFinishedRef.current = true;
     isClosingRef.current = false;
 
-    const dialog = dialogRef.current;
-    if (dialog) {
-      dialog.style.visibility = "hidden";
-    }
-
-    unlockMenuSheetScroll(scrollYRef.current);
-
     requestAnimationFrame(() => {
-      dialogRef.current?.close();
       onExited();
     });
   }, [onExited]);
@@ -59,7 +49,7 @@ export function MenuItemSheet({ item, scrollY, onExited }: Props) {
 
     isClosingRef.current = true;
     isAnimatedInRef.current = false;
-    dialogRef.current?.classList.remove("menu-item-sheet--visible");
+    rootRef.current?.classList.remove("menu-item-sheet--visible");
 
     const panel = panelRef.current;
     if (!panel) {
@@ -85,48 +75,40 @@ export function MenuItemSheet({ item, scrollY, onExited }: Props) {
   }, [finishClose]);
 
   useLayoutEffect(() => {
-    scrollYRef.current = scrollY;
+    lockMenuSheetScroll();
+    return () => unlockMenuSheetScroll();
+  }, []);
 
-    if (!isMenuSheetScrollLocked()) {
-      lockMenuSheetScroll();
-    }
+  useEffect(() => {
+    const root = rootRef.current;
+    if (!root) return;
 
-    const dialog = dialogRef.current;
-    if (!dialog) return;
-
-    dialog.showModal();
-
-    // Ensure the closed transform is committed before animating open.
-    void dialog.offsetHeight;
+    void root.offsetHeight;
 
     const frame = window.requestAnimationFrame(() => {
       isAnimatedInRef.current = true;
-      dialog.classList.add("menu-item-sheet--visible");
+      root.classList.add("menu-item-sheet--visible");
+      if (panelRef.current) {
+        panelRef.current.style.willChange = "auto";
+      }
     });
 
     return () => {
       window.cancelAnimationFrame(frame);
     };
-  }, [scrollY]);
+  }, []);
 
   useEffect(() => {
-    const dialog = dialogRef.current;
-    if (!dialog) return;
-
-    const handleCancel = (event: Event) => {
-      event.preventDefault();
-      beginClose();
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        beginClose();
+      }
     };
 
-    dialog.addEventListener("cancel", handleCancel);
-    return () => dialog.removeEventListener("cancel", handleCancel);
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
   }, [beginClose]);
-
-  const handleDialogClick = (event: React.MouseEvent<HTMLDialogElement>) => {
-    if (event.target === dialogRef.current) {
-      beginClose();
-    }
-  };
 
   const handleCloseClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
@@ -134,13 +116,21 @@ export function MenuItemSheet({ item, scrollY, onExited }: Props) {
     beginClose();
   };
 
-  return (
-    <dialog
-      ref={dialogRef}
+  return createPortal(
+    <div
+      ref={rootRef}
       className="menu-item-sheet"
+      role="dialog"
+      aria-modal="true"
       aria-labelledby={titleId}
-      onClick={handleDialogClick}
     >
+      <button
+        type="button"
+        className="menu-item-sheet__backdrop"
+        aria-label="Close menu item"
+        onClick={beginClose}
+      />
+
       <div ref={panelRef} className="menu-item-sheet__panel" role="document">
         <div className="menu-item-sheet__media">
           <MenuItemImage
@@ -190,6 +180,7 @@ export function MenuItemSheet({ item, scrollY, onExited }: Props) {
           </a>
         </div>
       </div>
-    </dialog>
+    </div>,
+    document.body,
   );
 }

@@ -1,35 +1,27 @@
-let lockedScrollY = 0;
+let lockCount = 0;
 
-export function lockMenuSheetScroll(): number {
-  lockedScrollY = window.scrollY;
+export function lockMenuSheetScroll(): void {
+  lockCount += 1;
 
-  document.body.style.position = "fixed";
-  document.body.style.top = `-${lockedScrollY}px`;
-  document.body.style.left = "0";
-  document.body.style.right = "0";
-  document.body.style.width = "100%";
+  if (lockCount > 1) return;
 
-  return lockedScrollY;
+  document.documentElement.style.overflow = "hidden";
+  document.body.style.overflow = "hidden";
+  document.body.style.touchAction = "none";
 }
 
-export function unlockMenuSheetScroll(scrollY: number = lockedScrollY) {
-  const html = document.documentElement;
-  const previousBehavior = html.style.scrollBehavior;
-  html.style.scrollBehavior = "auto";
+export function unlockMenuSheetScroll(): void {
+  if (lockCount === 0) return;
 
-  document.body.style.position = "";
-  document.body.style.top = "";
-  document.body.style.left = "";
-  document.body.style.right = "";
-  document.body.style.width = "";
+  lockCount -= 1;
 
-  html.scrollTop = scrollY;
-  document.body.scrollTop = scrollY;
-  window.scrollTo({ top: scrollY, left: 0, behavior: "instant" });
+  if (lockCount > 0) return;
 
-  html.style.scrollBehavior = previousBehavior;
+  document.documentElement.style.overflow = "";
+  document.body.style.overflow = "";
+  document.body.style.touchAction = "";
 }
 
 export function isMenuSheetScrollLocked(): boolean {
-  return document.body.style.position === "fixed";
+  return lockCount > 0;
 }
