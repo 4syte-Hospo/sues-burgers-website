@@ -4,7 +4,7 @@
   z-index: 50;
   background: var(--color-cream);
   border-bottom: 1px solid rgba(26, 26, 26, 0.08);
-  padding-block: var(--space-md);
+  padding-block: clamp(0.65rem, 2.5vw, var(--space-md));
 }
 
 .menu-cat-nav__scroll {
@@ -48,4 +48,10 @@
   background: var(--color-coral);
   border-color: var(--color-coral);
   color: var(--color-white);
+}
+
+@media (min-width: 768px) {
+  .menu-cat-nav {
+    padding-block: 0.75rem;
+  }
 }

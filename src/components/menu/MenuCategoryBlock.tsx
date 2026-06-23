@@ -10,7 +10,7 @@ type Props = {
 export function MenuCategoryBlock({ section }: Props) {
   return (
     <section
-      className="menu-category section"
+      className="menu-category"
       aria-labelledby={section.id}
     >
       <div className="container">

@@ -5,34 +5,34 @@
 
 .menu-hero__inner {
   display: grid;
-  gap: var(--space-xl);
+  gap: clamp(1.25rem, 4vw, var(--space-xl));
   align-items: center;
-  padding-block: clamp(2rem, 5vw, 3.5rem);
+  padding-block: clamp(1.5rem, 4vw, 3rem);
 }
 
 .menu-hero__eyebrow {
   font-family: var(--font-script);
-  font-size: clamp(1.35rem, 3.5vw, 1.85rem);
+  font-size: clamp(1.25rem, 3.2vw, 1.85rem);
   color: var(--color-coral);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.15rem;
 }
 
 .menu-hero__title {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 10vw, 5.5rem);
+  font-size: clamp(2.75rem, 9vw, 5.5rem);
   line-height: 0.92;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--color-coral);
-  margin-bottom: var(--space-md);
+  margin-bottom: clamp(0.65rem, 2vw, var(--space-md));
 }
 
 .menu-hero__body {
   font-size: clamp(0.95rem, 2.2vw, 1.1rem);
   color: var(--color-muted);
-  line-height: 1.65;
+  line-height: 1.6;
   max-width: 32rem;
-  margin-bottom: var(--space-lg);
+  margin-bottom: clamp(0.85rem, 2.5vw, var(--space-lg));
 }
 
 .menu-hero__actions {
@@ -62,8 +62,12 @@
   align-items: center;
 }
 
-
 @media (min-width: 768px) {
+  .menu-hero__inner {
+    padding-block: clamp(1.5rem, 3.75vw, 2.75rem);
+    gap: clamp(1.15rem, 3vw, 1.75rem);
+  }
+
   .menu-hero__actions {
     flex-wrap: wrap;
     gap: var(--space-sm);
@@ -81,7 +85,8 @@
 @media (min-width: 900px) {
   .menu-hero__inner {
     grid-template-columns: 1fr 1fr;
-    gap: var(--space-2xl);
+    gap: clamp(1.25rem, 3vw, 2.25rem);
+    padding-block: clamp(1.65rem, 4vw, 2.85rem);
   }
 
   .menu-hero__media {
