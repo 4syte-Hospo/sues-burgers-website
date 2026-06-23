@@ -17,6 +17,14 @@ function resolveSlideImages(slide: HeroSlide): HeroResponsiveImages | null {
   return getHeroImages(slide.imageKey);
 }
 
+function shouldLoadSlide(index: number, selectedIndex: number, slideCount: number): boolean {
+  if (slideCount <= 1) return true;
+
+  const prev = (selectedIndex - 1 + slideCount) % slideCount;
+  const next = (selectedIndex + 1) % slideCount;
+  return index === selectedIndex || index === prev || index === next;
+}
+
 type SlideImageProps = {
   slide: HeroSlide;
   isFirst: boolean;
@@ -31,8 +39,8 @@ function MenuHeroSlideImage({ slide, isFirst, shouldLoad }: SlideImageProps) {
     loading: (isFirst ? "eager" : "lazy") as "eager" | "lazy",
     fetchPriority: (isFirst ? "high" : "low") as "high" | "low",
     decoding: (isFirst ? "sync" : "async") as "sync" | "async",
-    width: manifest.mobileLayout.width,
-    height: manifest.mobileLayout.height,
+    width: images?.mobileWidth ?? manifest.mobileLayout.width,
+    height: images?.mobileHeight ?? manifest.mobileLayout.height,
   };
 
   return (
@@ -71,7 +79,6 @@ export function MenuHeroCarousel({ slides }: Props) {
     align: "center",
   });
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [loadedIndices, setLoadedIndices] = useState<Set<number>>(() => new Set([0]));
 
   const scrollTo = useCallback((index: number) => emblaApi?.scrollTo(index), [emblaApi]);
 
@@ -90,16 +97,6 @@ export function MenuHeroCarousel({ slides }: Props) {
     };
   }, [emblaApi]);
 
-  useEffect(() => {
-    setLoadedIndices((current) => {
-      const next = new Set(current);
-      next.add(selectedIndex);
-      next.add((selectedIndex - 1 + slides.length) % slides.length);
-      next.add((selectedIndex + 1) % slides.length);
-      return next;
-    });
-  }, [selectedIndex, slides.length]);
-
   if (slides.length === 0) return null;
 
   return (
@@ -111,7 +108,7 @@ export function MenuHeroCarousel({ slides }: Props) {
               <MenuHeroSlideImage
                 slide={slide}
                 isFirst={index === 0}
-                shouldLoad={loadedIndices.has(index)}
+                shouldLoad={shouldLoadSlide(index, selectedIndex, slides.length)}
               />
             </div>
           ))}

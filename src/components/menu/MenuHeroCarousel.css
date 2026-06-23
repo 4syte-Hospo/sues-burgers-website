@@ -16,6 +16,22 @@
 .menu-hero-carousel__slide {
   flex: 0 0 100%;
   min-width: 0;
+  line-height: 0;
+}
+
+.menu-hero-carousel__slide picture {
+  display: block;
+  width: 100%;
+  line-height: 0;
+  aspect-ratio: 3750 / 4688;
+  background: var(--color-cream);
+}
+
+@media (min-width: 768px) {
+  .menu-hero-carousel__slide picture {
+    aspect-ratio: 2000 / 1093;
+    background: var(--color-hero-bg);
+  }
 }
 
 .menu-hero-carousel__image {
