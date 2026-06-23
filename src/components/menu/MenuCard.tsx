@@ -27,6 +27,7 @@ function useTouchPrimary() {
 export function MenuCard({ item }: Props) {
   const cardRef = useRef<HTMLElement>(null);
   const [sheetOpen, setSheetOpen] = useState(false);
+  const [sheetMounted, setSheetMounted] = useState(false);
   const [sheetScrollY, setSheetScrollY] = useState(0);
   const isTouchPrimary = useTouchPrimary();
 
@@ -36,6 +37,7 @@ export function MenuCard({ item }: Props) {
 
   const openSheet = useCallback(() => {
     setSheetScrollY(window.scrollY);
+    setSheetMounted(true);
     setSheetOpen(true);
   }, []);
 
@@ -97,12 +99,16 @@ export function MenuCard({ item }: Props) {
         </div>
       </article>
 
-      {isTouchPrimary && sheetOpen && (
+      {isTouchPrimary && sheetMounted && (
         <MenuItemSheet
           item={item}
           open={sheetOpen}
           scrollY={sheetScrollY}
           onClose={() => setSheetOpen(false)}
+          onExited={() => {
+            setSheetMounted(false);
+            setSheetOpen(false);
+          }}
           returnFocusRef={cardRef}
         />
       )}

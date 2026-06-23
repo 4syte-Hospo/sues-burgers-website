@@ -11,6 +11,11 @@
 }
 
 .menu-item-sheet::backdrop {
+  background: rgba(26, 26, 26, 0);
+  transition: background-color 280ms ease-out;
+}
+
+.menu-item-sheet--visible::backdrop {
   background: rgba(26, 26, 26, 0.48);
 }
 
@@ -30,7 +35,17 @@
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   box-shadow: 0 -8px 40px rgba(26, 26, 26, 0.14);
   overflow: hidden;
-  animation: menu-item-sheet-in 220ms ease;
+  transform: translateY(1.25rem);
+  opacity: 0;
+  transition:
+    transform 340ms cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 260ms ease-out;
+  will-change: transform, opacity;
+}
+
+.menu-item-sheet--visible .menu-item-sheet__panel {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .menu-item-sheet__handle {
@@ -139,18 +154,15 @@
   text-align: center;
 }
 
-@keyframes menu-item-sheet-in {
-  from {
-    transform: translateY(100%);
-  }
-
-  to {
-    transform: translateY(0);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
+  .menu-item-sheet::backdrop,
   .menu-item-sheet__panel {
-    animation: none;
+    transition: none;
+  }
+
+  .menu-item-sheet__panel {
+    transform: none;
+    opacity: 1;
+    will-change: auto;
   }
 }
