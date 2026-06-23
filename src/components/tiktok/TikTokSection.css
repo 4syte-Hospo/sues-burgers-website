@@ -232,6 +232,26 @@
     white-space: normal;
     text-align: center;
   }
+
+  /* Embed carousel only — preview cards keep swipe-only mobile nav */
+  .tiktok-section:not(.tiktok-section--preview) .tiktok-section__arrow {
+    display: flex;
+    width: var(--tap-min);
+    height: var(--tap-min);
+    z-index: 3;
+  }
+
+  .tiktok-section:not(.tiktok-section--preview) .tiktok-section__arrow--prev {
+    left: 0.5rem;
+  }
+
+  .tiktok-section:not(.tiktok-section--preview) .tiktok-section__arrow--next {
+    right: 0.5rem;
+  }
+
+  .tiktok-section:not(.tiktok-section--preview) .tiktok-section__arrow:not(:disabled):active {
+    transform: translateY(-50%) scale(0.96);
+  }
 }
 
 @media (min-width: 768px) {

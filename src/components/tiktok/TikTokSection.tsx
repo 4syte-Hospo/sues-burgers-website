@@ -142,12 +142,19 @@ function useMobileIframeSwipe(
   }, [emblaApi, enabled, iframeRef]);
 }
 
-function TikTokEmbedCard({ video }: { video: TikTokVideo }) {
+function TikTokEmbedCard({
+  video,
+  isActive,
+}: {
+  video: TikTokVideo;
+  isActive: boolean;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const [showEmbed, setShowEmbed] = useState(false);
   const isMobile = useIsMobileViewport();
-  useMobileIframeSwipe(iframeRef, isMobile && showEmbed);
+  const shouldRenderEmbed = showEmbed && (isActive || !isMobile);
+  useMobileIframeSwipe(iframeRef, isMobile && shouldRenderEmbed);
 
   useEffect(() => {
     const el = ref.current;
@@ -168,7 +175,7 @@ function TikTokEmbedCard({ video }: { video: TikTokVideo }) {
     <div ref={ref} className="tiktok-card">
       <div className="tiktok-card__frame">
         <div className="tiktok-card__embed-wrap">
-          {showEmbed ? (
+          {shouldRenderEmbed ? (
             <iframe
               ref={iframeRef}
               src={`${TIKTOK_EMBED_BASE}/${video.id}`}
@@ -211,6 +218,7 @@ export function TikTokSection({ variant = "default", headingId = "tiktok-heading
   });
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(0);
   const isPreview = variant === "preview";
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
@@ -219,20 +227,21 @@ export function TikTokSection({ variant = "default", headingId = "tiktok-heading
   useEffect(() => {
     if (!emblaApi) return;
 
-    const updateButtons = () => {
+    const updateCarousel = () => {
       setCanScrollPrev(emblaApi.canScrollPrev());
       setCanScrollNext(emblaApi.canScrollNext());
+      setSelectedIndex(emblaApi.selectedScrollSnap());
     };
 
-    emblaApi.on("select", updateButtons);
-    emblaApi.on("reInit", updateButtons);
-    emblaApi.on("scroll", updateButtons);
-    updateButtons();
+    emblaApi.on("select", updateCarousel);
+    emblaApi.on("reInit", updateCarousel);
+    emblaApi.on("scroll", updateCarousel);
+    updateCarousel();
 
     return () => {
-      emblaApi.off("select", updateButtons);
-      emblaApi.off("reInit", updateButtons);
-      emblaApi.off("scroll", updateButtons);
+      emblaApi.off("select", updateCarousel);
+      emblaApi.off("reInit", updateCarousel);
+      emblaApi.off("scroll", updateCarousel);
     };
   }, [emblaApi]);
 
@@ -281,12 +290,12 @@ export function TikTokSection({ variant = "default", headingId = "tiktok-heading
 
           <div className="tiktok-section__viewport" ref={emblaRef}>
             <div className="tiktok-section__track">
-              {tiktokVideos.map((video) => (
+              {tiktokVideos.map((video, index) => (
                 <div className="tiktok-section__slide" key={video.id}>
                   {isPreview ? (
                     <TikTokPreviewCard video={video} />
                   ) : (
-                    <TikTokEmbedCard video={video} />
+                    <TikTokEmbedCard video={video} isActive={selectedIndex === index} />
                   )}
                 </div>
               ))}
