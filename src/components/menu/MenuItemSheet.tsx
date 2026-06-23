@@ -2,42 +2,21 @@ import { useCallback, useEffect, useId, useLayoutEffect, useRef } from "react";
 import type { MenuItem } from "../../types/menu";
 import { ORDER_URL } from "../../data/site";
 import { formatPrice } from "../../utils/data";
+import {
+  isMenuSheetScrollLocked,
+  lockMenuSheetScroll,
+  unlockMenuSheetScroll,
+} from "../../utils/menuSheetScroll";
 import { MenuItemImage } from "./MenuItemImage";
 import "./MenuItemSheet.css";
 
-const EXIT_MS = 340;
+const TRANSITION_MS = 360;
 
 type Props = {
   item: MenuItem;
   scrollY: number;
   onExited: () => void;
 };
-
-function lockBodyScroll(scrollY: number) {
-  document.body.style.position = "fixed";
-  document.body.style.top = `-${scrollY}px`;
-  document.body.style.left = "0";
-  document.body.style.right = "0";
-  document.body.style.width = "100%";
-}
-
-function unlockBodyScroll(scrollY: number) {
-  const html = document.documentElement;
-  const previousBehavior = html.style.scrollBehavior;
-  html.style.scrollBehavior = "auto";
-
-  document.body.style.position = "";
-  document.body.style.top = "";
-  document.body.style.left = "";
-  document.body.style.right = "";
-  document.body.style.width = "";
-
-  html.scrollTop = scrollY;
-  document.body.scrollTop = scrollY;
-  window.scrollTo({ top: scrollY, left: 0, behavior: "instant" });
-
-  html.style.scrollBehavior = previousBehavior;
-}
 
 export function MenuItemSheet({ item, scrollY, onExited }: Props) {
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -62,7 +41,7 @@ export function MenuItemSheet({ item, scrollY, onExited }: Props) {
       dialog.style.visibility = "hidden";
     }
 
-    unlockBodyScroll(scrollYRef.current);
+    unlockMenuSheetScroll(scrollYRef.current);
 
     requestAnimationFrame(() => {
       dialogRef.current?.close();
@@ -102,25 +81,37 @@ export function MenuItemSheet({ item, scrollY, onExited }: Props) {
     };
 
     panel.addEventListener("transitionend", handleTransitionEnd);
-    window.setTimeout(complete, EXIT_MS + 80);
+    window.setTimeout(complete, TRANSITION_MS + 80);
   }, [finishClose]);
 
   useLayoutEffect(() => {
     scrollYRef.current = scrollY;
-    lockBodyScroll(scrollY);
-    dialogRef.current?.showModal();
+
+    if (!isMenuSheetScrollLocked()) {
+      lockMenuSheetScroll();
+    }
+
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+
+    dialog.showModal();
+
+    // Ensure the closed transform is committed before animating open.
+    void dialog.offsetHeight;
+
+    const frame = window.requestAnimationFrame(() => {
+      isAnimatedInRef.current = true;
+      dialog.classList.add("menu-item-sheet--visible");
+    });
+
+    return () => {
+      window.cancelAnimationFrame(frame);
+    };
   }, [scrollY]);
 
   useEffect(() => {
     const dialog = dialogRef.current;
     if (!dialog) return;
-
-    const frame = window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        isAnimatedInRef.current = true;
-        dialog.classList.add("menu-item-sheet--visible");
-      });
-    });
 
     const handleCancel = (event: Event) => {
       event.preventDefault();
@@ -128,11 +119,7 @@ export function MenuItemSheet({ item, scrollY, onExited }: Props) {
     };
 
     dialog.addEventListener("cancel", handleCancel);
-
-    return () => {
-      window.cancelAnimationFrame(frame);
-      dialog.removeEventListener("cancel", handleCancel);
-    };
+    return () => dialog.removeEventListener("cancel", handleCancel);
   }, [beginClose]);
 
   const handleDialogClick = (event: React.MouseEvent<HTMLDialogElement>) => {
