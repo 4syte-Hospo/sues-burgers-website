@@ -616,6 +616,88 @@
       "fallback": "/images/menu/optimized/dulce-de-leche-shake-800.webp",
       "totalBytes": 135419
     },
+    "extra-bread": {
+      "source": "/images/menu/extra-bread.png",
+      "width": 800,
+      "height": 800,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/extra-bread-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 39470
+        },
+        {
+          "src": "/images/menu/optimized/extra-bread-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 47952
+        },
+        {
+          "src": "/images/menu/optimized/extra-bread-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 78662
+        },
+        {
+          "src": "/images/menu/optimized/extra-bread-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 93291
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/extra-bread-480.webp 480w, /images/menu/optimized/extra-bread-800.webp 800w",
+        "avif": "/images/menu/optimized/extra-bread-480.avif 480w, /images/menu/optimized/extra-bread-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/extra-bread-800.webp",
+      "totalBytes": 259375
+    },
+    "extra-tender": {
+      "source": "/images/menu/extra-tender.png",
+      "width": 800,
+      "height": 800,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/extra-tender-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 28936
+        },
+        {
+          "src": "/images/menu/optimized/extra-tender-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 34515
+        },
+        {
+          "src": "/images/menu/optimized/extra-tender-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 59690
+        },
+        {
+          "src": "/images/menu/optimized/extra-tender-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 71578
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/extra-tender-480.webp 480w, /images/menu/optimized/extra-tender-800.webp 800w",
+        "avif": "/images/menu/optimized/extra-tender-480.avif 480w, /images/menu/optimized/extra-tender-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/extra-tender-800.webp",
+      "totalBytes": 194719
+    },
     "fanta": {
       "source": "/images/menu/fanta.png",
       "width": 1000,

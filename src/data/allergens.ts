@@ -79,6 +79,8 @@ export const allergenSections: AllergenSection[] = [
     ["Raising Dave's Box", "X X X X O X X X X"],
     ["Sue's Hot Honey Box (Mild)", "X X X X O X X X X"],
     ["Baby Dave's Box", "X X X X O X X X X"],
+    ["Extra Tender", "X O X O O X X O O"],
+    ["Extra Toast", "X X X X O O X X O"],
   ]),
   section("sauces", "Sauces", [
     ["Signature Sauce", "O X O O O X X O X"],

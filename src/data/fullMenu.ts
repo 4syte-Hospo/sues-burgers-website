@@ -208,6 +208,22 @@ const baseMenuSections: MenuCategorySection[] = [
         fanFavourite: true,
         orderLink: order,
       },
+      {
+        id: "extra-tender",
+        name: "Extra Tender",
+        price: 4.5,
+        description:
+          "ADD AN EXTRA SUE'S SOUTHERN FRIED CHICKEN TENDER TO YOUR DAVE'S BOX — OR ENJOY ONE ON ITS OWN",
+        orderLink: order,
+      },
+      {
+        id: "extra-bread",
+        name: "Extra Toast",
+        price: 3.5,
+        description:
+          "ADD AN EXTRA SLICE OF OUR GARLIC-BUTTERED TEXAS TOAST TO YOUR DAVE'S BOX — OR ENJOY ONE ON ITS OWN",
+        orderLink: order,
+      },
     ],
   },
   {
