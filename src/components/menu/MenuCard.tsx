@@ -1,69 +1,111 @@
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { MenuItem } from "../../types/menu";
-import { MENU_ITEM_PLACEHOLDER_SRC, ORDER_URL } from "../../data/site";
+import { ORDER_URL } from "../../data/site";
 import { formatPrice } from "../../utils/data";
-import { getMenuImageSources } from "../../utils/menuImages";
+import { MenuItemImage } from "./MenuItemImage";
+import { MenuItemSheet } from "./MenuItemSheet";
 import "./MenuCard.css";
 
 type Props = {
   item: MenuItem;
 };
 
+function useTouchPrimary() {
+  const [isTouchPrimary, setIsTouchPrimary] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia("(hover: none)");
+    const update = () => setIsTouchPrimary(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, []);
+
+  return isTouchPrimary;
+}
+
 export function MenuCard({ item }: Props) {
+  const cardRef = useRef<HTMLElement>(null);
+  const [sheetOpen, setSheetOpen] = useState(false);
+  const [sheetScrollY, setSheetScrollY] = useState(0);
+  const isTouchPrimary = useTouchPrimary();
+
   const orderHref = item.orderLink ?? ORDER_URL;
   const priceDisplay =
     item.priceLabel ?? (item.price != null ? formatPrice(item.price) : "");
-  const optimized = item.image ? getMenuImageSources(item.image) : null;
+
+  const openSheet = useCallback(() => {
+    setSheetScrollY(window.scrollY);
+    setSheetOpen(true);
+  }, []);
+
+  const handleCardClick = (event: React.MouseEvent<HTMLElement>) => {
+    if (!isTouchPrimary) return;
+    if ((event.target as HTMLElement).closest("a")) return;
+    openSheet();
+  };
+
+  const handleCardKeyDown = (event: React.KeyboardEvent<HTMLElement>) => {
+    if (!isTouchPrimary) return;
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openSheet();
+    }
+  };
 
   return (
-    <article className="menu-card">
-      <div className="menu-card__media">
-        {optimized ? (
-          <picture>
-            <source type="image/avif" srcSet={optimized.avifSrcSet} sizes={optimized.sizes} />
-            <source type="image/webp" srcSet={optimized.webpSrcSet} sizes={optimized.sizes} />
-            <img
-              src={optimized.fallback}
-              alt={item.name}
-              className="menu-card__image"
-              loading="lazy"
-              decoding="async"
-              width={optimized.width}
-              height={optimized.height}
-            />
-          </picture>
-        ) : (
-          <img
-            src={item.image ?? MENU_ITEM_PLACEHOLDER_SRC}
-            alt={item.image ? item.name : ""}
-            className={`menu-card__image${item.image ? "" : " menu-card__image--placeholder"}`}
-            loading="lazy"
-            {...(!item.image ? { "aria-hidden": true } : {})}
-          />
-        )}
-        {item.badge && <span className="menu-card__badge">{item.badge}</span>}
-      </div>
-
-      <div className="menu-card__body">
-        <div className="menu-card__header">
-          <h3 className="menu-card__name">{item.name}</h3>
-          {priceDisplay && (
-            <span className="menu-card__price">{priceDisplay}</span>
-          )}
+    <>
+      <article
+        ref={cardRef}
+        className={`menu-card${isTouchPrimary ? " menu-card--touch" : ""}`}
+        {...(isTouchPrimary
+          ? {
+              role: "button",
+              tabIndex: 0,
+              onClick: handleCardClick,
+              onKeyDown: handleCardKeyDown,
+              "aria-haspopup": "dialog" as const,
+              "aria-expanded": sheetOpen,
+            }
+          : {})}
+      >
+        <div className="menu-card__media">
+          <MenuItemImage item={item} />
+          {item.badge && <span className="menu-card__badge">{item.badge}</span>}
         </div>
 
-        {item.description && (
-          <p className="menu-card__description">{item.description}</p>
-        )}
+        <div className="menu-card__body">
+          <div className="menu-card__header">
+            <h3 className="menu-card__name">{item.name}</h3>
+            {priceDisplay && (
+              <span className="menu-card__price">{priceDisplay}</span>
+            )}
+          </div>
 
-        <a
-          href={orderHref}
-          className="btn btn--primary btn--compact menu-card__order"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Order Now
-        </a>
-      </div>
-    </article>
+          {item.description && (
+            <p className="menu-card__description">{item.description}</p>
+          )}
+
+          <a
+            href={orderHref}
+            className="btn btn--primary btn--compact menu-card__order"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Order Now
+          </a>
+        </div>
+      </article>
+
+      {isTouchPrimary && sheetOpen && (
+        <MenuItemSheet
+          item={item}
+          open={sheetOpen}
+          scrollY={sheetScrollY}
+          onClose={() => setSheetOpen(false)}
+          returnFocusRef={cardRef}
+        />
+      )}
+    </>
   );
 }
