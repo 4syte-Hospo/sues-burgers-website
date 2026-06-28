@@ -38,28 +38,49 @@ export const faqItems: FaqItem[] = [
       {
         type: "paragraph",
         content:
-          'We offer the option to swap our standard milk bun out for a "gluten-free" (gluten friendly) bun that, to the best of our knowledge, has no gluten present. Please note due to glutinous products being present in our kitchen, bun toasters and prep surfaces, cross contamination is possible.',
+          "We offer the option to swap our standard milk bun for a **gluten-friendly bun** which, to the best of our knowledge, contains no gluten. Please note that while we take care during preparation, gluten-containing products are present in our kitchen, and our bun toasters and preparation surfaces are shared. As a result, **cross-contamination is possible**, and we cannot guarantee any item is completely gluten-free.",
       },
-      { type: "heading", content: "Beef" },
+      { type: "heading", content: "Beef Burgers" },
       {
         type: "paragraph",
         content:
-          "There are no additives, fillers or bread crumbs in our custom patty blend, making our beef burger options gluten friendly by swapping out for a GF bun. Our Naked Sue Burger is wrapped in lettuce leaves and is a gluten friendly alternative!",
+          "Our custom beef patties contain **no additives, fillers or breadcrumbs**, making our beef burgers suitable for gluten-friendly preparation.",
       },
       {
         type: "paragraph",
         content:
-          "Our current burgers that have a GFA (gluten friendly option available) by swapping to a gluten free bun (or bunless) are:",
+          "The following burgers **can be made gluten-friendly** by swapping the standard milk bun for a **gluten-friendly bun** (or by requesting them bunless):",
       },
       {
         type: "list",
-        items: ["Sue's Classic", "Truffle Cheezy", "Sue's Signature", "Oklahoma Sue"],
+        items: ["Sue's Classic", "Sue's Signature", "Oklahoma Sue"],
       },
-      { type: "heading", content: "Fried chicken burgers and tenders" },
+      {
+        type: "paragraph",
+        content: "The following burgers are **already gluten-friendly as served**:",
+      },
+      {
+        type: "list",
+        items: [
+          "**Naked Sue** – served wrapped in fresh lettuce leaves instead of a bun.",
+          "**Flying Sue** – our double cheeseburger served with grilled onion steaks in place of the bun.",
+        ],
+      },
+      { type: "heading", content: "Fried Chicken Burgers & Tenders" },
       {
         type: "paragraph",
         content:
-          "The Southern Fried Chicken Breasts and Tenders are dredged in plain flour which means they are NOT gluten friendly. If you are avoiding gluten altogether, ask your server to substitute your fried chicken breast for a grilled chicken breast instead. Our Grilled Chicken & Mozza Burger can be altered to gluten-friendly by requesting to swap for a gluten free bun.",
+          "Our Southern Fried Chicken Breasts and Tenders are coated in plain flour and are **not gluten-friendly**.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "If you're looking for a gluten-friendly chicken burger, our **Grilled Chicken & Mozza Burger** can be made gluten-friendly by swapping the standard milk bun for a **gluten-friendly bun** (or by requesting it bunless).",
+      },
+      {
+        type: "paragraph",
+        content:
+          "As always, while we take every reasonable precaution, **cross-contamination is possible** due to shared preparation areas, cooking equipment and bun toasters.",
       },
     ],
   },
