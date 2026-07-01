@@ -26,6 +26,11 @@ DESKTOP_LAYOUT = (2000, 1093)
 
 SLIDES = (
     {
+        "id": "tiktokhero",
+        "desktop": "tiktokhero-web.png",
+        "mobile": "tiktokhero-mobile.png",
+    },
+    {
         "id": "heroimg4",
         "desktop": "heroimg4.png",
         "mobile": "heroimg4-mobile.png",

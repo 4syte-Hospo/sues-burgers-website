@@ -9,6 +9,83 @@
   },
   "sizes": "(min-width: 768px) min(66vw, 1024px), 96vw",
   "slides": {
+    "tiktokhero": {
+      "desktop": {
+        "variants": [
+          {
+            "src": "/images/hero/optimized/tiktokhero-desktop-1200.webp",
+            "width": 1200,
+            "height": 656,
+            "format": "webp",
+            "bytes": 115810
+          },
+          {
+            "src": "/images/hero/optimized/tiktokhero-desktop-1200.avif",
+            "width": 1200,
+            "height": 656,
+            "format": "avif",
+            "bytes": 127544
+          },
+          {
+            "src": "/images/hero/optimized/tiktokhero-desktop-2000.webp",
+            "width": 2000,
+            "height": 1094,
+            "format": "webp",
+            "bytes": 208640
+          },
+          {
+            "src": "/images/hero/optimized/tiktokhero-desktop-2000.avif",
+            "width": 2000,
+            "height": 1094,
+            "format": "avif",
+            "bytes": 209269
+          }
+        ],
+        "srcset": {
+          "webp": "/images/hero/optimized/tiktokhero-desktop-1200.webp 1200w, /images/hero/optimized/tiktokhero-desktop-2000.webp 2000w",
+          "avif": "/images/hero/optimized/tiktokhero-desktop-1200.avif 1200w, /images/hero/optimized/tiktokhero-desktop-2000.avif 2000w"
+        },
+        "fallback": "/images/hero/optimized/tiktokhero-desktop-2000.webp"
+      },
+      "mobile": {
+        "variants": [
+          {
+            "src": "/images/hero/optimized/tiktokhero-mobile-768.webp",
+            "width": 768,
+            "height": 960,
+            "format": "webp",
+            "bytes": 108914
+          },
+          {
+            "src": "/images/hero/optimized/tiktokhero-mobile-768.avif",
+            "width": 768,
+            "height": 960,
+            "format": "avif",
+            "bytes": 120801
+          },
+          {
+            "src": "/images/hero/optimized/tiktokhero-mobile-1536.webp",
+            "width": 1536,
+            "height": 1920,
+            "format": "webp",
+            "bytes": 245650
+          },
+          {
+            "src": "/images/hero/optimized/tiktokhero-mobile-1536.avif",
+            "width": 1536,
+            "height": 1920,
+            "format": "avif",
+            "bytes": 233280
+          }
+        ],
+        "srcset": {
+          "webp": "/images/hero/optimized/tiktokhero-mobile-768.webp 768w, /images/hero/optimized/tiktokhero-mobile-1536.webp 1536w",
+          "avif": "/images/hero/optimized/tiktokhero-mobile-768.avif 768w, /images/hero/optimized/tiktokhero-mobile-1536.avif 1536w"
+        },
+        "fallback": "/images/hero/optimized/tiktokhero-mobile-768.webp"
+      },
+      "totalBytes": 1369908
+    },
     "heroimg4": {
       "desktop": {
         "variants": [

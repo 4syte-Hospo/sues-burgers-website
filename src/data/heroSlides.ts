@@ -6,11 +6,21 @@ const ORDER_URL = "https://suesburgers.redcatcloud.com.au/app/";
  * Hero slides — optimized WebP/AVIF variants in public/images/hero/optimized/
  * (generated via `npm run generate:hero-images`). Source PNGs remain for OG/social.
  * (heroimg1 = Dirty Soda, heroimg2 = Chili Mozzarella, heroimg3 = Raising Dave's,
- *  heroimg4 = Chicken Crack Sando)
+ *  heroimg4 = Chicken Crack Sando, tiktokhero = TikTok homepage hero)
  *
  * Desktop: 1200px + 2000px landscape. Mobile: 768px + 1536px portrait 4:5.
  */
 export const heroSlides: HeroSlide[] = [
+  {
+    id: "tiktok-hero",
+    imageKey: "tiktokhero",
+    desktopImage: "/images/hero/tiktokhero-web.png",
+    mobileImage: "/images/hero/tiktokhero-mobile.png",
+    alt: "Sue's Burgers & Shakes on TikTok — burgers, shakes and behind-the-scenes moments",
+    showCta: false,
+    homeOnly: true,
+    active: true,
+  },
   {
     id: "chicken-crack-sando",
     imageKey: "heroimg4",

@@ -43,4 +43,4 @@ export function getHeroImages(key: HeroImageKey): HeroResponsiveImages {
 }
 
 /** First homepage slide — used for LCP preload hints in index.html */
-export const LCP_HERO_IMAGES = getHeroImages("heroimg4");
+export const LCP_HERO_IMAGES = getHeroImages("tiktokhero");

@@ -15,9 +15,13 @@ export type HeroSlide = {
   mobileImage: string;
   /** Describes the artwork for screen readers */
   alt: string;
-  buttonText: string;
-  buttonLink: string;
+  buttonText?: string;
+  buttonLink?: string;
   active: boolean;
+  /** When false, no CTA button is rendered on the slide */
+  showCta?: boolean;
+  /** Homepage carousel only — excluded from the menu page hero */
+  homeOnly?: boolean;
   buttonPositionDesktop?: ButtonPosition;
   buttonPositionMobile?: ButtonPosition;
 };

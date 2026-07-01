@@ -61,15 +61,17 @@ export function HeroSlide({ slide, isFirst = false, shouldLoad = true }: Props) 
         ) : null}
       </picture>
 
-      <a
-        href={slide.buttonLink}
-        className="btn btn--primary btn--compact hero-slide__cta"
-        target="_blank"
-        rel="noopener noreferrer"
-        onClick={() => trackOrderNowClick("hero_carousel")}
-      >
-        {slide.buttonText}
-      </a>
+      {slide.showCta !== false && slide.buttonText && slide.buttonLink ? (
+        <a
+          href={slide.buttonLink}
+          className="btn btn--primary btn--compact hero-slide__cta"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => trackOrderNowClick("hero_carousel")}
+        >
+          {slide.buttonText}
+        </a>
+      ) : null}
     </article>
   );
 }
