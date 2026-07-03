@@ -66,8 +66,8 @@ export const allergenSections: AllergenSection[] = [
     ["Vegan Sue", "O O X X O O X O O"],
   ]),
   section("specials", "Specials", [
-    ["Spicy Crack Chicken Sandwich", "X X X X O X X O O"],
-    ["Original Crack Chicken Sandwich", "X X X X O X X O O"],
+    ["ORIGINAL CHICKEN CRACK SANDWICH", "X X X X O X X O O"],
+    ["SPICY CHICKEN CRACK SANDWICH", "X X X X O X X O O"],
   ]),
   section("burger-extras", "Burger Extras", [
     ["Cheese", "X O O O O O O O O"],

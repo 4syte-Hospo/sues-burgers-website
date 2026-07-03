@@ -38,18 +38,18 @@ const baseMenuSections: MenuCategorySection[] = [
       "Rotating hits made for the month — grab them while they're on the board.",
     items: [
       {
-        id: "chicken-crack-sandwich",
-        name: "Spicy Crack Chicken Sandwich",
+        id: "original-crack-chicken-sandwich",
+        name: "ORIGINAL CHICKEN CRACK SANDWICH",
         description:
-          "BUTTER-TOASTED MILK BREAD STACKED WITH SPICY FRIED CHICKEN BREAST, CRISPY SHREDDED LETTUCE, CRISPY CHICKEN SKIN BITS (CHICKEN CRACK), SRIRACHA MAYO, AND TOPPED WITH OUR SPICY SEASONING AND MORE CHICKEN CRACK! (MILD)",
+          "BUTTER-TOASTED MILK BREAD STACKED WITH SPICY FRIED CHICKEN BREAST, CRISPY SHREDDED LETTUCE, CRISPY CHICKEN SKIN BITS (CHICKEN CRACK), SUE'S SIGNATURE SAUCE AND EVEN MORE CHICKEN CRACK!",
         badge: "Monthly Special",
         orderLink: order,
       },
       {
-        id: "original-crack-chicken-sandwich",
-        name: "Original Crack Chicken Sandwich",
+        id: "chicken-crack-sandwich",
+        name: "SPICY CHICKEN CRACK SANDWICH",
         description:
-          "BUTTER-TOASTED MILK BREAD STACKED WITH SPICY FRIED CHICKEN BREAST, CRISPY SHREDDED LETTUCE, CRISPY CHICKEN SKIN BITS (CHICKEN CRACK), SUE'S SIGNATURE SAUCE AND EVEN MORE CHICKEN CRACK!",
+          "BUTTER-TOASTED MILK BREAD STACKED WITH SPICY FRIED CHICKEN BREAST, CRISPY SHREDDED LETTUCE, CRISPY CHICKEN SKIN BITS (CHICKEN CRACK), SRIRACHA MAYO, AND TOPPED WITH OUR SPICY SEASONING AND MORE CHICKEN CRACK! (MILD)",
         badge: "Monthly Special",
         orderLink: order,
       },
@@ -64,19 +64,19 @@ const baseMenuSections: MenuCategorySection[] = [
       "Fresh wagyu smash patties, toasty potato buns, and Sue's signature sauce — the classics that built the hype.",
     items: [
       {
-        id: "sues-classic",
-        name: "Sue's Classic",
-        price: 14.5,
-        description:
-          "SUE'S WAGYU PATTY, ONION, AMERICAN CHEESE, PICKLES & SUE'S SIGNATURE SAUCE ON A TOASTY POTATO BUN (GFA)",
-        orderLink: order,
-      },
-      {
         id: "signature-sue",
         name: "Signature Sue",
         price: 16,
         description:
           "SUE'S WAGYU PATTY, LETTUCE, TOMATO, ONION, AMERICAN CHEESE, PICKLES & SUE'S SIGNATURE SAUCE ON A TOASTY POTATO BUN (GFA)",
+        orderLink: order,
+      },
+      {
+        id: "sues-classic",
+        name: "Sue's Classic",
+        price: 14.5,
+        description:
+          "SUE'S WAGYU PATTY, ONION, AMERICAN CHEESE, PICKLES & SUE'S SIGNATURE SAUCE ON A TOASTY POTATO BUN (GFA)",
         orderLink: order,
       },
       {
