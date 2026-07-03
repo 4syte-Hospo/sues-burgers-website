@@ -35,6 +35,13 @@ export function HeroSlider({ slides }: Props) {
     align: "center",
     containScroll: false,
     duration: 28,
+    watchDrag: (_emblaApi, event) => {
+      const target = event.target;
+      if (target instanceof Element && target.closest(".hero-slide__cta")) {
+        return false;
+      }
+      return true;
+    },
   });
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [loadedIndices, setLoadedIndices] = useState<Set<number>>(() => new Set([0]));
@@ -49,10 +56,27 @@ export function HeroSlider({ slides }: Props) {
     emblaApi.on("select", onSelect);
     onSelect();
 
-    const interval = window.setInterval(() => emblaApi.scrollNext(), 6000);
+    let interval = window.setInterval(() => emblaApi.scrollNext(), 6000);
+
+    const viewport = emblaApi.rootNode();
+    const pauseAutoplay = () => window.clearInterval(interval);
+    const resumeAutoplay = () => {
+      pauseAutoplay();
+      interval = window.setInterval(() => emblaApi.scrollNext(), 6000);
+    };
+
+    viewport.addEventListener("mouseenter", pauseAutoplay);
+    viewport.addEventListener("mouseleave", resumeAutoplay);
+    viewport.addEventListener("focusin", pauseAutoplay);
+    viewport.addEventListener("focusout", resumeAutoplay);
+
     return () => {
       emblaApi.off("select", onSelect);
-      window.clearInterval(interval);
+      pauseAutoplay();
+      viewport.removeEventListener("mouseenter", pauseAutoplay);
+      viewport.removeEventListener("mouseleave", resumeAutoplay);
+      viewport.removeEventListener("focusin", pauseAutoplay);
+      viewport.removeEventListener("focusout", resumeAutoplay);
     };
   }, [emblaApi]);
 

@@ -143,6 +143,11 @@
   min-height: auto;
   min-width: auto;
   padding: 0.3rem 0.85rem;
+  touch-action: manipulation;
+}
+
+.hero__slide:not(.hero__slide--active) .hero-slide__cta {
+  pointer-events: none;
 }
 
 .hero-slide__cta:active {
@@ -153,6 +158,7 @@
   .hero-slide__cta {
     left: var(--cta-x-desktop, 50%);
     top: var(--cta-y-desktop, 80%);
+    z-index: 5;
     min-height: var(--tap-min);
     min-width: var(--tap-min);
     padding: 0.45rem 1.35rem;

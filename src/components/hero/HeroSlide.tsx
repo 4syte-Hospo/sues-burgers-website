@@ -67,6 +67,7 @@ export function HeroSlide({ slide, isFirst = false, shouldLoad = true }: Props) 
           className="btn btn--primary btn--compact hero-slide__cta"
           target="_blank"
           rel="noopener noreferrer"
+          onPointerDown={(event) => event.stopPropagation()}
           onClick={() => trackOrderNowClick("hero_carousel")}
         >
           {slide.buttonText}
