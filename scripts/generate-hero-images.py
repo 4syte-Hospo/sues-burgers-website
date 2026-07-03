@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -91,10 +92,19 @@ def build_srcset(variants: list[dict], fmt: str) -> str:
     return ", ".join(parts)
 
 
+def build_asset_version() -> str:
+    digest = hashlib.md5()
+    for slide in SLIDES:
+        for key in ("desktop", "mobile"):
+            digest.update((HERO_DIR / slide[key]).read_bytes())
+    return digest.hexdigest()[:8]
+
+
 def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     manifest: dict = {
+        "assetVersion": build_asset_version(),
         "mobileLayout": {"width": MOBILE_LAYOUT[0], "height": MOBILE_LAYOUT[1]},
         "desktopLayout": {"width": DESKTOP_LAYOUT[0], "height": DESKTOP_LAYOUT[1]},
         "sizes": "(min-width: 768px) min(66vw, 1024px), 96vw",
@@ -150,7 +160,7 @@ def main() -> None:
         print(f"{slide_id}: {slide_bytes / 1024 / 1024:.2f} MB across {len(desktop_variants) + len(mobile_variants)} files")
 
     MANIFEST_PATH.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
-    print(f"\nWrote manifest to {MANIFEST_PATH.relative_to(ROOT)}")
+    print(f"\nWrote manifest to {MANIFEST_PATH.relative_to(ROOT)} (assetVersion={manifest['assetVersion']})")
     print(f"Total optimized payload (all variants): {total_bytes / 1024 / 1024:.2f} MB")
 
 

@@ -1,4 +1,5 @@
 {
+  "assetVersion": "13783e40",
   "mobileLayout": {
     "width": 3750,
     "height": 4688
@@ -94,28 +95,28 @@
             "width": 1200,
             "height": 657,
             "format": "webp",
-            "bytes": 130540
+            "bytes": 129870
           },
           {
             "src": "/images/hero/optimized/heroimg4-desktop-1200.avif",
             "width": 1200,
             "height": 657,
             "format": "avif",
-            "bytes": 159129
+            "bytes": 158032
           },
           {
             "src": "/images/hero/optimized/heroimg4-desktop-2000.webp",
             "width": 2000,
             "height": 1094,
             "format": "webp",
-            "bytes": 277582
+            "bytes": 268418
           },
           {
             "src": "/images/hero/optimized/heroimg4-desktop-2000.avif",
             "width": 2000,
             "height": 1094,
             "format": "avif",
-            "bytes": 333315
+            "bytes": 320106
           }
         ],
         "srcset": {
@@ -161,7 +162,7 @@
         },
         "fallback": "/images/hero/optimized/heroimg4-mobile-768.webp"
       },
-      "totalBytes": 1901602
+      "totalBytes": 1877462
     },
     "heroimg3": {
       "desktop": {
