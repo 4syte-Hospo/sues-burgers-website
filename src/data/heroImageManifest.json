@@ -92,30 +92,30 @@
           {
             "src": "/images/hero/optimized/heroimg4-desktop-1200.webp",
             "width": 1200,
-            "height": 656,
+            "height": 657,
             "format": "webp",
-            "bytes": 118016
+            "bytes": 130540
           },
           {
             "src": "/images/hero/optimized/heroimg4-desktop-1200.avif",
             "width": 1200,
-            "height": 656,
+            "height": 657,
             "format": "avif",
-            "bytes": 141103
+            "bytes": 159129
           },
           {
             "src": "/images/hero/optimized/heroimg4-desktop-2000.webp",
             "width": 2000,
             "height": 1094,
             "format": "webp",
-            "bytes": 231956
+            "bytes": 277582
           },
           {
             "src": "/images/hero/optimized/heroimg4-desktop-2000.avif",
             "width": 2000,
             "height": 1094,
             "format": "avif",
-            "bytes": 262854
+            "bytes": 333315
           }
         ],
         "srcset": {
@@ -131,28 +131,28 @@
             "width": 768,
             "height": 960,
             "format": "webp",
-            "bytes": 122044
+            "bytes": 122738
           },
           {
             "src": "/images/hero/optimized/heroimg4-mobile-768.avif",
             "width": 768,
             "height": 960,
             "format": "avif",
-            "bytes": 145346
+            "bytes": 148167
           },
           {
             "src": "/images/hero/optimized/heroimg4-mobile-1536.webp",
             "width": 1536,
             "height": 1920,
             "format": "webp",
-            "bytes": 296938
+            "bytes": 334266
           },
           {
             "src": "/images/hero/optimized/heroimg4-mobile-1536.avif",
             "width": 1536,
             "height": 1920,
             "format": "avif",
-            "bytes": 317802
+            "bytes": 395865
           }
         ],
         "srcset": {
@@ -161,7 +161,7 @@
         },
         "fallback": "/images/hero/optimized/heroimg4-mobile-768.webp"
       },
-      "totalBytes": 1636059
+      "totalBytes": 1901602
     },
     "heroimg3": {
       "desktop": {
@@ -169,30 +169,30 @@
           {
             "src": "/images/hero/optimized/heroimg3-desktop-1200.webp",
             "width": 1200,
-            "height": 656,
+            "height": 657,
             "format": "webp",
-            "bytes": 92710
+            "bytes": 84960
           },
           {
             "src": "/images/hero/optimized/heroimg3-desktop-1200.avif",
             "width": 1200,
-            "height": 656,
+            "height": 657,
             "format": "avif",
-            "bytes": 110343
+            "bytes": 96656
           },
           {
             "src": "/images/hero/optimized/heroimg3-desktop-2000.webp",
             "width": 2000,
             "height": 1094,
             "format": "webp",
-            "bytes": 177058
+            "bytes": 157902
           },
           {
             "src": "/images/hero/optimized/heroimg3-desktop-2000.avif",
             "width": 2000,
             "height": 1094,
             "format": "avif",
-            "bytes": 196873
+            "bytes": 166154
           }
         ],
         "srcset": {
@@ -208,28 +208,28 @@
             "width": 768,
             "height": 960,
             "format": "webp",
-            "bytes": 98458
+            "bytes": 89836
           },
           {
             "src": "/images/hero/optimized/heroimg3-mobile-768.avif",
             "width": 768,
             "height": 960,
             "format": "avif",
-            "bytes": 120565
+            "bytes": 109899
           },
           {
             "src": "/images/hero/optimized/heroimg3-mobile-1536.webp",
             "width": 1536,
             "height": 1920,
             "format": "webp",
-            "bytes": 251334
+            "bytes": 217252
           },
           {
             "src": "/images/hero/optimized/heroimg3-mobile-1536.avif",
             "width": 1536,
             "height": 1920,
             "format": "avif",
-            "bytes": 275939
+            "bytes": 225775
           }
         ],
         "srcset": {
@@ -238,7 +238,7 @@
         },
         "fallback": "/images/hero/optimized/heroimg3-mobile-768.webp"
       },
-      "totalBytes": 1323280
+      "totalBytes": 1148434
     },
     "heroimg1": {
       "desktop": {

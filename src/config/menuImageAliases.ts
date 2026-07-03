@@ -26,4 +26,5 @@ export const menuImageAliases: Record<string, string> = {
   "caramel-cola": "caramel-cola-dirty-soda.png",
   "mango-lychee-splash": "mango-lychee-splash-dirty-soda.png",
   "tropical-sunset": "tropical-sunset-dirty-soda.png",
+  "original-crack-chicken-sandwich": "og-crack-sando.png",
 };

@@ -39,9 +39,17 @@ const baseMenuSections: MenuCategorySection[] = [
     items: [
       {
         id: "chicken-crack-sandwich",
-        name: "Chicken Crack Sandwich",
+        name: "Spicy Crack Chicken Sandwich",
         description:
           "BUTTER-TOASTED MILK BREAD STACKED WITH SPICY FRIED CHICKEN BREAST, CRISPY SHREDDED LETTUCE, CRISPY CHICKEN SKIN BITS (CHICKEN CRACK), SRIRACHA MAYO, AND TOPPED WITH OUR SPICY SEASONING AND MORE CHICKEN CRACK! (MILD)",
+        badge: "Monthly Special",
+        orderLink: order,
+      },
+      {
+        id: "original-crack-chicken-sandwich",
+        name: "Original Crack Chicken Sandwich",
+        description:
+          "BUTTER-TOASTED MILK BREAD STACKED WITH SPICY FRIED CHICKEN BREAST, CRISPY SHREDDED LETTUCE, CRISPY CHICKEN SKIN BITS (CHICKEN CRACK), SUE'S SIGNATURE SAUCE AND EVEN MORE CHICKEN CRACK!",
         badge: "Monthly Special",
         orderLink: order,
       },

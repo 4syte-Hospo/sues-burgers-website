@@ -1231,6 +1231,47 @@
       "fallback": "/images/menu/optimized/nutella-shake-800.webp",
       "totalBytes": 165908
     },
+    "og-crack-sando": {
+      "source": "/images/menu/og-crack-sando.png",
+      "width": 1125,
+      "height": 1125,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/og-crack-sando-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 43972
+        },
+        {
+          "src": "/images/menu/optimized/og-crack-sando-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 58222
+        },
+        {
+          "src": "/images/menu/optimized/og-crack-sando-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 92186
+        },
+        {
+          "src": "/images/menu/optimized/og-crack-sando-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 115693
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/og-crack-sando-480.webp 480w, /images/menu/optimized/og-crack-sando-800.webp 800w",
+        "avif": "/images/menu/optimized/og-crack-sando-480.avif 480w, /images/menu/optimized/og-crack-sando-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/og-crack-sando-800.webp",
+      "totalBytes": 310073
+    },
     "oklahoma-burger": {
       "source": "/images/menu/oklahoma-burger.png",
       "width": 1000,

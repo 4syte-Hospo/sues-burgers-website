@@ -32,7 +32,7 @@ SLIDES = (
     },
     {
         "id": "heroimg4",
-        "desktop": "heroimg4.png",
+        "desktop": "heroimg4-web.png",
         "mobile": "heroimg4-mobile.png",
     },
     {

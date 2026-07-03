@@ -24,14 +24,14 @@ export const heroSlides: HeroSlide[] = [
   {
     id: "chicken-crack-sando",
     imageKey: "heroimg4",
-    desktopImage: "/images/hero/heroimg4.png",
+    desktopImage: "/images/hero/heroimg4-web.png",
     mobileImage: "/images/hero/heroimg4-mobile.png",
-    alt: "Limited time Chicken Crack Sando — spicy fried chicken, sriracha mayo, and crispy chicken skin on butter-toasted milk bread",
+    alt: "Limited time Chicken Crack Sandos — Original and Spicy fried chicken sandwiches with crispy chicken skin on butter-toasted milk bread",
     buttonText: "ORDER ONLINE",
     buttonLink: ORDER_URL,
     active: true,
-    buttonPositionDesktop: { x: 74, y: 88 },
-    buttonPositionMobile: { x: 50, y: 93.5 },
+    buttonPositionDesktop: { x: 45.5, y: 41 },
+    buttonPositionMobile: { x: 50, y: 28 },
   },
   {
     id: "raising-daves-box",
@@ -42,7 +42,7 @@ export const heroSlides: HeroSlide[] = [
     buttonText: "ORDER ONLINE",
     buttonLink: ORDER_URL,
     active: true,
-    buttonPositionDesktop: { x: 72, y: 86 },
+    buttonPositionDesktop: { x: 75, y: 87 },
     buttonPositionMobile: { x: 50, y: 92.5 },
   },
   {
