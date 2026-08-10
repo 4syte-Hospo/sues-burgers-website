@@ -71,11 +71,11 @@ export const locations: LocationStore[] = [
 
 export const comingSoonLocation = {
   id: "location-three",
-  title: "Sue's #3",
-  subtitle: "Coming Soon",
-  teaser: "Our next Sue's is on the way. Stay tuned.",
+  title: "Sue's Burgers & Shakes",
+  subtitle: "Paddington - Coming Soon",
+  teaser: "More details coming soon.",
   image: "/images/locations/location-three.png",
   imageAlt:
-    "Sue's Burgers & Shakes storefront at night with red neon signage reflected on wet pavement",
+    "Sue's Burgers & Shakes Paddington storefront at night with red neon signage reflected on wet pavement",
   followUrl: "https://www.instagram.com/suesburgersandshakes",
 } as const;

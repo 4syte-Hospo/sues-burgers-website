@@ -20,7 +20,7 @@ export const careerRoles: { id: CareersRole; label: string }[] = [
 export const careerLocations: { id: CareersLocation; label: string }[] = [
   { id: "carindale", label: "Carindale" },
   { id: "woolloongabba", label: "Woolloongabba" },
-  { id: "location-three", label: "Sue's #3 / Coming Soon" },
+  { id: "location-three", label: "Paddington / Coming Soon" },
   { id: "any", label: "Any location" },
 ];
 
