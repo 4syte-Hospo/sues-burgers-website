@@ -5,7 +5,7 @@ export const allergenPage = {
   title: "Allergen Information",
   intro:
     "Use this guide to check which allergens are present in our menu items. Symbols show whether an allergen is contained in the item or may be present as a trace.",
-  lastUpdated: "12 June 2026",
+  lastUpdated: "21 August 2026",
   disclaimer:
     "Please be aware that there is always a risk that traces of allergens may be transferred to items from our menu during processing, storage, or preparation (Trace Levels). Sue's Burgers & Shakes is unable to guarantee that any item sold is free from traces of listed allergens.",
   pdfHref: "/docs/sues-burgers-allergen-information.pdf",
@@ -66,8 +66,7 @@ export const allergenSections: AllergenSection[] = [
     ["Vegan Sue", "O O X X O O X O O"],
   ]),
   section("specials", "Specials", [
-    ["ORIGINAL CHICKEN CRACK SANDWICH", "X X X X O X X O O"],
-    ["SPICY CHICKEN CRACK SANDWICH", "X X X X O X X O O"],
+    ["HOT HONEY CHICKEN SANDO", "X X X X O X X X O"],
   ]),
   section("burger-extras", "Burger Extras", [
     ["Cheese", "X O O O O O O O O"],

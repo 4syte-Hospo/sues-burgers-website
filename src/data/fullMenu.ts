@@ -38,18 +38,10 @@ const baseMenuSections: MenuCategorySection[] = [
       "Rotating hits made for the month — grab them while they're on the board.",
     items: [
       {
-        id: "original-crack-chicken-sandwich",
-        name: "ORIGINAL CHICKEN CRACK SANDWICH",
+        id: "hh-chicken-sando",
+        name: "HOT HONEY CHICKEN SANDO",
         description:
-          "BUTTER-TOASTED MILK BREAD STACKED WITH SOUTHERN FRIED CHICKEN BREAST, CRISPY SHREDDED LETTUCE, CRISPY CHICKEN SKIN BITS (CHICKEN CRACK), SUE'S SIGNATURE SAUCE AND EVEN MORE CHICKEN CRACK!",
-        badge: "Monthly Special",
-        orderLink: order,
-      },
-      {
-        id: "chicken-crack-sandwich",
-        name: "SPICY CHICKEN CRACK SANDWICH",
-        description:
-          "BUTTER-TOASTED MILK BREAD STACKED WITH SPICY FRIED CHICKEN BREAST, CRISPY SHREDDED LETTUCE, CRISPY CHICKEN SKIN BITS (CHICKEN CRACK), SRIRACHA MAYO, AND TOPPED WITH OUR SPICY SEASONING AND MORE CHICKEN CRACK! (MILD)",
+          "BUTTER-TOASTED MILK BREAD STACKED WITH A SOUTHERN FRIED CHICKEN BREAST DRIZZLED IN HOUSE-MADE HOT HONEY, CRISPY SHREDDED LETTUCE, SRIRACHA MAYO, TOPPED WITH OUR CHILLI SESAME AND EVEN MORE SRIRACHA MAYO (MILD)",
         badge: "Monthly Special",
         orderLink: order,
       },

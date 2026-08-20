@@ -862,6 +862,47 @@
       "fallback": "/images/menu/optimized/grilled-chicken-mozza-800.webp",
       "totalBytes": 185919
     },
+    "hh-chicken-sando": {
+      "source": "/images/menu/hh-chicken-sando.png",
+      "width": 1000,
+      "height": 1000,
+      "variants": [
+        {
+          "src": "/images/menu/optimized/hh-chicken-sando-480.webp",
+          "width": 480,
+          "height": 480,
+          "format": "webp",
+          "bytes": 43292
+        },
+        {
+          "src": "/images/menu/optimized/hh-chicken-sando-480.avif",
+          "width": 480,
+          "height": 480,
+          "format": "avif",
+          "bytes": 54724
+        },
+        {
+          "src": "/images/menu/optimized/hh-chicken-sando-800.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp",
+          "bytes": 91420
+        },
+        {
+          "src": "/images/menu/optimized/hh-chicken-sando-800.avif",
+          "width": 800,
+          "height": 800,
+          "format": "avif",
+          "bytes": 112550
+        }
+      ],
+      "srcset": {
+        "webp": "/images/menu/optimized/hh-chicken-sando-480.webp 480w, /images/menu/optimized/hh-chicken-sando-800.webp 800w",
+        "avif": "/images/menu/optimized/hh-chicken-sando-480.avif 480w, /images/menu/optimized/hh-chicken-sando-800.avif 800w"
+      },
+      "fallback": "/images/menu/optimized/hh-chicken-sando-800.webp",
+      "totalBytes": 301986
+    },
     "jalapeno-smash-burger": {
       "source": "/images/menu/jalapeno-smash-burger.png",
       "width": 1000,
