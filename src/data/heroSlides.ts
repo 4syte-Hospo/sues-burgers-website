@@ -6,22 +6,22 @@ const ORDER_URL = "https://suesburgers.redcatcloud.com.au/app/";
  * Hero slides — optimized WebP/AVIF variants in public/images/hero/optimized/
  * (generated via `npm run generate:hero-images`). Source PNGs remain for OG/social.
  * (heroimg1 = Dirty Soda, heroimg2 = Chili Mozzarella, heroimg3 = Raising Dave's,
- *  heroimg4 = Chicken Crack Sando)
+ *  heroimg4 = Hot Honey Chicken Sando)
  *
  * Desktop: 1200px + 2000px landscape. Mobile: 768px + 1536px portrait 4:5.
  */
 export const heroSlides: HeroSlide[] = [
   {
-    id: "chicken-crack-sando",
+    id: "hot-honey-chicken-sando",
     imageKey: "heroimg4",
     desktopImage: "/images/hero/heroimg4-web.png",
     mobileImage: "/images/hero/heroimg4-mobile.png",
-    alt: "Limited time Chicken Crack Sandos — Original and Spicy fried chicken sandwiches with crispy chicken skin on butter-toasted milk bread",
+    alt: "Limited time Hot Honey Chicken Sando — southern fried chicken on butter-toasted milk bread with house-made hot honey and sriracha mayo",
     buttonText: "ORDER ONLINE",
     buttonLink: ORDER_URL,
     active: true,
-    buttonPositionDesktop: { x: 45.5, y: 41 },
-    buttonPositionMobile: { x: 50, y: 28 },
+    buttonPositionDesktop: { x: 71, y: 84 },
+    buttonPositionMobile: { x: 50, y: 92.5 },
   },
   {
     id: "raising-daves-box",
