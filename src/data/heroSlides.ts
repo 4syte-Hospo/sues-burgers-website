@@ -21,7 +21,7 @@ export const heroSlides: HeroSlide[] = [
     buttonLink: ORDER_URL,
     active: true,
     buttonPositionDesktop: { x: 71, y: 84 },
-    buttonPositionMobile: { x: 50, y: 92.5 },
+    buttonPositionMobile: { x: 50, y: 94.5 },
   },
   {
     id: "raising-daves-box",
